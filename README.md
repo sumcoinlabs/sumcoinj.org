@@ -1,2 +1,2 @@
-sumcoinj.github.io
+https://sumcoinj.org
 ==================
