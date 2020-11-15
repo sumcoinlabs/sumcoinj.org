@@ -104,7 +104,7 @@
 <br>
 <pre>public class <span class="strong">DumpedPrivateKey</span>
 extends <a href="../../../../com/google/bitcoin/core/VersionedChecksummedBytes.html" title="class in com.google.bitcoin.core">VersionedChecksummedBytes</a></pre>
-<div class="block">Parses and generates private keys in the form used by the Bitcoin "dumpprivkey" command. This is the private key
+<div class="block">Parses and generates private keys in the form used by the Sumcoin "dumpprivkey" command. This is the private key
  bytes with a header byte and 4 checksum bytes at the end. If there are 33 private key bytes instead of 32, then
  the last byte is a discriminator value for the compressed pubkey.</div>
 </li>
@@ -142,7 +142,7 @@ extends <a href="../../../../com/google/bitcoin/core/VersionedChecksummedBytes.h
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../com/google/bitcoin/core/DumpedPrivateKey.html#DumpedPrivateKey(com.google.bitcoin.core.NetworkParameters, java.lang.String)">DumpedPrivateKey</a></strong>(<a href="../../../../com/google/bitcoin/core/NetworkParameters.html" title="class in com.google.bitcoin.core">NetworkParameters</a>&nbsp;params,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encoded)</code>
-<div class="block">Parses the given private key as created by the "dumpprivkey" Bitcoin C++ RPC.</div>
+<div class="block">Parses the given private key as created by the "dumpprivkey" Sumcoin C++ RPC.</div>
 </td>
 </tr>
 </table>
@@ -212,7 +212,7 @@ extends <a href="../../../../com/google/bitcoin/core/VersionedChecksummedBytes.h
 <pre>public&nbsp;DumpedPrivateKey(<a href="../../../../com/google/bitcoin/core/NetworkParameters.html" title="class in com.google.bitcoin.core">NetworkParameters</a>&nbsp;params,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encoded)
                  throws <a href="../../../../com/google/bitcoin/core/AddressFormatException.html" title="class in com.google.bitcoin.core">AddressFormatException</a></pre>
-<div class="block">Parses the given private key as created by the "dumpprivkey" Bitcoin C++ RPC.</div>
+<div class="block">Parses the given private key as created by the "dumpprivkey" Sumcoin C++ RPC.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>params</code> - The expected network parameters of the key. If you don't care, provide null.</dd><dd><code>encoded</code> - The base58 encoded string.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../com/google/bitcoin/core/AddressFormatException.html" title="class in com.google.bitcoin.core">AddressFormatException</a></code> - If the string is invalid or the header byte doesn't match the network params.</dd></dl>

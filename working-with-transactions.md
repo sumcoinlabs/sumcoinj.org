@@ -16,7 +16,7 @@ title: "Working with transactions"
 
 ## Introduction
 
-Transactions are the fundamental atoms of the Bitcoin protocol. They encapsulate a claim upon some value, and the conditions needed for that value to itself later be claimed.
+Transactions are the fundamental atoms of the Sumcoin protocol. They encapsulate a claim upon some value, and the conditions needed for that value to itself later be claimed.
 
 This article will discuss:
 
@@ -27,13 +27,13 @@ This article will discuss:
 
 ## What is a transaction?
 
-Transactions are, at heart, a collection of _inputs_ and _outputs_. They also have a lock time, which is not used in the current Bitcoin network, and a few bits of metadata only represented in bitcoinj like when the transaction was last seen and a confidence measurement. All this is represented using the `Transaction` class.
+Transactions are, at heart, a collection of _inputs_ and _outputs_. They also have a lock time, which is not used in the current Sumcoin network, and a few bits of metadata only represented in sumcoinj like when the transaction was last seen and a confidence measurement. All this is represented using the `Transaction` class.
 
 An output is a data structure specifying a _value_ and a _script_, conventionally called the _scriptPubKey_. An output allocates some of the value gathered by the transactions inputs to a particular program. Anyone who can satisfy the program (make it return true) is allowed to claim that outputs value in their own transaction. Output scripts most often check signatures against public keys, but they can do many other things.
 
-An input is a data structure that contains a _script_, which in practice is just a list of byte arrays, and an _outpoint_, which is a reference to an output of another transaction. Because Bitcoin identifies transactions by their hash, an outpoint is therefore a (hash, index) pair in which the index simply identifies which output in the given transaction is intended. We say the input is _connected_ to an output. Input scripts, conventionally called _scriptSigs_ can theoretically contain any script opcodes, but because the programs are run with no input there is little point in doing that, therefore, real input scripts only ever push constants like signatures and keys onto the stack.
+An input is a data structure that contains a _script_, which in practice is just a list of byte arrays, and an _outpoint_, which is a reference to an output of another transaction. Because Sumcoin identifies transactions by their hash, an outpoint is therefore a (hash, index) pair in which the index simply identifies which output in the given transaction is intended. We say the input is _connected_ to an output. Input scripts, conventionally called _scriptSigs_ can theoretically contain any script opcodes, but because the programs are run with no input there is little point in doing that, therefore, real input scripts only ever push constants like signatures and keys onto the stack.
 
-Inputs also contain _sequence numbers_. Sequence numbers are not currently used on the Bitcoin network and are not exposed by bitcoinj. They exist to support [contracts](https://en.bitcoin.it/wiki/Contracts).
+Inputs also contain _sequence numbers_. Sequence numbers are not currently used on the Sumcoin network and are not exposed by sumcoinj. They exist to support [contracts](https://en.bitcoin.it/wiki/Contracts).
 
 The mismatch, if any, between the value gathered by a transactions inputs and spent by its outputs is called the _fee_. Obviously, a transaction that has more value in its outputs than gathered by its inputs is considered invalid, but the reverse is not true. Value not re-allocated can be legitimately claimed by whoever successfully mines a block containing that transaction.
 
@@ -56,16 +56,16 @@ Inputs are represented with the `TransactionInput` class, and outputs are of cou
 
 ## Confidence levels
 
-A transaction has an associated _confidence_. This is data you can use to calculate the probability of the transaction being reversed (double spent). This is always a risk in Bitcoin although at high network speeds, the probability becomes extremely low, certainly relative to traditional payment systems.
+A transaction has an associated _confidence_. This is data you can use to calculate the probability of the transaction being reversed (double spent). This is always a risk in Sumcoin although at high network speeds, the probability becomes extremely low, certainly relative to traditional payment systems.
 
-Confidence is modelled with the `TransactionConfidence` object. You can get one by calling `Transaction.getConfidence()`. Confidence data does not exist in Bitcoin serialization, but will survive Java and protobuf serialization. 
+Confidence is modelled with the `TransactionConfidence` object. You can get one by calling `Transaction.getConfidence()`. Confidence data does not exist in Sumcoin serialization, but will survive Java and protobuf serialization. 
 
 A confidence object has one of several states:
 
 * If **BUILDING**, then the transaction is included in the best chain and your confidence in it is increasing.
 * If **PENDING**, then the transaction is unconfirmed and should be included shortly as long as it is being broadcast from time to time and is considered valid by the network. A pending transaction will be announced if the containing wallet has been attached to a live `PeerGroup` using `PeerGroup.addWallet()`. You can estimate how likely the transaction is to be included by measuring how many nodes announce it after sending it to one peer, using `TransactionConfidence.numBroadcastPeers()`. Or if you saw it from a trusted peer, you can assume it's valid and will get mined sooner or later as well. 
 * If **DEAD**, then it means the transaction won't confirm unless there is another re-org, because some other transaction is spending one of its inputs. Such transactions should be alerted to the user so they can take action, eg, suspending shipment of goods if they are a merchant.
-* **UNKNOWN** is used if we have no information about the confidence of this transaction, because for example it has been deserialized from a Bitcoin structure but not broadcast or seen in the chain yet. UNKNOWN is the default state.
+* **UNKNOWN** is used if we have no information about the confidence of this transaction, because for example it has been deserialized from a Sumcoin structure but not broadcast or seen in the chain yet. UNKNOWN is the default state.
 
 The confidence type, available via `TransactionConfidence.getConfidenceType()`, is a general statement of the transactions state. You can get a more precise view using getters on the object. For example, in the `BUILDING` state, `getDepthInBlocks()` should tell you how deeply buried the transaction is, in terms of blocks. The deeper it is buried in the chain, the less chance you have of the transaction being reversed.
 
@@ -73,7 +73,7 @@ Depth in blocks is easy to understand and roughly corresponds to how long the tr
 
 ### Understanding difficulty and confidence
 
-The most common reason you are interested in confidence is you wish to measure the risk of losing money that was sent to you, for example, to delay dispatching of goods or provision of services. The Bitcoin community uses a rule of thumb of zero confirmations for things that aren't of much value like MP3s or ebooks, one or two blocks for things (10-20 minutes) for things that stand a risk of a double spend attack, or 6 blocks (an hour) for where rock solid certainty is required, like with currency exchanges.
+The most common reason you are interested in confidence is you wish to measure the risk of losing money that was sent to you, for example, to delay dispatching of goods or provision of services. The Sumcoin community uses a rule of thumb of zero confirmations for things that aren't of much value like MP3s or ebooks, one or two blocks for things (10-20 minutes) for things that stand a risk of a double spend attack, or 6 blocks (an hour) for where rock solid certainty is required, like with currency exchanges.
 
 In practice, reports of merchants suffering double-spend fraud are rare so this discussion is somewhat theoretical.
 
@@ -90,11 +90,11 @@ However there are many other possibilities.
 
 ### Direct transfer
 
-It's possible to send someone money by directly giving them a transaction, which they can then broadcast at their leisure, or further modify. These use cases aren't well supported today, but in future may become a common way to use Bitcoin.
+It's possible to send someone money by directly giving them a transaction, which they can then broadcast at their leisure, or further modify. These use cases aren't well supported today, but in future may become a common way to use Sumcoin.
 
 ### Participation in contracts
 
-[Contracts](https://en.bitcoin.it/wiki/Contracts) allow for a variety of low trust trades to take place, mediated by the Bitcoin network. By carefully constructing transactions with particular scripts, signatures and structures you can have low-trust dispute mediation, coins locked to arbitrary conditions (eg, futures contracts), assurance contracts, [smart property](https://en.bitcoin.it/wiki/Smart_Property) and many other possibilities.
+[Contracts](https://en.bitcoin.it/wiki/Contracts) allow for a variety of low trust trades to take place, mediated by the Sumcoin network. By carefully constructing transactions with particular scripts, signatures and structures you can have low-trust dispute mediation, coins locked to arbitrary conditions (eg, futures contracts), assurance contracts, [smart property](https://en.bitcoin.it/wiki/Smart_Property) and many other possibilities.
 
 You can learn more about this topic in the article [WorkingWithContracts](working-with-contracts).
 

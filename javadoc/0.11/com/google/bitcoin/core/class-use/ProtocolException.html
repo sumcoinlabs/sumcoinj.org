@@ -102,7 +102,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/google/bitcoin/core/Message.html" title="class in com.google.bitcoin.core">Message</a></code></td>
-<td class="colLast"><span class="strong">BitcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.html#deserialize(java.nio.ByteBuffer)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
+<td class="colLast"><span class="strong">SumcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.html#deserialize(java.nio.ByteBuffer)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Reads a message from the given ByteBuffer and returns it.</div>
 </td>
 </tr>
@@ -114,15 +114,15 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in com.google.bitcoin.core">BitcoinSerializer.BitcoinPacketHeader</a></code></td>
-<td class="colLast"><span class="strong">BitcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.html#deserializeHeader(java.nio.ByteBuffer)">deserializeHeader</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
+<td class="colFirst"><code><a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in com.google.bitcoin.core">SumcoinSerializer.SumcoinPacketHeader</a></code></td>
+<td class="colLast"><span class="strong">SumcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.html#deserializeHeader(java.nio.ByteBuffer)">deserializeHeader</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserializes only the header in case packet meta data is needed before decoding
  the payload.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/google/bitcoin/core/Message.html" title="class in com.google.bitcoin.core">Message</a></code></td>
-<td class="colLast"><span class="strong">BitcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.html#deserializePayload(com.google.bitcoin.core.BitcoinSerializer.BitcoinPacketHeader, java.nio.ByteBuffer)">deserializePayload</a></strong>(<a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in com.google.bitcoin.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<td class="colLast"><span class="strong">SumcoinSerializer.</span><code><strong><a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.html#deserializePayload(com.google.bitcoin.core.SumcoinSerializer.SumcoinPacketHeader, java.nio.ByteBuffer)">deserializePayload</a></strong>(<a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in com.google.bitcoin.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                   <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserialize payload only.</div>
 </td>
@@ -260,12 +260,12 @@
             byte[]&nbsp;payloadBytes)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../../../com/google/bitcoin/core/BitcoinSerializer.BitcoinPacketHeader.html#BitcoinSerializer.BitcoinPacketHeader(java.nio.ByteBuffer)">BitcoinSerializer.BitcoinPacketHeader</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../com/google/bitcoin/core/SumcoinSerializer.SumcoinPacketHeader.html#SumcoinSerializer.SumcoinPacketHeader(java.nio.ByteBuffer)">SumcoinSerializer.SumcoinPacketHeader</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../com/google/bitcoin/core/Block.html#Block(com.google.bitcoin.core.NetworkParameters, byte[])">Block</a></strong>(<a href="../../../../../com/google/bitcoin/core/NetworkParameters.html" title="class in com.google.bitcoin.core">NetworkParameters</a>&nbsp;params,
      byte[]&nbsp;payloadBytes)</code>
-<div class="block">Constructs a block object from the Bitcoin wire format.</div>
+<div class="block">Constructs a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -274,7 +274,7 @@
      boolean&nbsp;parseLazy,
      boolean&nbsp;parseRetain,
      int&nbsp;length)</code>
-<div class="block">Contruct a block object from the Bitcoin wire format.</div>
+<div class="block">Contruct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="altColor">

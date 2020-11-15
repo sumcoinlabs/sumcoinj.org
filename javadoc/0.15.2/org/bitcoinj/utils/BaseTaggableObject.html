@@ -49,10 +49,10 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../org/bitcoinj/utils/BlockFileLoader.html" title="class in org.bitcoinj.utils"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/utils/BlockFileLoader.html" title="class in org.sumcoinj.utils"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/utils/BaseTaggableObject.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/utils/BaseTaggableObject.html" target="_top">Frames</a></li>
 <li><a href="BaseTaggableObject.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.utils</div>
+<div class="subTitle">org.sumcoinj.utils</div>
 <h2 title="Class BaseTaggableObject" class="title">Class BaseTaggableObject</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.utils.BaseTaggableObject</li>
+<li>org.sumcoinj.utils.BaseTaggableObject</li>
 </ul>
 </li>
 </ul>
@@ -108,18 +108,18 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></dd>
+<dd><a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/bitcoinj/wallet/Wallet.html" title="class in org.bitcoinj.wallet">Wallet</a></dd>
+<dd><a href="../../../org/sumcoinj/wallet/Wallet.html" title="class in org.sumcoinj.wallet">Wallet</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">BaseTaggableObject</span>
 extends java.lang.Object
-implements <a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></pre>
-<div class="block">A simple implementation of <a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils"><code>TaggableObject</code></a> that just uses a lazily created hashmap that is
+implements <a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></pre>
+<div class="block">A simple implementation of <a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils"><code>TaggableObject</code></a> that just uses a lazily created hashmap that is
  synchronized on this objects Java monitor.</div>
 </li>
 </ul>
@@ -141,7 +141,7 @@ implements <a href="../../../org/bitcoinj/utils/TaggableObject.html" title="inte
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected java.util.Map&lt;java.lang.String,com.google.protobuf.ByteString&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#tags">tags</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#tags">tags</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -158,7 +158,7 @@ implements <a href="../../../org/bitcoinj/utils/TaggableObject.html" title="inte
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#BaseTaggableObject--">BaseTaggableObject</a></span>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#BaseTaggableObject--">BaseTaggableObject</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -177,26 +177,26 @@ implements <a href="../../../org/bitcoinj/utils/TaggableObject.html" title="inte
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>com.google.protobuf.ByteString</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#getTag-java.lang.String-">getTag</a></span>(java.lang.String&nbsp;tag)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#getTag-java.lang.String-">getTag</a></span>(java.lang.String&nbsp;tag)</code>
 <div class="block">Returns the immutable byte array associated with the given tag name, or throws <code>IllegalArgumentException</code>
  if that tag wasn't set yet.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.Map&lt;java.lang.String,com.google.protobuf.ByteString&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#getTags--">getTags</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#getTags--">getTags</a></span>()</code>
 <div class="block">Returns a copy of all the tags held by this object.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>com.google.protobuf.ByteString</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#maybeGetTag-java.lang.String-">maybeGetTag</a></span>(java.lang.String&nbsp;tag)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#maybeGetTag-java.lang.String-">maybeGetTag</a></span>(java.lang.String&nbsp;tag)</code>
 <div class="block">Returns the immutable byte array associated with the given tag name, or null if there is none.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/utils/BaseTaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">setTag</a></span>(java.lang.String&nbsp;tag,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/utils/BaseTaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">setTag</a></span>(java.lang.String&nbsp;tag,
       com.google.protobuf.ByteString&nbsp;value)</code>
 <div class="block">Associates the given immutable byte array with the string tag.</div>
 </td>
@@ -266,11 +266,11 @@ protected&nbsp;java.util.Map&lt;java.lang.String,com.google.protobuf.ByteString&
 <h4>maybeGetTag</h4>
 <pre>@Nullable
 public&nbsp;com.google.protobuf.ByteString&nbsp;maybeGetTag(java.lang.String&nbsp;tag)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html#maybeGetTag-java.lang.String-">TaggableObject</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html#maybeGetTag-java.lang.String-">TaggableObject</a></code></span></div>
 <div class="block">Returns the immutable byte array associated with the given tag name, or null if there is none.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/utils/TaggableObject.html#maybeGetTag-java.lang.String-">maybeGetTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/utils/TaggableObject.html#maybeGetTag-java.lang.String-">maybeGetTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -281,12 +281,12 @@ public&nbsp;com.google.protobuf.ByteString&nbsp;maybeGetTag(java.lang.String&nbs
 <li class="blockList">
 <h4>getTag</h4>
 <pre>public&nbsp;com.google.protobuf.ByteString&nbsp;getTag(java.lang.String&nbsp;tag)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html#getTag-java.lang.String-">TaggableObject</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html#getTag-java.lang.String-">TaggableObject</a></code></span></div>
 <div class="block">Returns the immutable byte array associated with the given tag name, or throws <code>IllegalArgumentException</code>
  if that tag wasn't set yet.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/utils/TaggableObject.html#getTag-java.lang.String-">getTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/utils/TaggableObject.html#getTag-java.lang.String-">getTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -298,11 +298,11 @@ public&nbsp;com.google.protobuf.ByteString&nbsp;maybeGetTag(java.lang.String&nbs
 <h4>setTag</h4>
 <pre>public&nbsp;void&nbsp;setTag(java.lang.String&nbsp;tag,
                    com.google.protobuf.ByteString&nbsp;value)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">TaggableObject</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">TaggableObject</a></code></span></div>
 <div class="block">Associates the given immutable byte array with the string tag. See the docs for TaggableObject to learn more.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/utils/TaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">setTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/utils/TaggableObject.html#setTag-java.lang.String-com.google.protobuf.ByteString-">setTag</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -313,11 +313,11 @@ public&nbsp;com.google.protobuf.ByteString&nbsp;maybeGetTag(java.lang.String&nbs
 <li class="blockList">
 <h4>getTags</h4>
 <pre>public&nbsp;java.util.Map&lt;java.lang.String,com.google.protobuf.ByteString&gt;&nbsp;getTags()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html#getTags--">TaggableObject</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html#getTags--">TaggableObject</a></code></span></div>
 <div class="block">Returns a copy of all the tags held by this object.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/utils/TaggableObject.html#getTags--">getTags</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/bitcoinj/utils/TaggableObject.html" title="interface in org.bitcoinj.utils">TaggableObject</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/utils/TaggableObject.html#getTags--">getTags</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/sumcoinj/utils/TaggableObject.html" title="interface in org.sumcoinj.utils">TaggableObject</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -349,10 +349,10 @@ public&nbsp;com.google.protobuf.ByteString&nbsp;maybeGetTag(java.lang.String&nbs
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../org/bitcoinj/utils/BlockFileLoader.html" title="class in org.bitcoinj.utils"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/utils/BlockFileLoader.html" title="class in org.sumcoinj.utils"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/utils/BaseTaggableObject.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/utils/BaseTaggableObject.html" target="_top">Frames</a></li>
 <li><a href="BaseTaggableObject.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

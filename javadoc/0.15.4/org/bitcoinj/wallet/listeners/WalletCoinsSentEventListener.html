@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/wallet/listeners/WalletCoinsReceivedEventListener.html" title="interface in org.bitcoinj.wallet.listeners"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/wallet/listeners/WalletReorganizeEventListener.html" title="interface in org.bitcoinj.wallet.listeners"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/wallet/listeners/WalletCoinsReceivedEventListener.html" title="interface in org.sumcoinj.wallet.listeners"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/wallet/listeners/WalletReorganizeEventListener.html" title="interface in org.sumcoinj.wallet.listeners"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/wallet/listeners/WalletCoinsSentEventListener.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/wallet/listeners/WalletCoinsSentEventListener.html" target="_top">Frames</a></li>
 <li><a href="WalletCoinsSentEventListener.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.wallet.listeners</div>
+<div class="subTitle">org.sumcoinj.wallet.listeners</div>
 <h2 title="Interface WalletCoinsSentEventListener" class="title">Interface WalletCoinsSentEventListener</h2>
 </div>
 <div class="contentContainer">
@@ -100,7 +100,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../org/bitcoinj/jni/NativeWalletCoinsSentEventListener.html" title="class in org.bitcoinj.jni">NativeWalletCoinsSentEventListener</a></dd>
+<dd><a href="../../../../org/sumcoinj/jni/NativeWalletCoinsSentEventListener.html" title="class in org.sumcoinj.jni">NativeWalletCoinsSentEventListener</a></dd>
 </dl>
 <hr>
 <br>
@@ -127,10 +127,10 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/wallet/listeners/WalletCoinsSentEventListener.html#onCoinsSent-org.bitcoinj.wallet.Wallet-org.bitcoinj.core.Transaction-org.bitcoinj.core.Coin-org.bitcoinj.core.Coin-">onCoinsSent</a></span>(<a href="../../../../org/bitcoinj/wallet/Wallet.html" title="class in org.bitcoinj.wallet">Wallet</a>&nbsp;wallet,
-           <a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;tx,
-           <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;prevBalance,
-           <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;newBalance)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/wallet/listeners/WalletCoinsSentEventListener.html#onCoinsSent-org.sumcoinj.wallet.Wallet-org.sumcoinj.core.Transaction-org.sumcoinj.core.Coin-org.sumcoinj.core.Coin-">onCoinsSent</a></span>(<a href="../../../../org/sumcoinj/wallet/Wallet.html" title="class in org.sumcoinj.wallet">Wallet</a>&nbsp;wallet,
+           <a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;tx,
+           <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;prevBalance,
+           <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;newBalance)</code>
 <div class="block">This is called when a transaction is seen that sends coins <b>from</b> this wallet, either
  because it was broadcast across the network or because a block was received.</div>
 </td>
@@ -150,16 +150,16 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="onCoinsSent-org.bitcoinj.wallet.Wallet-org.bitcoinj.core.Transaction-org.bitcoinj.core.Coin-org.bitcoinj.core.Coin-">
+<a name="onCoinsSent-org.sumcoinj.wallet.Wallet-org.sumcoinj.core.Transaction-org.sumcoinj.core.Coin-org.sumcoinj.core.Coin-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onCoinsSent</h4>
-<pre>void&nbsp;onCoinsSent(<a href="../../../../org/bitcoinj/wallet/Wallet.html" title="class in org.bitcoinj.wallet">Wallet</a>&nbsp;wallet,
-                 <a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;tx,
-                 <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;prevBalance,
-                 <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;newBalance)</pre>
+<pre>void&nbsp;onCoinsSent(<a href="../../../../org/sumcoinj/wallet/Wallet.html" title="class in org.sumcoinj.wallet">Wallet</a>&nbsp;wallet,
+                 <a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;tx,
+                 <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;prevBalance,
+                 <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;newBalance)</pre>
 <div class="block">This is called when a transaction is seen that sends coins <b>from</b> this wallet, either
  because it was broadcast across the network or because a block was received. This may at first glance seem
  useless, because in the common case you already know about such transactions because you created them with
@@ -205,11 +205,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/wallet/listeners/WalletCoinsReceivedEventListener.html" title="interface in org.bitcoinj.wallet.listeners"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/wallet/listeners/WalletReorganizeEventListener.html" title="interface in org.bitcoinj.wallet.listeners"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/wallet/listeners/WalletCoinsReceivedEventListener.html" title="interface in org.sumcoinj.wallet.listeners"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/wallet/listeners/WalletReorganizeEventListener.html" title="interface in org.sumcoinj.wallet.listeners"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/wallet/listeners/WalletCoinsSentEventListener.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/wallet/listeners/WalletCoinsSentEventListener.html" target="_top">Frames</a></li>
 <li><a href="WalletCoinsSentEventListener.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

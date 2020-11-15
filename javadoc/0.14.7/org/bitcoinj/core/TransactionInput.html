@@ -449,7 +449,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -584,7 +584,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - NetworkParameters object.</dd>
-<dd><code>payload</code> - Bitcoin protocol formatted byte array containing message content.</dd>
+<dd><code>payload</code> - Sumcoin protocol formatted byte array containing message content.</dd>
 <dd><code>offset</code> - The location of the first payload byte within the array.</dd>
 <dd><code>serializer</code> - the serializer to use for this message.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -681,7 +681,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in or
                                    throws <a href="../../../org/bitcoinj/core/ScriptException.html" title="class in org.bitcoinj.core">ScriptException</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Convenience method that returns the from address of this input by parsing the scriptSig. The concept of a
- "from address" is not well defined in Bitcoin and you should not assume that senders of a transaction can
+ "from address" is not well defined in Sumcoin and you should not assume that senders of a transaction can
  actually receive coins on the same address they used to sign (e.g. this is not true for shared wallets).</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -698,7 +698,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in or
 <pre>public&nbsp;long&nbsp;getSequenceNumber()</pre>
 <div class="block">Sequence numbers allow participants in a multi-party transaction signing protocol to create new versions of the
  transaction independently of each other. Newer versions of a transaction can replace an existing version that's
- in nodes memory pools if the existing version is time locked. See the Contracts page on the Bitcoin wiki for
+ in nodes memory pools if the existing version is time locked. See the Contracts page on the Sumcoin wiki for
  examples of how you can use this feature to build contract protocols.</div>
 </li>
 </ul>
@@ -711,7 +711,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in or
 <pre>public&nbsp;void&nbsp;setSequenceNumber(long&nbsp;sequence)</pre>
 <div class="block">Sequence numbers allow participants in a multi-party transaction signing protocol to create new versions of the
  transaction independently of each other. Newer versions of a transaction can replace an existing version that's
- in nodes memory pools if the existing version is time locked. See the Contracts page on the Bitcoin wiki for
+ in nodes memory pools if the existing version is time locked. See the Contracts page on the Sumcoin wiki for
  examples of how you can use this feature to build contract protocols.</div>
 </li>
 </ul>
@@ -979,7 +979,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Transaction.html" title="class i
 <h4>isStandard</h4>
 <pre>public&nbsp;<a href="../../../org/bitcoinj/wallet/DefaultRiskAnalysis.RuleViolation.html" title="enum in org.bitcoinj.wallet">DefaultRiskAnalysis.RuleViolation</a>&nbsp;isStandard()</pre>
 <div class="block"><p>Returns either RuleViolation.NONE if the input is standard, or which rule makes it non-standard if so.
- The "IsStandard" rules control whether the default Bitcoin Core client blocks relay of a tx / refuses to mine it,
+ The "IsStandard" rules control whether the default Sumcoin Core client blocks relay of a tx / refuses to mine it,
  however, non-standard transactions can still be included in blocks and will be accepted as valid if so.</p>
 
  <p>This method simply calls <tt>DefaultRiskAnalysis.isInputStandard(this)</tt>.</p></div>

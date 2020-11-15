@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/core/AlertMessage.html" title="class in org.bitcoinj.core"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/core/Bech32.html" title="class in org.bitcoinj.core"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/core/AlertMessage.html" title="class in org.sumcoinj.core"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/core/Bech32.html" title="class in org.sumcoinj.core"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/core/Base58.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/core/Base58.html" target="_top">Frames</a></li>
 <li><a href="Base58.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.core</div>
+<div class="subTitle">org.sumcoinj.core</div>
 <h2 title="Class Base58" class="title">Class Base58</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.core.Base58</li>
+<li>org.sumcoinj.core.Base58</li>
 </ul>
 </li>
 </ul>
@@ -110,11 +110,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">Base58</span>
 extends java.lang.Object</pre>
-<div class="block">Base58 is a way to encode Bitcoin addresses (or arbitrary data) as alphanumeric strings.
+<div class="block">Base58 is a way to encode Sumcoin addresses (or arbitrary data) as alphanumeric strings.
  <p>
  Note that this is not the same base58 as used by Flickr, which you may find referenced around the Internet.
  <p>
- You may want to consider working with <a href="../../../org/bitcoinj/core/PrefixedChecksummedBytes.html" title="class in org.bitcoinj.core"><code>PrefixedChecksummedBytes</code></a> instead, which
+ You may want to consider working with <a href="../../../org/sumcoinj/core/PrefixedChecksummedBytes.html" title="class in org.sumcoinj.core"><code>PrefixedChecksummedBytes</code></a> instead, which
  adds support for testing the prefix and suffix bytes commonly found in addresses.
  <p>
  Satoshi explains: why base-58 instead of standard base-64 encoding?
@@ -152,7 +152,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static char[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#ALPHABET">ALPHABET</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#ALPHABET">ALPHABET</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -169,7 +169,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#Base58--">Base58</a></span>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#Base58--">Base58</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -188,30 +188,30 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#decode-java.lang.String-">decode</a></span>(java.lang.String&nbsp;input)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#decode-java.lang.String-">decode</a></span>(java.lang.String&nbsp;input)</code>
 <div class="block">Decodes the given base58 string into the original data bytes.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#decodeChecked-java.lang.String-">decodeChecked</a></span>(java.lang.String&nbsp;input)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#decodeChecked-java.lang.String-">decodeChecked</a></span>(java.lang.String&nbsp;input)</code>
 <div class="block">Decodes the given base58 string into the original data bytes, using the checksum in the
  last 4 bytes of the decoded data to verify that the rest are correct.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static java.math.BigInteger</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#decodeToBigInteger-java.lang.String-">decodeToBigInteger</a></span>(java.lang.String&nbsp;input)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#decodeToBigInteger-java.lang.String-">decodeToBigInteger</a></span>(java.lang.String&nbsp;input)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#encode-byte:A-">encode</a></span>(byte[]&nbsp;input)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#encode-byte:A-">encode</a></span>(byte[]&nbsp;input)</code>
 <div class="block">Encodes the given bytes as a base58 string (no checksum is appended).</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Base58.html#encodeChecked-int-byte:A-">encodeChecked</a></span>(int&nbsp;version,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/core/Base58.html#encodeChecked-int-byte:A-">encodeChecked</a></span>(int&nbsp;version,
              byte[]&nbsp;payload)</code>
 <div class="block">Encodes the given version and bytes as a base58 string.</div>
 </td>
@@ -313,7 +313,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>decode</h4>
 <pre>public static&nbsp;byte[]&nbsp;decode(java.lang.String&nbsp;input)
-                     throws <a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></pre>
+                     throws <a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></pre>
 <div class="block">Decodes the given base58 string into the original data bytes.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -321,7 +321,7 @@ extends java.lang.Object</pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the decoded data bytes</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></code> - if the given string is not a valid base58 string</dd>
+<dd><code><a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></code> - if the given string is not a valid base58 string</dd>
 </dl>
 </li>
 </ul>
@@ -332,10 +332,10 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>decodeToBigInteger</h4>
 <pre>public static&nbsp;java.math.BigInteger&nbsp;decodeToBigInteger(java.lang.String&nbsp;input)
-                                               throws <a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></pre>
+                                               throws <a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -346,7 +346,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>decodeChecked</h4>
 <pre>public static&nbsp;byte[]&nbsp;decodeChecked(java.lang.String&nbsp;input)
-                            throws <a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></pre>
+                            throws <a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></pre>
 <div class="block">Decodes the given base58 string into the original data bytes, using the checksum in the
  last 4 bytes of the decoded data to verify that the rest are correct. The checksum is
  removed from the returned data.</div>
@@ -354,7 +354,7 @@ extends java.lang.Object</pre>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>input</code> - the base58-encoded string to decode (which should include the checksum)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></code> - if the input is not base 58 or the checksum does not validate.</dd>
+<dd><code><a href="../../../org/sumcoinj/core/AddressFormatException.html" title="class in org.sumcoinj.core">AddressFormatException</a></code> - if the input is not base 58 or the checksum does not validate.</dd>
 </dl>
 </li>
 </ul>
@@ -385,11 +385,11 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/core/AlertMessage.html" title="class in org.bitcoinj.core"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/core/Bech32.html" title="class in org.bitcoinj.core"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/core/AlertMessage.html" title="class in org.sumcoinj.core"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/core/Bech32.html" title="class in org.sumcoinj.core"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/core/Base58.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/core/Base58.html" target="_top">Frames</a></li>
 <li><a href="Base58.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

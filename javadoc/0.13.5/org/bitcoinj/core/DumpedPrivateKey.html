@@ -120,7 +120,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">DumpedPrivateKey</span>
 extends <a href="../../../org/bitcoinj/core/VersionedChecksummedBytes.html" title="class in org.bitcoinj.core">VersionedChecksummedBytes</a></pre>
-<div class="block">Parses and generates private keys in the form used by the Bitcoin "dumpprivkey" command. This is the private key
+<div class="block">Parses and generates private keys in the form used by the Sumcoin "dumpprivkey" command. This is the private key
  bytes with a header byte and 4 checksum bytes at the end. If there are 33 private key bytes instead of 32, then
  the last byte is a discriminator value for the compressed pubkey.</div>
 <dl>
@@ -162,7 +162,7 @@ extends <a href="../../../org/bitcoinj/core/VersionedChecksummedBytes.html" titl
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/DumpedPrivateKey.html#DumpedPrivateKey-org.bitcoinj.core.NetworkParameters-java.lang.String-">DumpedPrivateKey</a></span>(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encoded)</code>
-<div class="block">Parses the given private key as created by the "dumpprivkey" Bitcoin C++ RPC.</div>
+<div class="block">Parses the given private key as created by the "dumpprivkey" Sumcoin C++ RPC.</div>
 </td>
 </tr>
 </table>
@@ -232,7 +232,7 @@ extends <a href="../../../org/bitcoinj/core/VersionedChecksummedBytes.html" titl
 <pre>public&nbsp;DumpedPrivateKey(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
                         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encoded)
                  throws <a href="../../../org/bitcoinj/core/AddressFormatException.html" title="class in org.bitcoinj.core">AddressFormatException</a></pre>
-<div class="block">Parses the given private key as created by the "dumpprivkey" Bitcoin C++ RPC.</div>
+<div class="block">Parses the given private key as created by the "dumpprivkey" Sumcoin C++ RPC.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - The expected network parameters of the key. If you don't care, provide null.</dd>

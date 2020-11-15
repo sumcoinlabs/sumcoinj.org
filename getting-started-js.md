@@ -16,19 +16,19 @@ title: "Getting started in Javascript"
 
 Java 8 ships with a Javascript engine called Nashorn that has performance approaching that of V8 (it's not quite as good, but good enough). It's easy to use Java code using this engine, and Javascript programs can be run from the command line or using an interactive interpreter. There are also projects that provide a node.js compatible API, but this tutorial will not explore those.
 
-To get started, grab version 8 of the JDK and make sure you can run the "jjs" tool. Next, download [the bundled bitcoinj JAR from Maven Central](http://search.maven.org/remotecontent?filepath=org/bitcoinj/bitcoinj-core/0.14.7/bitcoinj-core-0.14.7-bundled.jar) and put it into your working directory. That's all we need to start using bitcoinj from Javascript.
+To get started, grab version 8 of the JDK and make sure you can run the "jjs" tool. Next, download [the bundled sumcoinj JAR from Maven Central](http://search.maven.org/remotecontent?filepath=org/sumcoinj/sumcoinj-core/0.14.7/sumcoinj-core-0.14.7-bundled.jar) and put it into your working directory. That's all we need to start using sumcoinj from Javascript.
 
-Now let's take a look at [the demo.js file from the examples](https://github.com/bitcoinj/bitcoinj/blob/master/examples/src/main/javascript/demo.js) in the source tree. The demo program does a few basic things like creating a key and printing its address, and then brings up the network and prints some info about the peers it got connected to.
+Now let's take a look at [the demo.js file from the examples](https://sumcoinlabs/sumcoinj/blob/master/examples/src/main/javascript/demo.js) in the source tree. The demo program does a few basic things like creating a key and printing its address, and then brings up the network and prints some info about the peers it got connected to.
 
 ## Running the demo
 
-To run a program that uses bitcoinj in Javascript one can simply execute:
+To run a program that uses sumcoinj in Javascript one can simply execute:
 
 ```
-jjs -cp bitcoinj-0.14.7-bundled.jar demo.js
+jjs -cp sumcoinj-0.14.7-bundled.jar demo.js
 ```
 
-This runs the program in Nashorn. Note that Nashorn supports some extra stuff that isn't present in web-style Javascript, like the ability to import code from Java libraries. The "cp" command line argument sets the class path: it's a list of JARs (java libraries). In this case we're just telling it to load the bundled version of bitcoinj, which includes the library and all its dependencies together.
+This runs the program in Nashorn. Note that Nashorn supports some extra stuff that isn't present in web-style Javascript, like the ability to import code from Java libraries. The "cp" command line argument sets the class path: it's a list of JARs (java libraries). In this case we're just telling it to load the bundled version of sumcoinj, which includes the library and all its dependencies together.
 
 You'll get a warning from SLF4J about not having any logging backend. That's OK. We can look at how to set up logging later. For now let's just examine the code.
 
@@ -36,7 +36,7 @@ You'll get a warning from SLF4J about not having any logging backend. That's OK.
 
 {% highlight js %}
 // Import some stuff.
-var bcj = org.bitcoinj;
+var bcj = org.sumcoinj;
 var ECKey = bcj.core.ECKey;
 
 // We'll use the testnet for now.
@@ -51,7 +51,7 @@ print(key.creationTimeSeconds);
 key.creationTimeSeconds = 0;
 {% endhighlight %}
 
-The first part of this file is very straightforward. Nashorn reflects Java libraries into the Javascript namespace automatically, but we alias org.bitcoinj to just bcj here to make the code less verbose. We can also alias individual classes and so on. Then we fetch the "network parameters", this controls whether we are working with the main Bitcoin network or the test network (or regtest mode on a local node). The parameters object is passed to many APIs in bitcoinj.
+The first part of this file is very straightforward. Nashorn reflects Java libraries into the Javascript namespace automatically, but we alias org.sumcoinj to just bcj here to make the code less verbose. We can also alias individual classes and so on. Then we fetch the "network parameters", this controls whether we are working with the main Sumcoin network or the test network (or regtest mode on a local node). The parameters object is passed to many APIs in sumcoinj.
 
 Next up, we create a key, and show how to print its address.
 
@@ -101,7 +101,7 @@ for (var i = 0; i < connectedPeers.length; i++) {
 }
 {% endhighlight %}
 
-The "subVer" field of a Peer is the bitcoin equivalent of an HTTP user agent string. The "bestHeight" field is the self-reported (unauthenticated) chain height that the peer claims to be on.
+The "subVer" field of a Peer is the sumcoin equivalent of an HTTP user agent string. The "bestHeight" field is the self-reported (unauthenticated) chain height that the peer claims to be on.
 
 You can of course, also use the more modern JS style foreach that uses a closure, which is naturally less efficient:
 
@@ -117,7 +117,7 @@ connectedPeers.forEach(function(peer) {
 });
 {% endhighlight %}
 
-Here we can see that we're blocking again and measuring the ping time to the remote peer. Note that this is not an ICMP (internet level) ping, but rather a Bitcoin protocol specific ping message.
+Here we can see that we're blocking again and measuring the ping time to the remote peer. Note that this is not an ICMP (internet level) ping, but rather a Sumcoin protocol specific ping message.
 
 Let's do that again, but this time in an async way:
 
@@ -138,15 +138,15 @@ futures.forEach(function(f) { f.get() });
 print("Done!");
 {% endhighlight %}
 
-Here we start a ping for each peer and add the returned future to the array. Then we add a closure that will run when the future completes. Note the final (required) parameter: it says which thread to run the closure in. Here we are specifying the 'user thread', which is a dedicated thread created by bitcoinj that hangs around waiting to run event handlers. By making things run in the user thread, you can be sure your own event handlers won't end up running in parallel to each other (although they can still run in parallel to the main thread!). Once the future listener runs, we can get the result as normal safe in the knowledge that it won't block.
+Here we start a ping for each peer and add the returned future to the array. Then we add a closure that will run when the future completes. Note the final (required) parameter: it says which thread to run the closure in. Here we are specifying the 'user thread', which is a dedicated thread created by sumcoinj that hangs around waiting to run event handlers. By making things run in the user thread, you can be sure your own event handlers won't end up running in parallel to each other (although they can still run in parallel to the main thread!). Once the future listener runs, we can get the result as normal safe in the knowledge that it won't block.
 
 The last forEach loop simply keeps the program running until all the pings have responses.
 
 ## Where to go from here?
 
-There are many other features in bitcoinj that this tutorial does not cover. You can read the other articles to learn more about full verification, wallet encryption and so on, and of course the JavaDocs detail the full API. 
+There are many other features in sumcoinj that this tutorial does not cover. You can read the other articles to learn more about full verification, wallet encryption and so on, and of course the JavaDocs detail the full API.
 
-There is another Javascript example that implements the same forwarding program as the Java tutorial, [forwarding.js](https://github.com/bitcoinj/bitcoinj/blob/master/examples/src/main/javascript/forwarding.js). You can read that program to learn how to use the wallet and how to receive and send money.
+There is another Javascript example that implements the same forwarding program as the Java tutorial, [forwarding.js](https://sumcoinlabs/sumcoinj/blob/master/examples/src/main/javascript/forwarding.js). You can read that program to learn how to use the wallet and how to receive and send money.
 
 Have fun and if you have any questions, find us on Matrix or the mailing list.
 

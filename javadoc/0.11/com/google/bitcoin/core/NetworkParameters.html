@@ -108,7 +108,7 @@
 <pre>public abstract class <span class="strong">NetworkParameters</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block"><p>NetworkParameters contains the data needed for working with an instantiation of a Bitcoin chain.</p>
+<div class="block"><p>NetworkParameters contains the data needed for working with an instantiation of a Sumcoin chain.</p>
 
  <p>This is an abstract class, concrete instantiations can be found in the params package. There are four:
  one for the main network (<a href="../../../../com/google/bitcoin/params/MainNetParams.html" title="class in com.google.bitcoin.params"><code>MainNetParams</code></a>), one for the public test network, and two others that are
@@ -986,7 +986,7 @@ public static&nbsp;<a href="../../../../com/google/bitcoin/core/NetworkParameter
 <pre>public&nbsp;<a href="../../../../com/google/bitcoin/core/Block.html" title="class in com.google.bitcoin.core">Block</a>&nbsp;getGenesisBlock()</pre>
 <div class="block"><p>Genesis block for this chain.</p>
 
- <p>The first block in every chain is a well known constant shared between all Bitcoin implemenetations. For a
+ <p>The first block in every chain is a well known constant shared between all Sumcoin implemenetations. For a
  block to be valid, it must be eventually possible to work backwards to the genesis block by following the
  prevBlockHash pointers in the block headers.</p>
 
@@ -1056,7 +1056,7 @@ public static&nbsp;<a href="../../../../com/google/bitcoin/core/NetworkParameter
 <pre>public&nbsp;int&nbsp;getTargetTimespan()</pre>
 <div class="block">How much time in seconds is supposed to pass between "interval" blocks. If the actual elapsed time is
  significantly different from this value, the network difficulty formula will produce a different value. Both
- test and production Bitcoin networks use 2 weeks (1209600 seconds).</div>
+ test and production Sumcoin networks use 2 weeks (1209600 seconds).</div>
 </li>
 </ul>
 <a name="getAcceptableAddressCodes()">
@@ -1088,7 +1088,7 @@ public static&nbsp;<a href="../../../../com/google/bitcoin/core/NetworkParameter
 <li class="blockList">
 <h4>getInterval</h4>
 <pre>public&nbsp;int&nbsp;getInterval()</pre>
-<div class="block">How many blocks pass between difficulty adjustment periods. Bitcoin standardises this to be 2015.</div>
+<div class="block">How many blocks pass between difficulty adjustment periods. Sumcoin standardises this to be 2015.</div>
 </li>
 </ul>
 <a name="getProofOfWorkLimit()">

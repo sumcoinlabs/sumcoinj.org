@@ -122,13 +122,13 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">Transaction</span>
 extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in org.bitcoinj.core">ChildMessage</a></pre>
 <div class="block"><p>A transaction represents the movement of coins from some addresses to some other addresses. It can also represent
- the minting of new coins. A Transaction object corresponds to the equivalent in the Bitcoin C++ implementation.</p>
+ the minting of new coins. A Transaction object corresponds to the equivalent in the Sumcoin C++ implementation.</p>
 
- <p>Transactions are the fundamental atoms of Bitcoin and have many powerful features. Read
+ <p>Transactions are the fundamental atoms of Sumcoin and have many powerful features. Read
  <a href="https://bitcoinj.github.io/working-with-transactions">"Working with transactions"</a> in the
  documentation to learn more about how to use this class.</p>
 
- <p>All Bitcoin transactions are at risk of being reversed, though the risk is much less than with traditional payment
+ <p>All Sumcoin transactions are at risk of being reversed, though the risk is much less than with traditional payment
  systems. Transactions have <i>confidence levels</i>, which help you decide whether to trust a transaction or not.
  Whether to trust a transaction is something that needs to be decided on a case by case basis - a rule that makes
  sense for selling MP3s might not make sense for selling cars, or accepting payments from a family member. If you
@@ -213,7 +213,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Transaction.html#REFERENCE_DEFAULT_MIN_TX_FEE">REFERENCE_DEFAULT_MIN_TX_FEE</a></span></code>
-<div class="block">If feePerKb is lower than this, Bitcoin Core will treat it as if there were no fee.</div>
+<div class="block">If feePerKb is lower than this, Sumcoin Core will treat it as if there were no fee.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -798,7 +798,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -887,7 +887,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <li class="blockList">
 <h4>REFERENCE_DEFAULT_MIN_TX_FEE</h4>
 <pre>public static final&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a> REFERENCE_DEFAULT_MIN_TX_FEE</pre>
-<div class="block">If feePerKb is lower than this, Bitcoin Core will treat it as if there were no fee.</div>
+<div class="block">If feePerKb is lower than this, Sumcoin Core will treat it as if there were no fee.</div>
 </li>
 </ul>
 <a name="DEFAULT_TX_FEE">
@@ -995,7 +995,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - NetworkParameters object.</dd>
-<dd><code>payload</code> - Bitcoin protocol formatted byte array containing message content.</dd>
+<dd><code>payload</code> - Sumcoin protocol formatted byte array containing message content.</dd>
 <dd><code>offset</code> - The location of the first payload byte within the array.</dd>
 <dd><code>parseRetain</code> - Whether to retain the backing byte array for quick reserialization.
  If true and the backing byte array is invalidated due to modification of a field then
@@ -1317,7 +1317,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html
 <h4>isCoinBase</h4>
 <pre>public&nbsp;boolean&nbsp;isCoinBase()</pre>
 <div class="block">A coinbase transaction is one that creates a new coin. They are the first transaction in each block and their
- value is determined by a formula that all implementations of Bitcoin share. In 2011 the value of a coinbase
+ value is determined by a formula that all implementations of Sumcoin share. In 2011 the value of a coinbase
  transaction is 50 coins, but in future it will be less. A coinbase transaction is defined not only by its
  position in a block but by the data in the inputs.</div>
 </li>
@@ -1431,7 +1431,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html
                                        boolean&nbsp;anyoneCanPay)
                                 throws <a href="../../../org/bitcoinj/core/ScriptException.html" title="class in org.bitcoinj.core">ScriptException</a></pre>
 <div class="block">Adds a new and fully signed input for the given parameters. Note that this method is <b>not</b> thread safe
- and requires external synchronization. Please refer to general documentation on Bitcoin scripting and contracts
+ and requires external synchronization. Please refer to general documentation on Sumcoin scripting and contracts
  to understand the values of sigHash and anyoneCanPay: otherwise you can use the other form of this method
  that sets them to typical defaults.</div>
 <dl>
@@ -1685,7 +1685,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html
 <pre>public&nbsp;long&nbsp;getLockTime()</pre>
 <div class="block">Transactions can have an associated lock time, specified either as a block height or in seconds since the
  UNIX epoch. A transaction is not allowed to be confirmed by miners until the lock time is reached, and
- since Bitcoin 0.8+ a transaction that did not end its lock period (non final) is considered to be non
+ since Sumcoin 0.8+ a transaction that did not end its lock period (non final) is considered to be non
  standard and won't be relayed or included in the memory pool either.</div>
 </li>
 </ul>
@@ -1698,7 +1698,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html
 <pre>public&nbsp;void&nbsp;setLockTime(long&nbsp;lockTime)</pre>
 <div class="block">Transactions can have an associated lock time, specified either as a block height or in seconds since the
  UNIX epoch. A transaction is not allowed to be confirmed by miners until the lock time is reached, and
- since Bitcoin 0.8+ a transaction that did not end its lock period (non final) is considered to be non
+ since Sumcoin 0.8+ a transaction that did not end its lock period (non final) is considered to be non
  standard and won't be relayed or included in the memory pool either.</div>
 </li>
 </ul>
@@ -1950,7 +1950,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html
  This is useful in certain types of <a href="http://en.bitcoin.it/wiki/Contracts">contracts</a>, such as
  micropayment channels.</p>
 
- <p>Note that currently the replacement feature is disabled in Bitcoin Core and will need to be
+ <p>Note that currently the replacement feature is disabled in Sumcoin Core and will need to be
  re-activated before this functionality is useful.</p></div>
 </li>
 </ul>

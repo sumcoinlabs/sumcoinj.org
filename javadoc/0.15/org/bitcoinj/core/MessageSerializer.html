@@ -108,7 +108,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/bitcoinj/core/BitcoinSerializer.html" title="class in org.bitcoinj.core">BitcoinSerializer</a></dd>
+<dd><a href="../../../org/bitcoinj/core/SumcoinSerializer.html" title="class in org.bitcoinj.core">SumcoinSerializer</a></dd>
 </dl>
 <hr>
 <br>
@@ -158,7 +158,7 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>abstract <a href="../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a></code></td>
+<td class="colFirst"><code>abstract <a href="../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/MessageSerializer.html#deserializeHeader-java.nio.ByteBuffer-">deserializeHeader</a></span>(java.nio.ByteBuffer&nbsp;in)</code>
 <div class="block">Deserializes only the header in case packet meta data is needed before decoding
  the payload.</div>
@@ -166,7 +166,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>abstract <a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/MessageSerializer.html#deserializePayload-org.bitcoinj.core.BitcoinSerializer.BitcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/MessageSerializer.html#deserializePayload-org.bitcoinj.core.SumcoinSerializer.SumcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                   java.nio.ByteBuffer&nbsp;in)</code>
 <div class="block">Deserialize payload only.</div>
 </td>
@@ -338,7 +338,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>deserializeHeader</h4>
-<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;deserializeHeader(java.nio.ByteBuffer&nbsp;in)
+<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;deserializeHeader(java.nio.ByteBuffer&nbsp;in)
                                                                  throws <a href="../../../org/bitcoinj/core/ProtocolException.html" title="class in org.bitcoinj.core">ProtocolException</a>,
                                                                         java.io.IOException,
                                                                         java.lang.UnsupportedOperationException</pre>
@@ -352,19 +352,19 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="deserializePayload-org.bitcoinj.core.BitcoinSerializer.BitcoinPacketHeader-java.nio.ByteBuffer-">
+<a name="deserializePayload-org.bitcoinj.core.SumcoinSerializer.SumcoinPacketHeader-java.nio.ByteBuffer-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deserializePayload</h4>
-<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;deserializePayload(<a href="../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;deserializePayload(<a href="../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                                            java.nio.ByteBuffer&nbsp;in)
                                     throws <a href="../../../org/bitcoinj/core/ProtocolException.html" title="class in org.bitcoinj.core">ProtocolException</a>,
                                            java.nio.BufferUnderflowException,
                                            java.lang.UnsupportedOperationException</pre>
 <div class="block">Deserialize payload only.  You must provide a header, typically obtained by calling
- <a href="../../../org/bitcoinj/core/BitcoinSerializer.html#deserializeHeader-java.nio.ByteBuffer-"><code>BitcoinSerializer.deserializeHeader(java.nio.ByteBuffer)</code></a>.</div>
+ <a href="../../../org/bitcoinj/core/SumcoinSerializer.html#deserializeHeader-java.nio.ByteBuffer-"><code>SumcoinSerializer.deserializeHeader(java.nio.ByteBuffer)</code></a>.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/bitcoinj/core/ProtocolException.html" title="class in org.bitcoinj.core">ProtocolException</a></code></dd>

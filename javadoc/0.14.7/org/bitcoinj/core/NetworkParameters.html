@@ -109,13 +109,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../org/bitcoinj/params/AbstractBitcoinNetParams.html" title="class in org.bitcoinj.params">AbstractBitcoinNetParams</a></dd>
+<dd><a href="../../../org/bitcoinj/params/AbstractSumcoinNetParams.html" title="class in org.bitcoinj.params">AbstractSumcoinNetParams</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">NetworkParameters</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block"><p>NetworkParameters contains the data needed for working with an instantiation of a Bitcoin chain.</p>
+<div class="block"><p>NetworkParameters contains the data needed for working with an instantiation of a Sumcoin chain.</p>
 
  <p>This is an abstract class, concrete instantiations can be found in the params package. There are four:
  one for the main network (<a href="../../../org/bitcoinj/params/MainNetParams.html" title="class in org.bitcoinj.params"><code>MainNetParams</code></a>), one for the public test network, and two others that are
@@ -569,7 +569,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/NetworkParameters.html#getProtocolVersionNum-org.bitcoinj.core.NetworkParameters.ProtocolVersion-">getProtocolVersionNum</a></span>(<a href="../../../org/bitcoinj/core/NetworkParameters.ProtocolVersion.html" title="enum in org.bitcoinj.core">NetworkParameters.ProtocolVersion</a>&nbsp;version)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
-<td class="colFirst"><code>abstract <a href="../../../org/bitcoinj/core/BitcoinSerializer.html" title="class in org.bitcoinj.core">BitcoinSerializer</a></code></td>
+<td class="colFirst"><code>abstract <a href="../../../org/bitcoinj/core/SumcoinSerializer.html" title="class in org.bitcoinj.core">SumcoinSerializer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/NetworkParameters.html#getSerializer-boolean-">getSerializer</a></span>(boolean&nbsp;parseRetain)</code>
 <div class="block">Construct and return a custom serializer.</div>
 </td>
@@ -1367,7 +1367,7 @@ public static&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" t
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/Block.html" title="class in org.bitcoinj.core">Block</a>&nbsp;getGenesisBlock()</pre>
 <div class="block"><p>Genesis block for this chain.</p>
 
- <p>The first block in every chain is a well known constant shared between all Bitcoin implemenetations. For a
+ <p>The first block in every chain is a well known constant shared between all Sumcoin implemenetations. For a
  block to be valid, it must be eventually possible to work backwards to the genesis block by following the
  prevBlockHash pointers in the block headers.</p>
 
@@ -1437,7 +1437,7 @@ public static&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" t
 <pre>public&nbsp;int&nbsp;getTargetTimespan()</pre>
 <div class="block">How much time in seconds is supposed to pass between "interval" blocks. If the actual elapsed time is
  significantly different from this value, the network difficulty formula will produce a different value. Both
- test and main Bitcoin networks use 2 weeks (1209600 seconds).</div>
+ test and main Sumcoin networks use 2 weeks (1209600 seconds).</div>
 </li>
 </ul>
 <a name="getAcceptableAddressCodes--">
@@ -1469,7 +1469,7 @@ public static&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" t
 <li class="blockList">
 <h4>getInterval</h4>
 <pre>public&nbsp;int&nbsp;getInterval()</pre>
-<div class="block">How many blocks pass between difficulty adjustment periods. Bitcoin standardises this to be 2015.</div>
+<div class="block">How many blocks pass between difficulty adjustment periods. Sumcoin standardises this to be 2015.</div>
 </li>
 </ul>
 <a name="getMaxTarget--">
@@ -1564,7 +1564,7 @@ public static&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" t
 <h4>hasMaxMoney</h4>
 <pre>public abstract&nbsp;boolean&nbsp;hasMaxMoney()</pre>
 <div class="block">Returns whether this network has a maximum number of coins (finite supply) or
- not. Always returns true for Bitcoin, but exists to be overriden for other
+ not. Always returns true for Sumcoin, but exists to be overriden for other
  networks.</div>
 </li>
 </ul>
@@ -1587,7 +1587,7 @@ public static&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" t
 <ul class="blockList">
 <li class="blockList">
 <h4>getSerializer</h4>
-<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/BitcoinSerializer.html" title="class in org.bitcoinj.core">BitcoinSerializer</a>&nbsp;getSerializer(boolean&nbsp;parseRetain)</pre>
+<pre>public abstract&nbsp;<a href="../../../org/bitcoinj/core/SumcoinSerializer.html" title="class in org.bitcoinj.core">SumcoinSerializer</a>&nbsp;getSerializer(boolean&nbsp;parseRetain)</pre>
 <div class="block">Construct and return a custom serializer.</div>
 </li>
 </ul>

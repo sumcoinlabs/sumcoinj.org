@@ -133,7 +133,7 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/Block.html" title="class in org.bitcoinj.core">Block</a></span></code>
-<div class="block">A block is a group of transactions, and is one of the fundamental data structures of the Bitcoin system.</div>
+<div class="block">A block is a group of transactions, and is one of the fundamental data structures of the Sumcoin system.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -190,7 +190,7 @@
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/GetUTXOsMessage.html" title="class in org.bitcoinj.core">GetUTXOsMessage</a></span></code>
-<div class="block">This command is supported only by <a href="http://github.com/bitcoinxt/bitcoinxt">Bitcoin XT</a> nodes, which
+<div class="block">This command is supported only by <a href="http://github.com/bitcoinxt/bitcoinxt">Sumcoin XT</a> nodes, which
  advertise themselves using the second service bit flag.</div>
 </td>
 </tr>
@@ -235,7 +235,7 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/PeerAddress.html" title="class in org.bitcoinj.core">PeerAddress</a></span></code>
 <div class="block">A PeerAddress holds an IP address and port number representing the network location of
- a peer in the Bitcoin P2P network.</div>
+ a peer in the Sumcoin P2P network.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -325,13 +325,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#deserialize-java.nio.ByteBuffer-">deserialize</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#deserialize-java.nio.ByteBuffer-">deserialize</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Reads a message from the given ByteBuffer and returns it.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#deserializePayload-org.bitcoinj.core.BitcoinSerializer.BitcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#deserializePayload-org.bitcoinj.core.SumcoinSerializer.SumcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                   <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserialize payload only.</div>
 </td>
@@ -408,7 +408,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#serialize-org.bitcoinj.core.Message-java.io.OutputStream-">serialize</a></span>(<a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;message,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#serialize-org.bitcoinj.core.Message-java.io.OutputStream-">serialize</a></span>(<a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;message,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
 <div class="block">Writes message to to the output stream.</div>
 </td>

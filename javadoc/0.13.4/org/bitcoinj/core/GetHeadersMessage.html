@@ -126,7 +126,7 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">GetHeadersMessage</span>
 extends <a href="../../../org/bitcoinj/core/GetBlocksMessage.html" title="class in org.bitcoinj.core">GetBlocksMessage</a></pre>
 <div class="block">The "getheaders" command is structurally identical to "getblocks", but has different meaning. On receiving this
- message a Bitcoin node returns matching blocks up to the limit, but without the bodies. It is useful as an
+ message a Sumcoin node returns matching blocks up to the limit, but without the bodies. It is useful as an
  optimization: when your wallet does not contain any keys created before a particular time, you don't have to download
  the bodies for those blocks because you know there are no relevant transactions.</div>
 <dl>
@@ -238,7 +238,7 @@ extends <a href="../../../org/bitcoinj/core/GetBlocksMessage.html" title="class 
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">

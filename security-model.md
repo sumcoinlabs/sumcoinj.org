@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Understanding the bitcoinj security model"
+title: "Understanding the sumcoinj security model"
 ---
 
 <div markdown="1" id="toc" class="toc"><div markdown="1">
@@ -12,19 +12,19 @@ title: "Understanding the bitcoinj security model"
 
 <div markdown="1" class="toccontent">
 
-# Understanding the bitcoinj security model
+# Understanding the sumcoinj security model
 
-_Learn about the difference between full vs simplified modes, and how a bitcoinj app can be attacked._
+_Learn about the difference between full vs simplified modes, and how a sumcoinj app can be attacked._
 
 ## Introduction
 
-bitcoinj supports two different modes for your application: full verification and simplified verification. The mode you choose controls the resource usage of your application and how much trust you need in other participants in the Bitcoin system. As a developer, it's important you understand the differences and in which situations your app can or cannot be trusted.
+sumcoinj supports two different modes for your application: full verification and simplified verification. The mode you choose controls the resource usage of your application and how much trust you need in other participants in the Sumcoin system. As a developer, it's important you understand the differences and in which situations your app can or cannot be trusted.
 
-Firstly, let's recap how a regular full node works. The fundamental problem Bitcoin solves is achieving consensus on who owns what. Every node maintains a database of unspent outputs, and transactions that attempt to spend outputs that don't exist or were already spent are ignored. Blocks are solved by miners and broadcast to ensure everyone agrees on the ordering of transactions, and so nodes that don't see a broadcast transaction for some reason (eg, they were offline at the time) can catch up.
+Firstly, let's recap how a regular full node works. The fundamental problem Sumcoin solves is achieving consensus on who owns what. Every node maintains a database of unspent outputs, and transactions that attempt to spend outputs that don't exist or were already spent are ignored. Blocks are solved by miners and broadcast to ensure everyone agrees on the ordering of transactions, and so nodes that don't see a broadcast transaction for some reason (eg, they were offline at the time) can catch up.
 
 The act of checking, storing and updating the database for every single transaction is quite intensive. Catching up to the current state of the database from scratch is also very slow. For this reason, not every computer can run a full node.
 
-bitcoinj implements both full mode and _simplified payment verification_. In this mode, only transactions that are relevant to the wallet are stored. Every other transaction is thrown away or simply never downloaded to start with. The block chain is still used and broadcast transactions are still received, but those transactions are not and cannot be checked to ensure they are valid. This mode of operation is fast and lightweight enough to be run on a smartphone, but can be defeated in various ways.
+sumcoinj implements both full mode and _simplified payment verification_. In this mode, only transactions that are relevant to the wallet are stored. Every other transaction is thrown away or simply never downloaded to start with. The block chain is still used and broadcast transactions are still received, but those transactions are not and cannot be checked to ensure they are valid. This mode of operation is fast and lightweight enough to be run on a smartphone, but can be defeated in various ways.
 
 ## Pending transactions
 
@@ -32,12 +32,12 @@ When a transaction is broadcast over the network we say it is _pending_ inclusio
 
 Your app will receive pending transactions, add them to the wallet, and run event listeners. However, in SPV mode the only reason you have to believe the transaction is valid is the fact that the nodes you connected to relayed the transaction. If an attacker could ensure you were connected to his nodes, this would mean they could feed you a transaction that was completely invalid (spent non-existing money), and it would still be accepted as if it was valid. 
 
-Because bitcoinj apps do not accept incoming connections, the peers you talk to are always randomly selected at startup (based on DNS seeds today). So it can be difficult for an attacker to control your connectivity like that. For this reason, the number of peers that have announced a transaction is exposed in the `TransactionConfidence` object and you can listen on that to learn when new peers have announced a transaction. Once most of your peers have announced, you can be fairly sure that the transaction is propagating its way across the network and is very likely to be valid. 
+Because sumcoinj apps do not accept incoming connections, the peers you talk to are always randomly selected at startup (based on DNS seeds today). So it can be difficult for an attacker to control your connectivity like that. For this reason, the number of peers that have announced a transaction is exposed in the `TransactionConfidence` object and you can listen on that to learn when new peers have announced a transaction. Once most of your peers have announced, you can be fairly sure that the transaction is propagating its way across the network and is very likely to be valid. 
 
 There are three potential attacks on this method of gaining confidence.
 
-1. Hijacking your entire internet connection and connecting you to a fake network. This is called a _Sybil attack_ and is easiest to pull off when you are using an untrusted internet connection (e.g. coffee shop wifi), or using Tor. Bitcoinj does not support Tor today, so realistically, this concern is biggest when using a mobile wallet.
-2. Exploiting race conditions by broadcasting two invalid transactions simultaneously. This technique was explored in [a paper by researchers at ETH Zurich](http://eprint.iacr.org/2012/248.pdf). For the technique to work best the attacker must be able to connect to the victim. bitcoinj apps do not accept incoming connections (there is no reason for them to do so), so this is difficult to pull off. In future the Bitcoin network will likely relay double spend alerts, but it's not implemented today.
+1. Hijacking your entire internet connection and connecting you to a fake network. This is called a _Sybil attack_ and is easiest to pull off when you are using an untrusted internet connection (e.g. coffee shop wifi), or using Tor. Sumcoinj does not support Tor today, so realistically, this concern is biggest when using a mobile wallet.
+2. Exploiting race conditions by broadcasting two invalid transactions simultaneously. This technique was explored in [a paper by researchers at ETH Zurich](http://eprint.iacr.org/2012/248.pdf). For the technique to work best the attacker must be able to connect to the victim. sumcoinj apps do not accept incoming connections (there is no reason for them to do so), so this is difficult to pull off. In future the Sumcoin network will likely relay double spend alerts, but it's not implemented today.
 3. Mining a block that contains a double spend, then buying a service, then broadcasting the block. This is known as a _Finney attack_ and is discussed below.
 
 ## Finney attacks
@@ -64,7 +64,7 @@ Many types of application don't deliver a service immediately, and there it's OK
 
 **Recall that confidence can go down as well as up**. A "reorganize" is what happens when the chain you are on is replaced by a new best chain that ran parallel to yours. A re-organize can change your wallet arbitrarily, eg, by making transactions that were previously confirmed unconfirmed or (in the case of a double spend) dead. Re-orgs that make a transaction go dead are discussed in Satoshis paper, and are slightly different to the Finney attack case where there is no re-org, just a new best block. It's very rare for re-orgs to change the confidence of transactions that are buried deep in the chain.
 
-Just because a transaction appears in a block does not mean it is valid. Again, bitcoinj apps do not check transaction validity. Instead the assumption is that it's difficult to build a block chain containing an invalid block because you would have to be able to outrun the rest of the miners combined. There is one exploit against this assumption that is not yet fixed: **if an attacker can control your connections to the Bitcoin network, they can prevent you from seeing newly found legitimate blocks and mine their own invalid block containing a bad transaction**. This attack is detectable because unless the attacker can outrun the network (a 51% attack), the speed with which new blocks arrive will drop significantly. In future bitcoinj may offer a "red alert" mode in which things that seem odd are flagged, it would indicate to your app that it's time to stop trading.
+Just because a transaction appears in a block does not mean it is valid. Again, sumcoinj apps do not check transaction validity. Instead the assumption is that it's difficult to build a block chain containing an invalid block because you would have to be able to outrun the rest of the miners combined. There is one exploit against this assumption that is not yet fixed: **if an attacker can control your connections to the Sumcoin network, they can prevent you from seeing newly found legitimate blocks and mine their own invalid block containing a bad transaction**. This attack is detectable because unless the attacker can outrun the network (a 51% attack), the speed with which new blocks arrive will drop significantly. In future sumcoinj may offer a "red alert" mode in which things that seem odd are flagged, it would indicate to your app that it's time to stop trading.
 
 If you are delivering something of high value, how much confidence should you require? The traditional "rule of thumb" is six blocks, or an hour. An alternative way to look at this is to figure out how long you can realistically wait, then look at how much work is done on average in that timespan, and then require that much work done. This insulates you from varying interest in mining over time and ensures the cost of doing a double spend attack is the same.
 

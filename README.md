@@ -1,2 +1,2 @@
-bitcoinj.github.io
+sumcoinj.github.io
 ==================

@@ -15,4 +15,4 @@ com.google.bitcoin.wallet
 org.bitcoin
 org.bitcoin.paymentchannel
 org.bitcoin.protocols.payments
-org.bitcoinj.wallet
+org.sumcoinj.wallet

@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Working with bitcoinj"
+title: "Working with sumcoinj"
 ---
 
 <div markdown="1" id="toc" class="toc"><div markdown="1">
@@ -12,13 +12,13 @@ title: "Working with bitcoinj"
 
 <div markdown="1" class="toccontent">
 
-# Working with bitcoinj
+# Working with sumcoinj
 
 _Common patterns and things you should know._
 
 ## Introduction
 
-bitcoinj uses a few of the following design patterns throughout the code. You can look at the example code in org/bitcoinj/examples and tools to see how to use the library.
+sumcoinj uses a few of the following design patterns throughout the code. You can look at the example code in org/sumcoinj/examples and tools to see how to use the library.
 
 ### Futures
 
@@ -45,16 +45,16 @@ Threading.USER_THREAD = new Executor() {
 };
 {% endhighlight %}
 
-The above code snippet run at the start of your app will ensure that bitcoinj callbacks end up running on the GUI thread, meaning they can update widgets and change the GUI in any way they like - simple!
+The above code snippet run at the start of your app will ensure that sumcoinj callbacks end up running on the GUI thread, meaning they can update widgets and change the GUI in any way they like - simple!
 
 ### Serialization
 
-There are three different binary serialization formats used in bitcoinj.
+There are three different binary serialization formats used in sumcoinj.
 
 Some classes are serializable using Java serialization. However, as is typical for serializable objects in Java, there is no attempt to preserve long term data compatibility. Thus we don't recommend you use this unless you're shuttling data around temporarily, like on a network.
 
 The Wallet class can be serialized to the [Google protocol buffer format](http://code.google.com/p/protobuf/). This is an extensible, tagged binary format that is easy to work with from many languages. The format is described by a simple language that is compiled into classes for your preferred environment. Protocol buffers are also used for the micropayment protocol.
 
-Finally the proprietary Bitcoin serialization format is supported for anything that subclasses the Message class.
+Finally the proprietary Sumcoin serialization format is supported for anything that subclasses the Message class.
 
 </div>

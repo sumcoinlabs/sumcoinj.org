@@ -1,46 +1,46 @@
 ---
 layout: base
-title: "bitcoinj"
+title: "sumcoinj"
 ---
 
-<h1 id="introduction">What is bitcoinj?</h1>
+<h1 id="introduction">What is sumcoinj?</h1>
 
 <div class="projectsbadge">
-  <a href="https://play.google.com/store/apps/details?id=de.schildbach.wallet"><img src="/img/clients/bitcoinwallet.png" alt="bitcoinwallet"></a>
+  <a href="https://play.google.com/store/apps/details?id=de.schildbach.wallet"><img src="/img/clients/sumcoinwallet.png" alt="sumcoinwallet"></a>
   <a href="https://bisq.network/" alt="bisq"><img src="/img/clients/bisq.png"></a>
   <a href="https://www.rsk.co"><img src="/img/clients/rsk.png" alt="rsk"></a>
-  <br><span>Some projects using bitcoinj<br></span>
+  <br><span>Some projects using sumcoinj<br></span>
 </div>
 
-<p>bitcoinj is a library for working with the Bitcoin protocol. It can maintain a wallet, send/receive transactions without needing a local copy of Bitcoin Core and has many other advanced features. It's implemented in Java but can be used from any JVM compatible language: examples in Python and JavaScript are included.</p>
+<p>sumcoinj is a library for working with the Sumcoin protocol. It can maintain a wallet, send/receive transactions without needing a local copy of Sumcoin Core and has many other advanced features. It's implemented in Java but can be used from any JVM compatible language: examples in Python and JavaScript are included.</p>
 
-<p>It comes with full documentation and many large, well known Bitcoin apps and services are built on it.</p>
+<p>It comes with full documentation and many large, well known Sumcoin apps and services are built on it.</p>
 
 <h2>Features</h2>
 
 <ul class="features">
-  <li>Highly optimised <b>lightweight simplified payment verification</b> (SPV) mode. In this mode, only a small part of the block chain is downloaded, making bitcoinj suitable for usage on constrained devices like smartphones or cheap virtual private servers.</li>
-  <li>Experimental <b>full verification mode</b>, which does the same verification work as Bitcoin Core. In this mode, the unspent transaction output set (UTXO set) is calculated and, thanks to a PostgreSQL store, can be indexed into a database allowing for fast lookup of balance by address.</li>
+  <li>Highly optimised <b>lightweight simplified payment verification</b> (SPV) mode. In this mode, only a small part of the block chain is downloaded, making sumcoinj suitable for usage on constrained devices like smartphones or cheap virtual private servers.</li>
+  <li>Experimental <b>full verification mode</b>, which does the same verification work as Sumcoin Core. In this mode, the unspent transaction output set (UTXO set) is calculated and, thanks to a PostgreSQL store, can be indexed into a database allowing for fast lookup of balance by address.</li>
   <li>A <b>wallet class</b> with encryption, fee calculation, multi-signing, deterministic key derivation, pluggable coin selection/coin control, extensions support and event listeners that let you stay up to date with changes in your balance.</li>
   <li>Support for <b>micropayment channels</b> that let you set up a multi-signature contract between client and server, and then negotiate on the channel, allowing fast micropayments that avoid miner fees.</li>
   <li>Provides both <b>async and thread-per-connection</b> for network IO, allowing you to choose between scalability and blocking-only features like SOCKS proxying.</li>
-  <li>Easily implement apps that use Bitcoin's <b>contracts features</b>.</li>
+  <li>Easily implement apps that use Sumcoin's <b>contracts features</b>.</li>
   <li>A simple <b>GUI wallet app</b> that you can use as the basis for your own apps. <a href="/simple-gui-wallet">Watch or read a tutorial</a> on how to customise it and build a native installer that does not require Java.</li>
   <li><b>Command line tools</b> for working with wallet and chain files, the payment protocol, the network and more.</li>
-  <li>Strong <a href="/bitcoin-standards"><b>Bitcoin standards</b></a> support.</li>
+  <li>Strong <a href="/sumcoin-standards"><b>Sumcoin standards</b></a> support.</li>
   <li>A friendly and helpful <a href="/#community"><b>community</b></a>!</li>
 </ul>
 
 <h1 id="getting-started">Getting started</h1>
 
-<p>You can <a href="https://search.maven.org/remotecontent?filepath=org/bitcoinj/bitcoinj-core/0.15.7/bitcoinj-core-0.15.7.jar" class="downloadlink">download the library as a JAR</a>, or <a href="/using-maven">use Maven</a>/<a href="/using-gradle">use Gradle</a>, or <a href="https://github.com/bitcoinj/bitcoinj">get the code from github</a>. Then read:</p>
+<p>You can <a href="https://search.maven.org/remotecontent?filepath=org/sumcoinj/sumcoinj-core/0.15.7/sumcoinj-core-0.15.7.jar" class="downloadlink">download the library as a JAR</a>, or <a href="/using-maven">use Maven</a>/<a href="/using-gradle">use Gradle</a>, or <a href="https://sumcoinlabs/sumcoinj">get the code from github</a>. Then read:</p>
 
 <ul>
-  <li><a href="https://bitcoin.org/bitcoin.pdf">Satoshi's white paper</a> - the bitcoinj documentation assumes basic familiarity with how Bitcoin works, the structure of transactions and the block chain.</li>
+  <li><a href="https://bitcoin.org/bitcoin.pdf">Satoshi's white paper</a> - the sumcoinj documentation assumes basic familiarity with how Sumcoin works, the structure of transactions and the block chain.</li>
   <li><b><a href="/getting-started">Getting started</a></b> - a step by step tutorial for Java and JavaScript devs on how to use the library.</li>
 </ul>
 
-<p><b>Important announcements</b>: If you use bitcoinj in an application please sign up for <a href="https://groups.google.com/forum/?fromgroups#!forum/bitcoinj-announce">the announcement list</a> so you know when new versions are available and if there are critical bugs found.</p>
+<p><b>Important announcements</b>: If you use sumcoinj in an application please sign up for <a href="https://groups.google.com/forum/?fromgroups#!forum/sumcoinj-announce">the announcement list</a> so you know when new versions are available and if there are critical bugs found.</p>
 
 <p><b>Be aware</b>: this library is Apache licensed. By using it, you agree with the terms of that license. In particular pay attention to section 7 and 8, which assert <b>there is NO WARRANTY that this library is safe to use or bug free, and in fact that by using this code you accept that none of the contributors shall be liable for any damages or monetary loss that results from your use of their code, even if due to bugs in that code</b>. In short, according to the license the library is distributed under, there are no situations in which you could sue any of the developers (it's as if you wrote the entire library yourself). If you can't handle that, don't use this library.</p>
 
@@ -53,11 +53,11 @@ title: "bitcoinj"
 <h2>Basics</h2>
 <ul>
   <li><a href="/limitations">Limitations and missing features</a></li>
-  <li><a href="/security-model">Understanding the bitcoinj security model</a></li>
-  <li><a href="/working-with-bitcoinj">Working with bitcoinj</a> - basic patterns and things you should know</li>
+  <li><a href="/security-model">Understanding the sumcoinj security model</a></li>
+  <li><a href="/working-with-sumcoinj">Working with sumcoinj</a> - basic patterns and things you should know</li>
   <li><a href="/how-things-fit-together">How the different components of your app fit together</a></li>
   <li><a href="/testing">How to test your software</a></li>
-</ul> 
+</ul>
 
 <h2>Core APIs in depth</h2>
 <ul>
@@ -80,13 +80,13 @@ title: "bitcoinj"
   <li><a href="/networking">How to use the network API</a></li>
 </ul>
 
-<h2>bitcoinj TV</h2>
+<h2>sumcoinj TV</h2>
 <ul>
   <li><a href="/simple-gui-wallet">Video tutorial: how to make a simple GUI wallet using the wallet template app</a></li>
   <li><a href="/document-timestamp-app">Video tutorial: how to build and bundle a document timestamping contracts app in under 30 minutes</a>
 </ul>
 
-<h2>Advanced features</h2>  
+<h2>Advanced features</h2>
 <ul>
   <li><a href="/contexts">API contexts</a></li>
   <li><a href="/full-verification">How to use the experimental fully verifying mode</a></li>
@@ -94,7 +94,7 @@ title: "bitcoinj"
   <li><a href="/payment-protocol">Working with the BIP70 payment protocol</a></li>
   <li><a href="/working-with-micropayments">Working with micropayment channels</a></li>
   <li><a href="/speeding-up-chain-sync">Information on block chain synchronisation optimisations</a></li>
-  <li><a href="/using-from-other-languages">Using bitcoinj from other languages like C++, JavaScript, Ruby, Python, etc</a></li>
+  <li><a href="/using-from-other-languages">Using sumcoinj from other languages like C++, JavaScript, Ruby, Python, etc</a></li>
   <li><a href="/coding-conventions">Coding conventions in the library itself</a></li>
 </ul>
 
@@ -103,8 +103,8 @@ title: "bitcoinj"
 <h1 id="community">Community</h1>
 
 <ul>
-  <li>View <a href="https://github.com/bitcoinj/bitcoinj">bitcoinj on Github</a> - make sure to <q>star</q> us!</li>
-  <li>Ask questions and discuss improvements on the <a href="https://groups.google.com/forum/#!forum/bitcoinj">mailing list</a></li>
-  <li>Search and report issues on the <a href="https://github.com/bitcoinj/bitcoinj/issues">Issues Data Base</a> (to ask for help please use the mailing list, not the Issues DB)</li>
-  <li>Join our <a href="https://matrix.org">Matrix</a> room: <a href="https://matrix.to/#/#bitcoinj:matrix.org">#bitcoinj:matrix.org</a>.</li>
+  <li>View <a href="https://sumcoinlabs/sumcoinj">sumcoinj on Github</a> - make sure to <q>star</q> us!</li>
+  <li>Ask questions and discuss improvements on the <a href="https://groups.google.com/forum/#!forum/sumcoinj">mailing list</a></li>
+  <li>Search and report issues on the <a href="https://sumcoinlabs/sumcoinj/issues">Issues Data Base</a> (to ask for help please use the mailing list, not the Issues DB)</li>
+  <li>Join our <a href="https://matrix.org">Matrix</a> room: <a href="https://matrix.to/#/#sumcoinj:matrix.org">#sumcoinj:matrix.org</a>.</li>
 </ul>

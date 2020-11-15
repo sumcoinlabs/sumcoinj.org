@@ -106,7 +106,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="../../../../com/google/bitcoin/core/BlockChainListener.html" title="interface in com.google.bitcoin.core">BlockChainListener</a>, <a href="../../../../com/google/bitcoin/core/PeerFilterProvider.html" title="interface in com.google.bitcoin.core">PeerFilterProvider</a></pre>
 <div class="block"><p>A Wallet stores keys and a record of transactions that send and receive value from those keys. Using these,
  it is able to create new transactions that spend the recorded transactions, and this is the fundamental operation
- of the Bitcoin protocol.</p>
+ of the Sumcoin protocol.</p>
 
  <p>To learn more about this class, read <b><a href="http://code.google.com/p/bitcoinj/wiki/WorkingWithTheWallet">
      working with the wallet.</a></b></p>
@@ -919,7 +919,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/Wallet.html#setTransactionBroadcaster(com.google.bitcoin.core.TransactionBroadcaster)">setTransactionBroadcaster</a></strong>(<a href="../../../../com/google/bitcoin/core/TransactionBroadcaster.html" title="interface in com.google.bitcoin.core">TransactionBroadcaster</a>&nbsp;broadcaster)</code>
 <div class="block">Specifies that the given <a href="../../../../com/google/bitcoin/core/TransactionBroadcaster.html" title="interface in com.google.bitcoin.core"><code>TransactionBroadcaster</code></a>, typically a <a href="../../../../com/google/bitcoin/core/PeerGroup.html" title="class in com.google.bitcoin.core"><code>PeerGroup</code></a>, should be used for
- sending transactions to the Bitcoin network by default.</div>
+ sending transactions to the Sumcoin network by default.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1633,7 +1633,7 @@ public&nbsp;<a href="../../../../com/google/bitcoin/core/Transaction.html" title
 
  <p>You MUST ensure that nanocoins is larger than <a href="../../../../com/google/bitcoin/core/Transaction.html#MIN_NONDUST_OUTPUT"><code>Transaction.MIN_NONDUST_OUTPUT</code></a> or the transaction will
  almost certainly be rejected by the network as dust.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>address</code> - The Bitcoin address to send the money to.</dd><dd><code>nanocoins</code> - How much currency to send, in nanocoins.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>address</code> - The Sumcoin address to send the money to.</dd><dd><code>nanocoins</code> - How much currency to send, in nanocoins.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>either the created Transaction or null if there are insufficient coins.
  coins as spent until commitTx is called on the result.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -2524,7 +2524,7 @@ public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.htm
 <pre>public&nbsp;void&nbsp;setTransactionBroadcaster(<a href="http://docs.oracle.com/javase/6/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                              <a href="../../../../com/google/bitcoin/core/TransactionBroadcaster.html" title="interface in com.google.bitcoin.core">TransactionBroadcaster</a>&nbsp;broadcaster)</pre>
 <div class="block"><p>Specifies that the given <a href="../../../../com/google/bitcoin/core/TransactionBroadcaster.html" title="interface in com.google.bitcoin.core"><code>TransactionBroadcaster</code></a>, typically a <a href="../../../../com/google/bitcoin/core/PeerGroup.html" title="class in com.google.bitcoin.core"><code>PeerGroup</code></a>, should be used for
- sending transactions to the Bitcoin network by default. Some sendCoins methods let you specify a broadcaster
+ sending transactions to the Sumcoin network by default. Some sendCoins methods let you specify a broadcaster
  explicitly, in that case, they don't use this broadcaster. If null is specified then the wallet won't attempt
  to broadcast transactions itself.</p>
 

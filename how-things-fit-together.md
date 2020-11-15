@@ -16,15 +16,15 @@ title: "How the different components of your app fit together"
 
 ## Introduction
 
-This article shows you how the different objects and interfaces in a typical bitcoinj based application interact. We will see how data arrives from the network, is converted into Java objects, and then how those objects travel around until they are eventually used to perform various actions or saved to disk.
+This article shows you how the different objects and interfaces in a typical sumcoinj based application interact. We will see how data arrives from the network, is converted into Java objects, and then how those objects travel around until they are eventually used to perform various actions or saved to disk.
 
 For the purposes of this article we will assume the application is a wallet.
 
 ## The network
 
-The life of a piece of Bitcoin data starts in two ways - when it is sent to us by another node in the peer-to-peer network, or when a transaction is created by ourselves.
+The life of a piece of Sumcoin data starts in two ways - when it is sent to us by another node in the peer-to-peer network, or when a transaction is created by ourselves.
 
-The lowest level of the [Networking](/networking) API is an object that implements `ClientConnectionManager`. This interface provides methods for opening new connections, and requesting that some (randomly chosen) connections be closed. To open a new connection, an object that implements the `StreamParser` interface must be provided along with the network address to connect to. The client connection manager will then set up a socket and manage reads/writes to it. There are no guarantees about threading here - the manager may run methods of the provided `StreamParser` on any number of threads or just one. There are two implementations provided: `BlockingClientManager` and `NioClientManager`. If you create a high level `PeerGroup` object then by default a `NioClientManager` will be created, though you can also provide your own via the constructors. The difference between them is that `NioClientManager` uses a single thread and async epoll/select based IO, and `BlockingClientManager` uses a thread per connection with standard Java blocking sockets. Why does bitcoinj support both approaches?
+The lowest level of the [Networking](/networking) API is an object that implements `ClientConnectionManager`. This interface provides methods for opening new connections, and requesting that some (randomly chosen) connections be closed. To open a new connection, an object that implements the `StreamParser` interface must be provided along with the network address to connect to. The client connection manager will then set up a socket and manage reads/writes to it. There are no guarantees about threading here - the manager may run methods of the provided `StreamParser` on any number of threads or just one. There are two implementations provided: `BlockingClientManager` and `NioClientManager`. If you create a high level `PeerGroup` object then by default a `NioClientManager` will be created, though you can also provide your own via the constructors. The difference between them is that `NioClientManager` uses a single thread and async epoll/select based IO, and `BlockingClientManager` uses a thread per connection with standard Java blocking sockets. Why does sumcoinj support both approaches?
 
 * Blocking IO is useful when you want features. Java can transparently support SSL and SOCKS proxying, but only when blocking sockets are used.
 * Async IO is useful when you want to handle thousands of connections simultaneously without the additional memory pressure of a thread per connection.
@@ -39,7 +39,7 @@ As noted above, the client manager classes require an implementation of the `Str
 
 When a client manager is given a new parser, it sets an internal object as the `MessageWriteTarget`. This interface just exposes a method for writing bytes, and closing the connection. Thus the parser object usually manages the lifecycle of a connection once started.
 
-The abstract `PeerSocketHandler` class implements `StreamParser` for the Bitcoin P2P networking protocol, by providing buffering, checksumming and parsing of the byte streams into `Message` objects. This is done using the `BitcoinSerializer` class, which knows how to read the type of the message and its checksum from the wire, then build the appropriate object to represent that kind of message. It has a static map of names to object types. Each object it can construct is a descendent of the `Message` class. Each message class is responsible for its own deserialization from raw byte form.
+The abstract `PeerSocketHandler` class implements `StreamParser` for the Sumcoin P2P networking protocol, by providing buffering, checksumming and parsing of the byte streams into `Message` objects. This is done using the `SumcoinSerializer` class, which knows how to read the type of the message and its checksum from the wire, then build the appropriate object to represent that kind of message. It has a static map of names to object types. Each object it can construct is a descendent of the `Message` class. Each message class is responsible for its own deserialization from raw byte form.
 
 Once a `Message` is fully constructed and finished deserializing itself, it's passed to an abstract method on `PeerSocketHandler`. Thus if you want to just get access to a stream of parsed messages, you should subclass at this point.
 
@@ -47,7 +47,7 @@ The serialization of messages is a custom binary format designed by Satoshi. It 
 
 ## Peer logic
 
-However, most likely your app does not want to handle a stream of raw Bitcoin protocol messages, but rather operate at a higher level. For this purpose, the `Peer` class subclasses `PeerSocketHandler`, tracks state related to the connection and processes incoming messages. It provides high level operations like downloading blocks, the entire chain, transactions, performing pings and so on.
+However, most likely your app does not want to handle a stream of raw Sumcoin protocol messages, but rather operate at a higher level. For this purpose, the `Peer` class subclasses `PeerSocketHandler`, tracks state related to the connection and processes incoming messages. It provides high level operations like downloading blocks, the entire chain, transactions, performing pings and so on.
 
 It also dispatches messages to various other objects to which it is connected, specifically:
 
@@ -66,7 +66,7 @@ On receiving a message, each `PeerEventListener` has a chance to read and interc
 
 ## The memory pool
 
-It can be convenient to know how many peers (and which ones) have announced a particular transaction. See the article on the bitcoinj [SecurityModel](/security-model) for information on why this may be interesting. To implement this, the `MemoryPool` class keeps track of transactions and transaction hashes that have been seen.
+It can be convenient to know how many peers (and which ones) have announced a particular transaction. See the article on the sumcoinj [SecurityModel](/security-model) for information on why this may be interesting. To implement this, the `MemoryPool` class keeps track of transactions and transaction hashes that have been seen.
 
 For example, if a peer sends us an "inv" stating it has the transaction with hash 87c79f8d77fe2078333c612e2bdf1735127c6c02 then the `Peer` will inform the `MemoryPool` of that, and it will record that this peer has seen that transaction. We may eventually download the given transaction to find out if it belongs to us, and at that point it's also given to the `MemoryPool` which keeps it around in case some part of the app is interested in it. As further invs come in, the transactions confidence object is updated.
 
@@ -96,11 +96,11 @@ For an SPV mode app, the block store is given all non-orphan blocks regardless o
 
 ### Data pruning
 
-For a fully validating node, the store is expected to do a lot more and must implement the `FullPrunedBlockStore` interface. Together the chain and store implement the _ultraprune_ algorithm, the same as Bitcoin 0.8+ does. However unlike Bitcoin 0.8 the store will actually permanently delete unneeded data after a while, so it cannot serve the chain to other nodes, but the utilized disk space is a lot lower.
+For a fully validating node, the store is expected to do a lot more and must implement the `FullPrunedBlockStore` interface. Together the chain and store implement the _ultraprune_ algorithm, the same as Sumcoin 0.8+ does. However unlike Sumcoin 0.8 the store will actually permanently delete unneeded data after a while, so it cannot serve the chain to other nodes, but the utilized disk space is a lot lower.
 
 A pruning node does not attempt to store the entire block chain. Instead it stores only the set of unspent transaction outputs (UTXO set). Once a transaction output is spent, its data is no longer needed and it can be deleted. Reorganize events complicate the picture somewhat because they can rewrite history, therefore pruning stores are expected to also keep around a number of "undo blocks" which allow a reversal of the changes to the UTXO set. The number of undo blocks stored is a tradeoff between disk space used and the largest reorganize that can be processed. If undo blocks are thrown away too aggressively, a large reorg might permanently kick the node off the chain forcing re-initialization from scratch, so it's best to be conservative.
 
-The `FullPrunedBlockStore` interface provides methods for adding, removing and testing the UTXO set. It also has methods for inserting blocks and undo blocks and beginning/ending database transactions (note: as distinct from Bitcoin transactions).
+The `FullPrunedBlockStore` interface provides methods for adding, removing and testing the UTXO set. It also has methods for inserting blocks and undo blocks and beginning/ending database transactions (note: as distinct from Sumcoin transactions).
 
 ## The wallet
 

@@ -210,7 +210,7 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/bitcoinj/crypto/TransactionSignature.html" title="class in org.bitcoinj.crypto">TransactionSignature</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromBitcoin-byte:A-boolean-boolean-">decodeFromBitcoin</a></span>(byte[]&nbsp;bytes,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromSumcoin-byte:A-boolean-boolean-">decodeFromSumcoin</a></span>(byte[]&nbsp;bytes,
                  boolean&nbsp;requireCanonicalEncoding,
                  boolean&nbsp;requireCanonicalSValue)</code>
 <div class="block">Returns a decoded signature.</div>
@@ -225,7 +225,7 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/TransactionSignature.html#encodeToBitcoin--">encodeToBitcoin</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/TransactionSignature.html#encodeToSumcoin--">encodeToSumcoin</a></span>()</code>
 <div class="block">What we get back from the signer are the two components of a signature, r and s.</div>
 </td>
 </tr>
@@ -233,7 +233,7 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/TransactionSignature.html#isEncodingCanonical-byte:A-">isEncodingCanonical</a></span>(byte[]&nbsp;signature)</code>
 <div class="block">Returns true if the given signature is has canonical encoding, and will thus be accepted as standard by
- Bitcoin Core.</div>
+ Sumcoin Core.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -284,7 +284,7 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 <pre>public final&nbsp;int sighashFlags</pre>
 <div class="block">A byte that controls which parts of a transaction are signed. This is exposed because signatures
  parsed off the wire may have sighash flags that aren't "normal" serializations of the enum values.
- Because Bitcoin Core works via bit testing, we must not lose the exact value when round-tripping
+ Because Sumcoin Core works via bit testing, we must not lose the exact value when round-tripping
  otherwise we'll fail to verify signature hashes.</div>
 </li>
 </ul>
@@ -371,10 +371,10 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 <h4>isEncodingCanonical</h4>
 <pre>public static&nbsp;boolean&nbsp;isEncodingCanonical(byte[]&nbsp;signature)</pre>
 <div class="block">Returns true if the given signature is has canonical encoding, and will thus be accepted as standard by
- Bitcoin Core. DER and the SIGHASH encoding allow for quite some flexibility in how the same structures
+ Sumcoin Core. DER and the SIGHASH encoding allow for quite some flexibility in how the same structures
  are encoded, and this can open up novel attacks in which a man in the middle takes a transaction and then
  changes its signature such that the transaction hash is different but it's still valid. This can confuse wallets
- and generally violates people's mental model of how Bitcoin should work, thus, non-canonical signatures are now
+ and generally violates people's mental model of how Sumcoin should work, thus, non-canonical signatures are now
  not relayed by default.</div>
 </li>
 </ul>
@@ -396,15 +396,15 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/Transaction.SigHash.html" title="enum in org.bitcoinj.core">Transaction.SigHash</a>&nbsp;sigHashMode()</pre>
 </li>
 </ul>
-<a name="encodeToBitcoin--">
+<a name="encodeToSumcoin--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>encodeToBitcoin</h4>
-<pre>public&nbsp;byte[]&nbsp;encodeToBitcoin()</pre>
+<h4>encodeToSumcoin</h4>
+<pre>public&nbsp;byte[]&nbsp;encodeToSumcoin()</pre>
 <div class="block">What we get back from the signer are the two components of a signature, r and s. To get a flat byte stream
- of the type used by Bitcoin we have to encode them using DER encoding, which is just a way to pack the two
+ of the type used by Sumcoin we have to encode them using DER encoding, which is just a way to pack the two
  components into a structure, and then we append a byte to the end for the sighash flags.</div>
 </li>
 </ul>
@@ -418,7 +418,7 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html#toCanonicalised--">ECKey.ECDSASignature</a></code></span></div>
 <div class="block">Will automatically adjust the S component to be less than or equal to half the curve order, if necessary.
  This is required because for every signature (r,s) the signature (r, -s (mod N)) is a valid signature of
- the same message. However, we dislike the ability to modify the bits of a Bitcoin transaction after it's
+ the same message. However, we dislike the ability to modify the bits of a Sumcoin transaction after it's
  been signed, as that violates various assumed invariants. Thus in future only one of those forms will be
  considered legal and the other will be banned.</div>
 <dl>
@@ -427,13 +427,13 @@ extends <a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="cl
 </dl>
 </li>
 </ul>
-<a name="decodeFromBitcoin-byte:A-boolean-boolean-">
+<a name="decodeFromSumcoin-byte:A-boolean-boolean-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>decodeFromBitcoin</h4>
-<pre>public static&nbsp;<a href="../../../org/bitcoinj/crypto/TransactionSignature.html" title="class in org.bitcoinj.crypto">TransactionSignature</a>&nbsp;decodeFromBitcoin(byte[]&nbsp;bytes,
+<h4>decodeFromSumcoin</h4>
+<pre>public static&nbsp;<a href="../../../org/bitcoinj/crypto/TransactionSignature.html" title="class in org.bitcoinj.crypto">TransactionSignature</a>&nbsp;decodeFromSumcoin(byte[]&nbsp;bytes,
                                                      boolean&nbsp;requireCanonicalEncoding,
                                                      boolean&nbsp;requireCanonicalSValue)
                                               throws <a href="../../../org/bitcoinj/core/SignatureDecodeException.html" title="class in org.bitcoinj.core">SignatureDecodeException</a>,

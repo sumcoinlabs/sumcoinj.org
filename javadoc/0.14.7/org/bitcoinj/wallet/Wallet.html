@@ -123,7 +123,7 @@ extends <a href="../../../org/bitcoinj/utils/BaseTaggableObject.html" title="cla
 implements <a href="../../../org/bitcoinj/core/listeners/NewBestBlockListener.html" title="interface in org.bitcoinj.core.listeners">NewBestBlockListener</a>, <a href="../../../org/bitcoinj/core/listeners/TransactionReceivedInBlockListener.html" title="interface in org.bitcoinj.core.listeners">TransactionReceivedInBlockListener</a>, <a href="../../../org/bitcoinj/core/PeerFilterProvider.html" title="interface in org.bitcoinj.core">PeerFilterProvider</a>, <a href="../../../org/bitcoinj/wallet/KeyBag.html" title="interface in org.bitcoinj.wallet">KeyBag</a>, <a href="../../../org/bitcoinj/core/TransactionBag.html" title="interface in org.bitcoinj.core">TransactionBag</a>, <a href="../../../org/bitcoinj/core/listeners/ReorganizeListener.html" title="interface in org.bitcoinj.core.listeners">ReorganizeListener</a></pre>
 <div class="block"><p>A Wallet stores keys and a record of transactions that send and receive value from those keys. Using these,
  it is able to create new transactions that spend the recorded transactions, and this is the fundamental operation
- of the Bitcoin protocol.</p>
+ of the Sumcoin protocol.</p>
 
  <p>To learn more about this class, read <b><a href="https://bitcoinj.github.io/working-with-the-wallet">
      working with the wallet.</a></b></p>
@@ -184,7 +184,7 @@ implements <a href="../../../org/bitcoinj/core/listeners/NewBestBlockListener.ht
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></span></code>
-<div class="block">Thrown if the resultant transaction is too big for Bitcoin to process.</div>
+<div class="block">Thrown if the resultant transaction is too big for Sumcoin to process.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1593,7 +1593,7 @@ implements <a href="../../../org/bitcoinj/core/listeners/NewBestBlockListener.ht
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/wallet/Wallet.html#setTransactionBroadcaster-org.bitcoinj.core.TransactionBroadcaster-">setTransactionBroadcaster</a></span>(<a href="../../../org/bitcoinj/core/TransactionBroadcaster.html" title="interface in org.bitcoinj.core">TransactionBroadcaster</a>&nbsp;broadcaster)</code>
 <div class="block">Specifies that the given <a href="../../../org/bitcoinj/core/TransactionBroadcaster.html" title="interface in org.bitcoinj.core"><code>TransactionBroadcaster</code></a>, typically a <a href="../../../org/bitcoinj/core/PeerGroup.html" title="class in org.bitcoinj.core"><code>PeerGroup</code></a>, should be used for
- sending transactions to the Bitcoin network by default.</div>
+ sending transactions to the Sumcoin network by default.</div>
 </td>
 </tr>
 <tr id="i199" class="rowColor">
@@ -4036,7 +4036,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
  will almost certainly be rejected by the network as dust.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>address</code> - The Bitcoin address to send the money to.</dd>
+<dd><code>address</code> - The Sumcoin address to send the money to.</dd>
 <dd><code>value</code> - How much currency to send.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>either the created Transaction or null if there are insufficient coins.</dd>
@@ -4044,7 +4044,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="../../../org/bitcoinj/core/InsufficientMoneyException.html" title="class in org.bitcoinj.core">InsufficientMoneyException</a></code> - if the request could not be completed due to not enough balance.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4069,7 +4069,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if you try and complete the same SendRequest twice</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4109,7 +4109,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="../../../org/bitcoinj/core/InsufficientMoneyException.html" title="class in org.bitcoinj.core">InsufficientMoneyException</a></code> - if the request could not be completed due to not enough balance.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4143,7 +4143,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if you try and complete the same SendRequest twice</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4169,7 +4169,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if you try and complete the same SendRequest twice</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4195,7 +4195,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if you try and complete the same SendRequest twice</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4218,7 +4218,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.b
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if you try and complete the same SendRequest twice</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.DustySendRequested.html" title="class in org.bitcoinj.wallet">Wallet.DustySendRequested</a></code> - if the resultant transaction would violate the dust rules.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.CouldNotAdjustDownwards.html" title="class in org.bitcoinj.wallet">Wallet.CouldNotAdjustDownwards</a></code> - if emptying the wallet was requested and the output can't be shrunk for fees without violating a protocol rule.</dd>
-<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Bitcoin to process.</dd>
+<dd><code><a href="../../../org/bitcoinj/wallet/Wallet.ExceededMaxTransactionSize.html" title="class in org.bitcoinj.wallet">Wallet.ExceededMaxTransactionSize</a></code> - if the resultant transaction is too big for Sumcoin to process.</dd>
 <dd><code><a href="../../../org/bitcoinj/wallet/Wallet.MultipleOpReturnRequested.html" title="class in org.bitcoinj.wallet">Wallet.MultipleOpReturnRequested</a></code> - if there is more than one OP_RETURN output for the resultant transaction.</dd>
 </dl>
 </li>
@@ -4628,7 +4628,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/UTXOProvider.html" title="interf
 <pre>public&nbsp;void&nbsp;setTransactionBroadcaster(<a href="http://docs.oracle.com/javase/6/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                                       <a href="../../../org/bitcoinj/core/TransactionBroadcaster.html" title="interface in org.bitcoinj.core">TransactionBroadcaster</a>&nbsp;broadcaster)</pre>
 <div class="block"><p>Specifies that the given <a href="../../../org/bitcoinj/core/TransactionBroadcaster.html" title="interface in org.bitcoinj.core"><code>TransactionBroadcaster</code></a>, typically a <a href="../../../org/bitcoinj/core/PeerGroup.html" title="class in org.bitcoinj.core"><code>PeerGroup</code></a>, should be used for
- sending transactions to the Bitcoin network by default. Some sendCoins methods let you specify a broadcaster
+ sending transactions to the Sumcoin network by default. Some sendCoins methods let you specify a broadcaster
  explicitly, in that case, they don't use this broadcaster. If null is specified then the wallet won't attempt
  to broadcast transactions itself.</p>
 

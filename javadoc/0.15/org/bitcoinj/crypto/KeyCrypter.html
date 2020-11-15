@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/crypto/HDUtils.html" title="class in org.bitcoinj.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/crypto/HDUtils.html" title="class in org.sumcoinj.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/crypto/KeyCrypter.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/crypto/KeyCrypter.html" target="_top">Frames</a></li>
 <li><a href="KeyCrypter.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.crypto</div>
+<div class="subTitle">org.sumcoinj.crypto</div>
 <h2 title="Interface KeyCrypter" class="title">Interface KeyCrypter</h2>
 </div>
 <div class="contentContainer">
@@ -104,7 +104,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../org/bitcoinj/crypto/KeyCrypterScrypt.html" title="class in org.bitcoinj.crypto">KeyCrypterScrypt</a></dd>
+<dd><a href="../../../org/sumcoinj/crypto/KeyCrypterScrypt.html" title="class in org.sumcoinj.crypto">KeyCrypterScrypt</a></dd>
 </dl>
 <hr>
 <br>
@@ -141,27 +141,27 @@ extends java.io.Serializable</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/KeyCrypter.html#decrypt-org.bitcoinj.crypto.EncryptedData-org.bouncycastle.crypto.params.KeyParameter-">decrypt</a></span>(<a href="../../../org/bitcoinj/crypto/EncryptedData.html" title="class in org.bitcoinj.crypto">EncryptedData</a>&nbsp;encryptedBytesToDecode,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/crypto/KeyCrypter.html#decrypt-org.sumcoinj.crypto.EncryptedData-org.bouncycastle.crypto.params.KeyParameter-">decrypt</a></span>(<a href="../../../org/sumcoinj/crypto/EncryptedData.html" title="class in org.sumcoinj.crypto">EncryptedData</a>&nbsp;encryptedBytesToDecode,
        org.bouncycastle.crypto.params.KeyParameter&nbsp;aesKey)</code>
 <div class="block">Decrypt the provided encrypted bytes, converting them into unencrypted bytes.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>org.bouncycastle.crypto.params.KeyParameter</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/KeyCrypter.html#deriveKey-java.lang.CharSequence-">deriveKey</a></span>(java.lang.CharSequence&nbsp;password)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/crypto/KeyCrypter.html#deriveKey-java.lang.CharSequence-">deriveKey</a></span>(java.lang.CharSequence&nbsp;password)</code>
 <div class="block">Create a KeyParameter (which typically contains an AES key)</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/crypto/EncryptedData.html" title="class in org.bitcoinj.crypto">EncryptedData</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/KeyCrypter.html#encrypt-byte:A-org.bouncycastle.crypto.params.KeyParameter-">encrypt</a></span>(byte[]&nbsp;plainBytes,
+<td class="colFirst"><code><a href="../../../org/sumcoinj/crypto/EncryptedData.html" title="class in org.sumcoinj.crypto">EncryptedData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/crypto/KeyCrypter.html#encrypt-byte:A-org.bouncycastle.crypto.params.KeyParameter-">encrypt</a></span>(byte[]&nbsp;plainBytes,
        org.bouncycastle.crypto.params.KeyParameter&nbsp;aesKey)</code>
 <div class="block">Encrypt the supplied bytes, converting them into ciphertext.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/wallet/Protos.Wallet.EncryptionType.html" title="enum in org.bitcoinj.wallet">Protos.Wallet.EncryptionType</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/crypto/KeyCrypter.html#getUnderstoodEncryptionType--">getUnderstoodEncryptionType</a></span>()</code>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/wallet/Protos.Wallet.EncryptionType.html" title="enum in org.sumcoinj.wallet">Protos.Wallet.EncryptionType</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/crypto/KeyCrypter.html#getUnderstoodEncryptionType--">getUnderstoodEncryptionType</a></span>()</code>
 <div class="block">Return the EncryptionType enum value which denotes the type of encryption/ decryption that this KeyCrypter
  can understand.</div>
 </td>
@@ -187,7 +187,7 @@ extends java.io.Serializable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUnderstoodEncryptionType</h4>
-<pre><a href="../../../org/bitcoinj/wallet/Protos.Wallet.EncryptionType.html" title="enum in org.bitcoinj.wallet">Protos.Wallet.EncryptionType</a>&nbsp;getUnderstoodEncryptionType()</pre>
+<pre><a href="../../../org/sumcoinj/wallet/Protos.Wallet.EncryptionType.html" title="enum in org.sumcoinj.wallet">Protos.Wallet.EncryptionType</a>&nbsp;getUnderstoodEncryptionType()</pre>
 <div class="block">Return the EncryptionType enum value which denotes the type of encryption/ decryption that this KeyCrypter
  can understand.</div>
 </li>
@@ -199,7 +199,7 @@ extends java.io.Serializable</pre>
 <li class="blockList">
 <h4>deriveKey</h4>
 <pre>org.bouncycastle.crypto.params.KeyParameter&nbsp;deriveKey(java.lang.CharSequence&nbsp;password)
-                                               throws <a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></pre>
+                                               throws <a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></pre>
 <div class="block">Create a KeyParameter (which typically contains an AES key)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -207,23 +207,23 @@ extends java.io.Serializable</pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>KeyParameter The KeyParameter which typically contains the AES key to use for encrypting and decrypting</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="decrypt-org.bitcoinj.crypto.EncryptedData-org.bouncycastle.crypto.params.KeyParameter-">
+<a name="decrypt-org.sumcoinj.crypto.EncryptedData-org.bouncycastle.crypto.params.KeyParameter-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>decrypt</h4>
-<pre>byte[]&nbsp;decrypt(<a href="../../../org/bitcoinj/crypto/EncryptedData.html" title="class in org.bitcoinj.crypto">EncryptedData</a>&nbsp;encryptedBytesToDecode,
+<pre>byte[]&nbsp;decrypt(<a href="../../../org/sumcoinj/crypto/EncryptedData.html" title="class in org.sumcoinj.crypto">EncryptedData</a>&nbsp;encryptedBytesToDecode,
                org.bouncycastle.crypto.params.KeyParameter&nbsp;aesKey)
-        throws <a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></pre>
+        throws <a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></pre>
 <div class="block">Decrypt the provided encrypted bytes, converting them into unencrypted bytes.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></code> - if decryption was unsuccessful.</dd>
+<dd><code><a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></code> - if decryption was unsuccessful.</dd>
 </dl>
 </li>
 </ul>
@@ -233,15 +233,15 @@ extends java.io.Serializable</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>encrypt</h4>
-<pre><a href="../../../org/bitcoinj/crypto/EncryptedData.html" title="class in org.bitcoinj.crypto">EncryptedData</a>&nbsp;encrypt(byte[]&nbsp;plainBytes,
+<pre><a href="../../../org/sumcoinj/crypto/EncryptedData.html" title="class in org.sumcoinj.crypto">EncryptedData</a>&nbsp;encrypt(byte[]&nbsp;plainBytes,
                       org.bouncycastle.crypto.params.KeyParameter&nbsp;aesKey)
-               throws <a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></pre>
+               throws <a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></pre>
 <div class="block">Encrypt the supplied bytes, converting them into ciphertext.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>encryptedPrivateKey An encryptedPrivateKey containing the encrypted bytes and an initialisation vector.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto">KeyCrypterException</a></code> - if encryption was unsuccessful</dd>
+<dd><code><a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto">KeyCrypterException</a></code> - if encryption was unsuccessful</dd>
 </dl>
 </li>
 </ul>
@@ -272,11 +272,11 @@ extends java.io.Serializable</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/crypto/HDUtils.html" title="class in org.bitcoinj.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/crypto/KeyCrypterException.html" title="class in org.bitcoinj.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/crypto/HDUtils.html" title="class in org.sumcoinj.crypto"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/crypto/KeyCrypterException.html" title="class in org.sumcoinj.crypto"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/crypto/KeyCrypter.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/crypto/KeyCrypter.html" target="_top">Frames</a></li>
 <li><a href="KeyCrypter.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

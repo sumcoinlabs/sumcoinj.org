@@ -49,10 +49,10 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.bitcoinj.protocols.payments"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.sumcoinj.protocols.payments"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/protocols/payments/PaymentProtocol.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/protocols/payments/PaymentProtocol.html" target="_top">Frames</a></li>
 <li><a href="PaymentProtocol.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.protocols.payments</div>
+<div class="subTitle">org.sumcoinj.protocols.payments</div>
 <h2 title="Class PaymentProtocol" class="title">Class PaymentProtocol</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.protocols.payments.PaymentProtocol</li>
+<li>org.sumcoinj.protocols.payments.PaymentProtocol</li>
 </ul>
 </li>
 </ul>
@@ -112,10 +112,10 @@ var activeTableTab = "activeTableTab";
 extends java.lang.Object</pre>
 <div class="block"><p>Utility methods and constants for working with <a href="https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki">
  BIP 70 aka the payment protocol</a>. These are low level wrappers around the protocol buffers. If you're implementing
- a wallet app, look at <a href="../../../../org/bitcoinj/protocols/payments/PaymentSession.html" title="class in org.bitcoinj.protocols.payments"><code>PaymentSession</code></a> for a higher level API that should simplify working with the protocol.</p>
+ a wallet app, look at <a href="../../../../org/sumcoinj/protocols/payments/PaymentSession.html" title="class in org.sumcoinj.protocols.payments"><code>PaymentSession</code></a> for a higher level API that should simplify working with the protocol.</p>
 
  <p>BIP 70 defines a binary, protobuf based protocol that runs directly between sender and receiver of funds. Payment
- protocol data does not flow over the Bitcoin P2P network or enter the block chain. It's instead for data that is only
+ protocol data does not flow over the Sumcoin P2P network or enter the block chain. It's instead for data that is only
  of interest to the parties involved but isn't otherwise needed for consensus.</p></div>
 </li>
 </ul>
@@ -137,19 +137,19 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.Ack</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.Ack</a></span></code>
 <div class="block">Message returned by the merchant in response to a Payment message.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Output.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.Output</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Output.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.Output</a></span></code>
 <div class="block">Value object to hold amount/script pairs.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a></span></code>
 <div class="block">Information about the X.509 signature's issuer and subject.</div>
 </td>
 </tr>
@@ -170,15 +170,15 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENT">MIMETYPE_PAYMENT</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENT">MIMETYPE_PAYMENT</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENTACK">MIMETYPE_PAYMENTACK</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENTACK">MIMETYPE_PAYMENTACK</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENTREQUEST">MIMETYPE_PAYMENTREQUEST</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#MIMETYPE_PAYMENTREQUEST">MIMETYPE_PAYMENTREQUEST</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -195,7 +195,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#PaymentProtocol--">PaymentProtocol</a></span>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#PaymentProtocol--">PaymentProtocol</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -214,16 +214,16 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentACK.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentACK</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentAck-org.bitcoin.protocols.payments.Protos.Payment-java.lang.String-">createPaymentAck</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;paymentMessage,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentAck-org.bitcoin.protocols.payments.Protos.Payment-java.lang.String-">createPaymentAck</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;paymentMessage,
                 java.lang.String&nbsp;memo)</code>
 <div class="block">Create a payment ack.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-byte:A-">createPaymentMessage</a></span>(java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;&nbsp;transactions,
-                    <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;refundAmount,
-                    <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;refundAddress,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-byte:A-">createPaymentMessage</a></span>(java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;&nbsp;transactions,
+                    <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;refundAmount,
+                    <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;refundAddress,
                     java.lang.String&nbsp;memo,
                     byte[]&nbsp;merchantData)</code>
 <div class="block">Create a payment message with one standard pay to address output.</div>
@@ -231,7 +231,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-java.util.List-java.lang.String-byte:A-">createPaymentMessage</a></span>(java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;&nbsp;transactions,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-java.util.List-java.lang.String-byte:A-">createPaymentMessage</a></span>(java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;&nbsp;transactions,
                     java.util.List&lt;<a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a>&gt;&nbsp;refundOutputs,
                     java.lang.String&nbsp;memo,
                     byte[]&nbsp;merchantData)</code>
@@ -240,9 +240,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.bitcoinj.core.NetworkParameters-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-java.lang.String-byte:A-">createPaymentRequest</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
-                    <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;amount,
-                    <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;toAddress,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.sumcoinj.core.NetworkParameters-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-java.lang.String-byte:A-">createPaymentRequest</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
+                    <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;amount,
+                    <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;toAddress,
                     java.lang.String&nbsp;memo,
                     java.lang.String&nbsp;paymentUrl,
                     byte[]&nbsp;merchantData)</code>
@@ -251,7 +251,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.bitcoinj.core.NetworkParameters-java.util.List-java.lang.String-java.lang.String-byte:A-">createPaymentRequest</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.sumcoinj.core.NetworkParameters-java.util.List-java.lang.String-java.lang.String-byte:A-">createPaymentRequest</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                     java.util.List&lt;<a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a>&gt;&nbsp;outputs,
                     java.lang.String&nbsp;memo,
                     java.lang.String&nbsp;paymentUrl,
@@ -261,42 +261,42 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPayToAddressOutput-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-">createPayToAddressOutput</a></span>(<a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;amount,
-                        <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;address)</code>
-<div class="block">Create a standard pay to address output for usage in <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.bitcoinj.core.NetworkParameters-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-java.lang.String-byte:A-"><code>createPaymentRequest(org.bitcoinj.core.NetworkParameters, org.bitcoinj.core.Coin, org.bitcoinj.core.Address, java.lang.String, java.lang.String, byte[])</code></a> and
- <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-byte:A-"><code>createPaymentMessage(java.util.List&lt;org.bitcoinj.core.Transaction&gt;, org.bitcoinj.core.Coin, org.bitcoinj.core.Address, java.lang.String, byte[])</code></a>.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPayToAddressOutput-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-">createPayToAddressOutput</a></span>(<a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;amount,
+                        <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;address)</code>
+<div class="block">Create a standard pay to address output for usage in <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.sumcoinj.core.NetworkParameters-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-java.lang.String-byte:A-"><code>createPaymentRequest(org.sumcoinj.core.NetworkParameters, org.sumcoinj.core.Coin, org.sumcoinj.core.Address, java.lang.String, java.lang.String, byte[])</code></a> and
+ <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-byte:A-"><code>createPaymentMessage(java.util.List&lt;org.sumcoinj.core.Transaction&gt;, org.sumcoinj.core.Coin, org.sumcoinj.core.Address, java.lang.String, byte[])</code></a>.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.Ack</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#parsePaymentAck-org.bitcoin.protocols.payments.Protos.PaymentACK-">parsePaymentAck</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentACK.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentACK</a>&nbsp;paymentAck)</code>
+<td class="colFirst"><code>static <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.Ack</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#parsePaymentAck-org.bitcoin.protocols.payments.Protos.PaymentACK-">parsePaymentAck</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentACK.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentACK</a>&nbsp;paymentAck)</code>
 <div class="block">Parse payment ack into an object.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../org/bitcoinj/protocols/payments/PaymentSession.html" title="class in org.bitcoinj.protocols.payments">PaymentSession</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#parsePaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest-">parsePaymentRequest</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest)</code>
+<td class="colFirst"><code>static <a href="../../../../org/sumcoinj/protocols/payments/PaymentSession.html" title="class in org.sumcoinj.protocols.payments">PaymentSession</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#parsePaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest-">parsePaymentRequest</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest)</code>
 <div class="block">Parse a payment request.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>static java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#parseTransactionsFromPaymentMessage-org.bitcoinj.core.NetworkParameters-org.bitcoin.protocols.payments.Protos.Payment-">parseTransactionsFromPaymentMessage</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colFirst"><code>static java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#parseTransactionsFromPaymentMessage-org.sumcoinj.core.NetworkParameters-org.bitcoin.protocols.payments.Protos.Payment-">parseTransactionsFromPaymentMessage</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                                    <a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;paymentMessage)</code>
 <div class="block">Parse transactions from payment message.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-">signPaymentRequest</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;paymentRequest,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-">signPaymentRequest</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;paymentRequest,
                   java.security.cert.X509Certificate[]&nbsp;certificateChain,
                   java.security.PrivateKey&nbsp;privateKey)</code>
 <div class="block">Sign the provided payment request.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#verifyPaymentRequestPki-org.bitcoin.protocols.payments.Protos.PaymentRequest-java.security.KeyStore-">verifyPaymentRequestPki</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest,
+<td class="colFirst"><code>static <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#verifyPaymentRequestPki-org.bitcoin.protocols.payments.Protos.PaymentRequest-java.security.KeyStore-">verifyPaymentRequestPki</a></span>(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest,
                        java.security.KeyStore&nbsp;trustStore)</code>
 <div class="block">Uses the provided PKI method to find the corresponding public key and verify the provided signature.</div>
 </td>
@@ -332,7 +332,7 @@ extends java.lang.Object</pre>
 <pre>public static final&nbsp;java.lang.String MIMETYPE_PAYMENTREQUEST</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#org.bitcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENTREQUEST">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#org.sumcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENTREQUEST">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -345,7 +345,7 @@ extends java.lang.Object</pre>
 <pre>public static final&nbsp;java.lang.String MIMETYPE_PAYMENT</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#org.bitcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENT">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#org.sumcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -358,7 +358,7 @@ extends java.lang.Object</pre>
 <pre>public static final&nbsp;java.lang.String MIMETYPE_PAYMENTACK</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#org.bitcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENTACK">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#org.sumcoinj.protocols.payments.PaymentProtocol.MIMETYPE_PAYMENTACK">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -387,16 +387,16 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="createPaymentRequest-org.bitcoinj.core.NetworkParameters-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-java.lang.String-byte:A-">
+<a name="createPaymentRequest-org.sumcoinj.core.NetworkParameters-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-java.lang.String-byte:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createPaymentRequest</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;createPaymentRequest(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;createPaymentRequest(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                                                                  @Nullable
-                                                                 <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;amount,
-                                                                 <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;toAddress,
+                                                                 <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;amount,
+                                                                 <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;toAddress,
                                                                  @Nullable
                                                                  java.lang.String&nbsp;memo,
                                                                  @Nullable
@@ -404,7 +404,7 @@ extends java.lang.Object</pre>
                                                                  @Nullable
                                                                  byte[]&nbsp;merchantData)</pre>
 <div class="block">Create a payment request with one standard pay to address output. You may want to sign the request using
- <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-"><code>signPaymentRequest(org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder, java.security.cert.X509Certificate[], java.security.PrivateKey)</code></a>. Use <code>Protos.PaymentRequest.Builder#build</code> to get the actual payment
+ <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-"><code>signPaymentRequest(org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder, java.security.cert.X509Certificate[], java.security.PrivateKey)</code></a>. Use <code>Protos.PaymentRequest.Builder#build</code> to get the actual payment
  request.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -419,13 +419,13 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="createPaymentRequest-org.bitcoinj.core.NetworkParameters-java.util.List-java.lang.String-java.lang.String-byte:A-">
+<a name="createPaymentRequest-org.sumcoinj.core.NetworkParameters-java.util.List-java.lang.String-java.lang.String-byte:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createPaymentRequest</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;createPaymentRequest(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.Builder.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest.Builder</a>&nbsp;createPaymentRequest(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                                                                  java.util.List&lt;<a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a>&gt;&nbsp;outputs,
                                                                  @Nullable
                                                                  java.lang.String&nbsp;memo,
@@ -433,7 +433,7 @@ extends java.lang.Object</pre>
                                                                  java.lang.String&nbsp;paymentUrl,
                                                                  @Nullable
                                                                  byte[]&nbsp;merchantData)</pre>
-<div class="block">Create a payment request. You may want to sign the request using <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-"><code>signPaymentRequest(org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder, java.security.cert.X509Certificate[], java.security.PrivateKey)</code></a>. Use
+<div class="block">Create a payment request. You may want to sign the request using <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#signPaymentRequest-org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder-java.security.cert.X509Certificate:A-java.security.PrivateKey-"><code>signPaymentRequest(org.bitcoin.protocols.payments.Protos.PaymentRequest.Builder, java.security.cert.X509Certificate[], java.security.PrivateKey)</code></a>. Use
  <code>Protos.PaymentRequest.Builder#build</code> to get the actual payment request.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -453,16 +453,16 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>parsePaymentRequest</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentSession.html" title="class in org.bitcoinj.protocols.payments">PaymentSession</a>&nbsp;parsePaymentRequest(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest)
-                                          throws <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocolException</a></pre>
+<pre>public static&nbsp;<a href="../../../../org/sumcoinj/protocols/payments/PaymentSession.html" title="class in org.sumcoinj.protocols.payments">PaymentSession</a>&nbsp;parsePaymentRequest(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest)
+                                          throws <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocolException</a></pre>
 <div class="block">Parse a payment request.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>paymentRequest</code> - payment request to parse</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>instance of <a href="../../../../org/bitcoinj/protocols/payments/PaymentSession.html" title="class in org.bitcoinj.protocols.payments"><code>PaymentSession</code></a>, used as a value object</dd>
+<dd>instance of <a href="../../../../org/sumcoinj/protocols/payments/PaymentSession.html" title="class in org.sumcoinj.protocols.payments"><code>PaymentSession</code></a>, used as a value object</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocolException</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocolException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -492,9 +492,9 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>verifyPaymentRequestPki</h4>
 <pre>@Nullable
-public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a>&nbsp;verifyPaymentRequestPki(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest,
+public static&nbsp;<a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.PkiVerificationData.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.PkiVerificationData</a>&nbsp;verifyPaymentRequestPki(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentRequest.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentRequest</a>&nbsp;paymentRequest,
                                                                                     java.security.KeyStore&nbsp;trustStore)
-                                                                             throws <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocolException</a></pre>
+                                                                             throws <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocolException</a></pre>
 <div class="block">Uses the provided PKI method to find the corresponding public key and verify the provided signature.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -503,21 +503,21 @@ public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentP
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>verification data, or null if no PKI method was specified in the <code>Protos.PaymentRequest</code>.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocolException</a></code> - if payment request could not be verified.</dd>
+<dd><code><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocolException.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocolException</a></code> - if payment request could not be verified.</dd>
 </dl>
 </li>
 </ul>
-<a name="createPaymentMessage-java.util.List-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-byte:A-">
+<a name="createPaymentMessage-java.util.List-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-byte:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createPaymentMessage</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;createPaymentMessage(java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;&nbsp;transactions,
+<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;createPaymentMessage(java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;&nbsp;transactions,
                                                   @Nullable
-                                                  <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;refundAmount,
+                                                  <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;refundAmount,
                                                   @Nullable
-                                                  <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;refundAddress,
+                                                  <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;refundAddress,
                                                   @Nullable
                                                   java.lang.String&nbsp;memo,
                                                   @Nullable
@@ -541,7 +541,7 @@ public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentP
 <ul class="blockList">
 <li class="blockList">
 <h4>createPaymentMessage</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;createPaymentMessage(java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;&nbsp;transactions,
+<pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;createPaymentMessage(java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;&nbsp;transactions,
                                                   @Nullable
                                                   java.util.List&lt;<a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a>&gt;&nbsp;refundOutputs,
                                                   @Nullable
@@ -560,13 +560,13 @@ public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentP
 </dl>
 </li>
 </ul>
-<a name="parseTransactionsFromPaymentMessage-org.bitcoinj.core.NetworkParameters-org.bitcoin.protocols.payments.Protos.Payment-">
+<a name="parseTransactionsFromPaymentMessage-org.sumcoinj.core.NetworkParameters-org.bitcoin.protocols.payments.Protos.Payment-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>parseTransactionsFromPaymentMessage</h4>
-<pre>public static&nbsp;java.util.List&lt;<a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&gt;&nbsp;parseTransactionsFromPaymentMessage(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<pre>public static&nbsp;java.util.List&lt;<a href="../../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&gt;&nbsp;parseTransactionsFromPaymentMessage(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                                                                               <a href="../../../../org/bitcoin/protocols/payments/Protos.Payment.html" title="class in org.bitcoin.protocols.payments">Protos.Payment</a>&nbsp;paymentMessage)</pre>
 <div class="block">Parse transactions from payment message.</div>
 <dl>
@@ -603,21 +603,21 @@ public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentP
 <ul class="blockList">
 <li class="blockList">
 <h4>parsePaymentAck</h4>
-<pre>public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.bitcoinj.protocols.payments">PaymentProtocol.Ack</a>&nbsp;parsePaymentAck(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentACK.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentACK</a>&nbsp;paymentAck)</pre>
+<pre>public static&nbsp;<a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.sumcoinj.protocols.payments">PaymentProtocol.Ack</a>&nbsp;parsePaymentAck(<a href="../../../../org/bitcoin/protocols/payments/Protos.PaymentACK.html" title="class in org.bitcoin.protocols.payments">Protos.PaymentACK</a>&nbsp;paymentAck)</pre>
 <div class="block">Parse payment ack into an object.</div>
 </li>
 </ul>
-<a name="createPayToAddressOutput-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-">
+<a name="createPayToAddressOutput-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>createPayToAddressOutput</h4>
 <pre>public static&nbsp;<a href="../../../../org/bitcoin/protocols/payments/Protos.Output.html" title="class in org.bitcoin.protocols.payments">Protos.Output</a>&nbsp;createPayToAddressOutput(@Nullable
-                                                     <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;amount,
-                                                     <a href="../../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;address)</pre>
-<div class="block">Create a standard pay to address output for usage in <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.bitcoinj.core.NetworkParameters-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-java.lang.String-byte:A-"><code>createPaymentRequest(org.bitcoinj.core.NetworkParameters, org.bitcoinj.core.Coin, org.bitcoinj.core.Address, java.lang.String, java.lang.String, byte[])</code></a> and
- <a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.bitcoinj.core.Coin-org.bitcoinj.core.Address-java.lang.String-byte:A-"><code>createPaymentMessage(java.util.List&lt;org.bitcoinj.core.Transaction&gt;, org.bitcoinj.core.Coin, org.bitcoinj.core.Address, java.lang.String, byte[])</code></a>.</div>
+                                                     <a href="../../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;amount,
+                                                     <a href="../../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;address)</pre>
+<div class="block">Create a standard pay to address output for usage in <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentRequest-org.sumcoinj.core.NetworkParameters-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-java.lang.String-byte:A-"><code>createPaymentRequest(org.sumcoinj.core.NetworkParameters, org.sumcoinj.core.Coin, org.sumcoinj.core.Address, java.lang.String, java.lang.String, byte[])</code></a> and
+ <a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.html#createPaymentMessage-java.util.List-org.sumcoinj.core.Coin-org.sumcoinj.core.Address-java.lang.String-byte:A-"><code>createPaymentMessage(java.util.List&lt;org.sumcoinj.core.Transaction&gt;, org.sumcoinj.core.Coin, org.sumcoinj.core.Address, java.lang.String, byte[])</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>amount</code> - amount to pay, or null</dd>
@@ -655,10 +655,10 @@ public static&nbsp;<a href="../../../../org/bitcoinj/protocols/payments/PaymentP
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../org/bitcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.bitcoinj.protocols.payments"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/payments/PaymentProtocol.Ack.html" title="class in org.sumcoinj.protocols.payments"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/protocols/payments/PaymentProtocol.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/protocols/payments/PaymentProtocol.html" target="_top">Frames</a></li>
 <li><a href="PaymentProtocol.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

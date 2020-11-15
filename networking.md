@@ -18,9 +18,9 @@ _This article applies to the code in git master only_
 
 ## Introduction
 
-The bitcoinj networking APIs have a few options targeted at different use-cases - you can spin up individual Peers and manage them yourself or bring up a `PeerGroup` to let it manage them, you can use one-off sockets or socket managers, and you can use blocking sockets or NIO/non-blocking sockets. This page attempts to explain the tradeoffs and use-cases for each choice, as well as provide some basic examples to doing more advanced networking.
+The sumcoinj networking APIs have a few options targeted at different use-cases - you can spin up individual Peers and manage them yourself or bring up a `PeerGroup` to let it manage them, you can use one-off sockets or socket managers, and you can use blocking sockets or NIO/non-blocking sockets. This page attempts to explain the tradeoffs and use-cases for each choice, as well as provide some basic examples to doing more advanced networking.
 
-The bitcoinj networking API is built up in a series of layers. On the bottom are simple wrapper classes that provide an API to open new connections using blocking sockets or java NIO (asynchronous select()-based sockets). On top of those sit various parsers that parse the network traffic into messages (ie into the Bitcoin messages). On top of those are `Peer` objects, which handle message handling (exchanging initial version handshake, downloading blocks, etc) for each individual remote peer and provide a simple event listener interface. Finally a `PeerGroup` can be layered on top to keep track of peers, ensuring there are always enough connections to the network and keeping track of network sync progress.
+The sumcoinj networking API is built up in a series of layers. On the bottom are simple wrapper classes that provide an API to open new connections using blocking sockets or java NIO (asynchronous select()-based sockets). On top of those sit various parsers that parse the network traffic into messages (ie into the Sumcoin messages). On top of those are `Peer` objects, which handle message handling (exchanging initial version handshake, downloading blocks, etc) for each individual remote peer and provide a simple event listener interface. Finally a `PeerGroup` can be layered on top to keep track of peers, ensuring there are always enough connections to the network and keeping track of network sync progress.
 
 ## The simple case
 
@@ -37,7 +37,7 @@ After this code completes you've connected to some peers and fully downloaded th
 
 ## Proxying
 
-If you wish to connect to the network using a SOCKS proxy, you must use blocking sockets instead of nio ones. This makes network slightly less efficient, but it should not be noticeable for anything short of very heavy workloads. Then you simply set the Java system properties for a SOCKS proxy (as below) and connections will automatically flow over the proxy. 
+If you wish to connect to the network using a SOCKS proxy, you must use blocking sockets instead of nio ones. This makes network slightly less efficient, but it should not be noticeable for anything short of very heavy workloads. Then you simply set the Java system properties for a SOCKS proxy (as below) and connections will automatically flow over the proxy.
 
 {% highlight java %}
 System.setProperty("socksProxyHost", "127.0.0.1");
@@ -50,7 +50,7 @@ peerGroup = new PeerGroup(params, chain, new BlockingClientManager());
 You can build a Peer at a lower level, controlling the socket to be used, using code like this:
 
 {% highlight java %}
-Peer peer = new Peer(params, bitcoin.chain(), new PeerAddress(InetAddress.getLocalHost(), 8333), "test app", "0.1") {
+Peer peer = new Peer(params, sumcoin.chain(), new PeerAddress(InetAddress.getLocalHost(), 3333), "test app", "0.1") {
     @Override
     public void connectionOpened() {
         super.connectionOpened();

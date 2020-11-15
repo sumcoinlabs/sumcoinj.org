@@ -267,7 +267,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>get</h4>
 <pre>public static&nbsp;<a href="../../../org/bitcoinj/core/Context.html" title="class in org.bitcoinj.core">Context</a>&nbsp;get()</pre>
-<div class="block">Returns the current context that is associated with the <b>calling thread</b>. BitcoinJ is an API that has thread
+<div class="block">Returns the current context that is associated with the <b>calling thread</b>. SumcoinJ is an API that has thread
  affinity: much like OpenGL it expects each thread that accesses it to have been configured with a global Context
  object. This method returns that. Note that to help you develop, this method will <i>also</i> propagate whichever
  context was created last onto the current thread, if it's missing. However it will print an error when doing so
@@ -296,7 +296,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>propagate</h4>
 <pre>public static&nbsp;void&nbsp;propagate(<a href="../../../org/bitcoinj/core/Context.html" title="class in org.bitcoinj.core">Context</a>&nbsp;context)</pre>
 <div class="block">Sets the given context as the current thread context. You should use this if you create your own threads that
- want to create core BitcoinJ objects. Generally, if a class can accept a Context in its constructor and might
+ want to create core SumcoinJ objects. Generally, if a class can accept a Context in its constructor and might
  be used (even indirectly) by a thread, you will want to call this first. Your task may be simplified by using
  a <a href="../../../org/bitcoinj/utils/ContextPropagatingThreadFactory.html" title="class in org.bitcoinj.utils"><code>ContextPropagatingThreadFactory</code></a>.</div>
 </li>
@@ -322,7 +322,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>getParams</h4>
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;getParams()</pre>
 <div class="block">Returns the <a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core"><code>NetworkParameters</code></a> specified when this context was (auto) created. The
- network parameters defines various hard coded constants for a specific instance of a Bitcoin network, such as
+ network parameters defines various hard coded constants for a specific instance of a Sumcoin network, such as
  main net, testnet, etc.</div>
 </li>
 </ul>

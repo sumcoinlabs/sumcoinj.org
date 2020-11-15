@@ -109,7 +109,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="#org.bitcoinj.params">org.bitcoinj.params</a></td>
 <td class="colLast">
-<div class="block">Network parameters encapsulate some of the differences between different Bitcoin networks such as the main
+<div class="block">Network parameters encapsulate some of the differences between different Sumcoin networks such as the main
  network, the testnet, regtest mode, unit testing params and so on.</div>
 </td>
 </tr>
@@ -117,13 +117,13 @@
 <td class="colFirst"><a href="#org.bitcoinj.protocols.channels">org.bitcoinj.protocols.channels</a></td>
 <td class="colLast">
 <div class="block">Micropayment channels allow for rapid tiny payments to be made to a third party once a channel has been set up, using
- some of the advanced features of the Bitcoin protocol.</div>
+ some of the advanced features of the Sumcoin protocol.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#org.bitcoinj.protocols.payments">org.bitcoinj.protocols.payments</a></td>
 <td class="colLast">
-<div class="block">The BIP70 payment protocol wraps Bitcoin transactions and adds various useful features like memos, refund addresses
+<div class="block">The BIP70 payment protocol wraps Sumcoin transactions and adds various useful features like memos, refund addresses
  and authentication.</div>
 </td>
 </tr>
@@ -481,16 +481,16 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoinj/crypto/TransactionSignature.html" title="class in org.bitcoinj.crypto">TransactionSignature</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TransactionSignature.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromBitcoin-byte:A-boolean-">decodeFromBitcoin</a></span>(byte[]&nbsp;bytes,
+<td class="colLast"><span class="typeNameLabel">TransactionSignature.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromSumcoin-byte:A-boolean-">decodeFromSumcoin</a></span>(byte[]&nbsp;bytes,
                  boolean&nbsp;requireCanonicalEncoding)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <code>#decodeFromBitcoin(byte[], boolean, boolean</code> instead}.</span></div>
+<div class="block"><span class="deprecationComment">use <code>#decodeFromSumcoin(byte[], boolean, boolean</code> instead}.</span></div>
 </div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../org/bitcoinj/crypto/TransactionSignature.html" title="class in org.bitcoinj.crypto">TransactionSignature</a></code></td>
-<td class="colLast"><span class="typeNameLabel">TransactionSignature.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromBitcoin-byte:A-boolean-boolean-">decodeFromBitcoin</a></span>(byte[]&nbsp;bytes,
+<td class="colLast"><span class="typeNameLabel">TransactionSignature.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/crypto/TransactionSignature.html#decodeFromSumcoin-byte:A-boolean-boolean-">decodeFromSumcoin</a></span>(byte[]&nbsp;bytes,
                  boolean&nbsp;requireCanonicalEncoding,
                  boolean&nbsp;requireCanonicalSValue)</code>
 <div class="block">Returns a decoded signature.</div>
@@ -556,7 +556,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractBitcoinNetParams.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/params/AbstractBitcoinNetParams.html#checkDifficultyTransitions-org.bitcoinj.core.StoredBlock-org.bitcoinj.core.Block-org.bitcoinj.store.BlockStore-">checkDifficultyTransitions</a></span>(<a href="../../../../org/bitcoinj/core/StoredBlock.html" title="class in org.bitcoinj.core">StoredBlock</a>&nbsp;storedPrev,
+<td class="colLast"><span class="typeNameLabel">AbstractSumcoinNetParams.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/params/AbstractSumcoinNetParams.html#checkDifficultyTransitions-org.bitcoinj.core.StoredBlock-org.bitcoinj.core.Block-org.bitcoinj.store.BlockStore-">checkDifficultyTransitions</a></span>(<a href="../../../../org/bitcoinj/core/StoredBlock.html" title="class in org.bitcoinj.core">StoredBlock</a>&nbsp;storedPrev,
                           <a href="../../../../org/bitcoinj/core/Block.html" title="class in org.bitcoinj.core">Block</a>&nbsp;nextBlock,
                           <a href="../../../../org/bitcoinj/store/BlockStore.html" title="interface in org.bitcoinj.store">BlockStore</a>&nbsp;blockStore)</code>&nbsp;</td>
 </tr>

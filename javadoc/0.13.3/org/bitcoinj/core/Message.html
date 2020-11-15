@@ -121,7 +121,7 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">Message</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block"><p>A Message is a data structure that can be serialized/deserialized using both the Bitcoin proprietary serialization
+<div class="block"><p>A Message is a data structure that can be serialized/deserialized using both the Sumcoin proprietary serialization
  format and built-in Java object serialization. Specific types of messages that are used both in the block chain,
  and on the wire, are derived from this class.</p></div>
 <dl>
@@ -261,7 +261,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a></span>()</code>
-<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--"><code>unsafeBitcoinSerialize()</code></a>, which is safe to mutate.</div>
+<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--"><code>unsafeSumcoinSerialize()</code></a>, which is safe to mutate.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -330,7 +330,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></span>()</code>
 <div class="block">Serialize this message to a byte array that conforms to the bitcoin wire protocol.</div>
 </td>
 </tr>
@@ -619,7 +619,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>bitcoinSerialize</h4>
 <pre>public&nbsp;byte[]&nbsp;bitcoinSerialize()</pre>
-<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--"><code>unsafeBitcoinSerialize()</code></a>, which is safe to mutate.
+<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--"><code>unsafeSumcoinSerialize()</code></a>, which is safe to mutate.
  If you need extra performance and can guarantee you won't write to the array, you can use the unsafe version.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -627,13 +627,13 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 </dl>
 </li>
 </ul>
-<a name="unsafeBitcoinSerialize--">
+<a name="unsafeSumcoinSerialize--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>unsafeBitcoinSerialize</h4>
-<pre>public&nbsp;byte[]&nbsp;unsafeBitcoinSerialize()</pre>
+<h4>unsafeSumcoinSerialize</h4>
+<pre>public&nbsp;byte[]&nbsp;unsafeSumcoinSerialize()</pre>
 <div class="block">Serialize this message to a byte array that conforms to the bitcoin wire protocol.
  <br/>
  This method may return the original byte array used to construct this message if the
@@ -678,7 +678,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <h4>getHash</h4>
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/Sha256Hash.html" title="class in org.bitcoinj.core">Sha256Hash</a>&nbsp;getHash()</pre>
 <div class="block">This method is a NOP for all classes except Block and Transaction.  It is only declared in Message
- so BitcoinSerializer can avoid 2 instanceof checks + a casting.</div>
+ so SumcoinSerializer can avoid 2 instanceof checks + a casting.</div>
 </li>
 </ul>
 <a name="getMessageSize--">

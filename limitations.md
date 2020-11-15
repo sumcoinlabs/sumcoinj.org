@@ -16,11 +16,11 @@ title: "Limitations and missing features."
 
 ## Introduction
 
-bitcoinj is a work in progress, and lacks some features you probably consider important. It also has strange quirks and other issues that should be fixed, but nobody has yet had time to do so (there were always higher priorities).
+sumcoinj is a work in progress, and lacks some features you probably consider important. It also has strange quirks and other issues that should be fixed, but nobody has yet had time to do so (there were always higher priorities).
 
 A lot of these quirks persist because the primary goal of the project has always been to support SPV smartphone wallets, with other use cases being treated as secondary priorities. Hence making the Android wallet perform well has repeatedly evicted other features and refactorings.
 
-For a full list, see [the bug tracker](https://github.com/bitcoinj/bitcoinj/issues). What is listed below is a small selection of the most important limitations. Patches are always welcome.
+For a full list, see [the bug tracker](https://sumcoinlabs/sumcoinj/issues). What is listed below is a small selection of the most important limitations. Patches are always welcome.
 
 ## Bugs and other problems
 
@@ -28,22 +28,22 @@ For a full list, see [the bug tracker](https://github.com/bitcoinj/bitcoinj/issu
 
 ## Security issues
 
-* The default coin selector is not very smart, which means you can do a denial-of-service attack against anyone for whom you have an address by sending lots of tiny coins. bitcoinj will try and use them to fulfil spends and hit the size/fee limits mentioned in the previous points. Also, the wallet can only create one transaction for one spend request (like all other Bitcoin implementations). If a transaction goes over-size, you simply cannot create spends anymore unless you manually break the values required down yourself.
+* The default coin selector is not very smart, which means you can do a denial-of-service attack against anyone for whom you have an address by sending lots of tiny coins. sumcoinj will try and use them to fulfil spends and hit the size/fee limits mentioned in the previous points. Also, the wallet can only create one transaction for one spend request (like all other Sumcoin implementations). If a transaction goes over-size, you simply cannot create spends anymore unless you manually break the values required down yourself.
 * SPV mode vs full verification is an important topic to understand, read the [SecurityModel](/security-model) page for more information on this.
-* Support for double spend detection is incomplete. Double spends are only handled in a few specific cases. General support requires upgrades to the global Bitcoin protocol.
-* BitcoinJ always bootstraps from DNS seeds. It does not store or use address broadcasts. That means if DNS seeds were all to go down, bitcoinj apps would stop working, and if they were compromised and started returning attacker-controlled nodes the apps would become subject to a Sybil attack (see the [SecurityModel](/security-model) page for more information on this).
+* Support for double spend detection is incomplete. Double spends are only handled in a few specific cases. General support requires upgrades to the global Sumcoin protocol.
+* SumcoinJ always bootstraps from DNS seeds. It does not store or use address broadcasts. That means if DNS seeds were all to go down, sumcoinj apps would stop working, and if they were compromised and started returning attacker-controlled nodes the apps would become subject to a Sybil attack (see the [SecurityModel](/security-model) page for more information on this).
 * Some features, like seeing pending transactions, rely on polling your randomly selected peers. This opens up users/wallets that are relying on unconfirmed transactions to sybil attacks. In future versions we may switch to using Tor to resolve this.
 * The code has not been professionally audited by security specialists and may have other, unexpected security holes (unfortunately this is true for most bitcoin related software). The library has been written for mobile wallets that don't contain large amounts of value and that is still the primary focus.
 
 ## Consensus
 
 * SPV mode always follows the chain with the most proof of work. In the event of a fork of the blockchain, the minority chain is expected to die off quickly. There is no solution for nodes who would like to stay on the minority chain.
-* In the event of a chain-split, bitcoinj does not protect against transactions being replayed on the minority chain. In other words, bitcoinj does not make any guarantee about what happens to a wallet's balance on the minority chain.
+* In the event of a chain-split, sumcoinj does not protect against transactions being replayed on the minority chain. In other words, sumcoinj does not make any guarantee about what happens to a wallet's balance on the minority chain.
 
 ## Privacy issues
 
 * Bloom filters are always set very tightly at the moment. The reason is that the API has no notion of bandwidth modes, and no code to measure bandwidth usage and adjust FP rates to keep it within bounds. Additionally building chains of filters that "lie coherently" is a challenging research problem.
-* Bitcoin P2P traffic is unencrypted (this is a limitation of Bitcoin rather than bitcoinj)
+* Sumcoin P2P traffic is unencrypted (this is a limitation of Sumcoin rather than sumcoinj)
 
 ## Protocol compliance
 
@@ -51,7 +51,7 @@ For a full list, see [the bug tracker](https://github.com/bitcoinj/bitcoinj/issu
 
 ## Micropayment channels 
 
-* Security issue: the Bitcoin network allows transaction malleability. With the code in 0.10, a malicious server could modify the contract tx before broadcasting it, rendering the refund useless and allowing extortion of the user.
+* Security issue: the Sumcoin network allows transaction malleability. With the code in 0.10, a malicious server could modify the contract tx before broadcasting it, rendering the refund useless and allowing extortion of the user.
 
 ## API warts
 

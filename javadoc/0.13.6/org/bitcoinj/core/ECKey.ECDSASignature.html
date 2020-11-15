@@ -120,7 +120,7 @@ var activeTableTab = "activeTableTab";
 <pre>public static class <span class="typeNameLabel">ECKey.ECDSASignature</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Groups the two components that make up a signature, and provides a way to encode to DER form, which is
- how ECDSA signatures are represented when embedded in other data structures in the Bitcoin protocol. The raw
+ how ECDSA signatures are represented when embedded in other data structures in the Sumcoin protocol. The raw
  components can be useful for doing further EC maths on them.</div>
 </li>
 </ul>
@@ -310,7 +310,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="class in org.bitcoinj.core">ECKey.ECDSASignature</a>&nbsp;toCanonicalised()</pre>
 <div class="block">Will automatically adjust the S component to be less than or equal to half the curve order, if necessary.
  This is required because for every signature (r,s) the signature (r, -s (mod N)) is a valid signature of
- the same message. However, we dislike the ability to modify the bits of a Bitcoin transaction after it's
+ the same message. However, we dislike the ability to modify the bits of a Sumcoin transaction after it's
  been signed, as that violates various assumed invariants. Thus in future only one of those forms will be
  considered legal and the other will be banned.</div>
 </li>

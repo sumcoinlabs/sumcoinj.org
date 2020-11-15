@@ -206,7 +206,7 @@ extends <a href="../../../org/bitcoinj/core/Message.html" title="class in org.bi
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/core/EmptyMessage.html#bitcoinSerialize--">bitcoinSerialize</a></span>()</code>
-<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--"><code>Message.unsafeBitcoinSerialize()</code></a>, which is safe to mutate.</div>
+<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--"><code>Message.unsafeSumcoinSerialize()</code></a>, which is safe to mutate.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -239,7 +239,7 @@ extends <a href="../../../org/bitcoinj/core/Message.html" title="class in org.bi
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -393,7 +393,7 @@ extends <a href="../../../org/bitcoinj/core/Message.html" title="class in org.bi
 <h4>bitcoinSerialize</h4>
 <pre>public&nbsp;byte[]&nbsp;bitcoinSerialize()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">Message</a></code></span></div>
-<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--"><code>Message.unsafeBitcoinSerialize()</code></a>, which is safe to mutate.
+<div class="block">Returns a copy of the array returned by <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--"><code>Message.unsafeSumcoinSerialize()</code></a>, which is safe to mutate.
  If you need extra performance and can guarantee you won't write to the array, you can use the unsafe version.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

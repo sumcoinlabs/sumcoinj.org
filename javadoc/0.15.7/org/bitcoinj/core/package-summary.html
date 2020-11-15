@@ -90,7 +90,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Monetary.html" title="interface in org.bitcoinj.core">Monetary</a></td>
 <td class="colLast">
-<div class="block">Classes implementing this interface represent a monetary value, such as a Bitcoin or fiat amount.</div>
+<div class="block">Classes implementing this interface represent a monetary value, such as a Sumcoin or fiat amount.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -171,7 +171,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Base58.html" title="class in org.bitcoinj.core">Base58</a></td>
 <td class="colLast">
-<div class="block">Base58 is a way to encode Bitcoin addresses (or arbitrary data) as alphanumeric strings.</div>
+<div class="block">Base58 is a way to encode Sumcoin addresses (or arbitrary data) as alphanumeric strings.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -183,26 +183,26 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../../org/bitcoinj/core/BitcoinSerializer.html" title="class in org.bitcoinj.core">BitcoinSerializer</a></td>
+<td class="colFirst"><a href="../../../org/bitcoinj/core/SumcoinSerializer.html" title="class in org.bitcoinj.core">SumcoinSerializer</a></td>
 <td class="colLast">
-<div class="block">Methods to serialize and de-serialize messages to the Bitcoin network format as defined in
+<div class="block">Methods to serialize and de-serialize messages to the Sumcoin network format as defined in
  <a href="https://en.bitcoin.it/wiki/Protocol_specification">the protocol specification</a>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a></td>
+<td class="colFirst"><a href="../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Block.html" title="class in org.bitcoinj.core">Block</a></td>
 <td class="colLast">
-<div class="block">A block is a group of transactions, and is one of the fundamental data structures of the Bitcoin system.</div>
+<div class="block">A block is a group of transactions, and is one of the fundamental data structures of the Sumcoin system.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/BlockChain.html" title="class in org.bitcoinj.core">BlockChain</a></td>
 <td class="colLast">
-<div class="block">A BlockChain implements the <i>simplified payment verification</i> mode of the Bitcoin protocol.</div>
+<div class="block">A BlockChain implements the <i>simplified payment verification</i> mode of the Sumcoin protocol.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -233,7 +233,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a></td>
 <td class="colLast">
-<div class="block">Represents a monetary Bitcoin value.</div>
+<div class="block">Represents a monetary Sumcoin value.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -246,7 +246,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/DumpedPrivateKey.html" title="class in org.bitcoinj.core">DumpedPrivateKey</a></td>
 <td class="colLast">
-<div class="block">Parses and generates private keys in the form used by the Bitcoin "dumpprivkey" command.</div>
+<div class="block">Parses and generates private keys in the form used by the Sumcoin "dumpprivkey" command.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -259,7 +259,7 @@
 <td class="colFirst"><a href="../../../org/bitcoinj/core/ECKey.ECDSASignature.html" title="class in org.bitcoinj.core">ECKey.ECDSASignature</a></td>
 <td class="colLast">
 <div class="block">Groups the two components that make up a signature, and provides a way to encode to DER form, which is
- how ECDSA signatures are represented when embedded in other data structures in the Bitcoin protocol.</div>
+ how ECDSA signatures are represented when embedded in other data structures in the Sumcoin protocol.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -278,7 +278,7 @@
 <td class="colFirst"><a href="../../../org/bitcoinj/core/FullPrunedBlockChain.html" title="class in org.bitcoinj.core">FullPrunedBlockChain</a></td>
 <td class="colLast">
 <div class="block">A FullPrunedBlockChain works in conjunction with a <a href="../../../org/bitcoinj/store/FullPrunedBlockStore.html" title="interface in org.bitcoinj.store"><code>FullPrunedBlockStore</code></a> to verify all the rules of the
- Bitcoin system, with the downside being a large cost in system resources.</div>
+ Sumcoin system, with the downside being a large cost in system resources.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -310,7 +310,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/GetUTXOsMessage.html" title="class in org.bitcoinj.core">GetUTXOsMessage</a></td>
 <td class="colLast">
-<div class="block">This command is supported only by <a href="http://github.com/bitcoinxt/bitcoinxt">Bitcoin XT</a> nodes, which
+<div class="block">This command is supported only by <a href="http://github.com/bitcoinxt/bitcoinxt">Sumcoin XT</a> nodes, which
  advertise themselves using the second service bit flag.</div>
 </td>
 </tr>
@@ -333,7 +333,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/LegacyAddress.html" title="class in org.bitcoinj.core">LegacyAddress</a></td>
 <td class="colLast">
-<div class="block">A Bitcoin address looks like 1MsScoe2fTJoq4ZPdQgqyhgWeoNamYPevy and is derived from an elliptic curve public key
+<div class="block">A Sumcoin address looks like SX75kbV2to7LCMj2rc9Bb8agpZxAg6rzoL and is derived from an elliptic curve public key
  plus a set of network parameters.</div>
 </td>
 </tr>
@@ -353,7 +353,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></td>
 <td class="colLast">
-<div class="block">A Message is a data structure that can be serialized/deserialized using the Bitcoin serialization format.</div>
+<div class="block">A Message is a data structure that can be serialized/deserialized using the Sumcoin serialization format.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -365,7 +365,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a></td>
 <td class="colLast">
-<div class="block">NetworkParameters contains the data needed for working with an instantiation of a Bitcoin chain.</div>
+<div class="block">NetworkParameters contains the data needed for working with an instantiation of a Sumcoin chain.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -383,7 +383,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Peer.html" title="class in org.bitcoinj.core">Peer</a></td>
 <td class="colLast">
-<div class="block">A Peer handles the high level communication with a Bitcoin node, extending a <a href="../../../org/bitcoinj/core/PeerSocketHandler.html" title="class in org.bitcoinj.core"><code>PeerSocketHandler</code></a> which
+<div class="block">A Peer handles the high level communication with a Sumcoin node, extending a <a href="../../../org/bitcoinj/core/PeerSocketHandler.html" title="class in org.bitcoinj.core"><code>PeerSocketHandler</code></a> which
  handles low-level message (de)serialization.</div>
 </td>
 </tr>
@@ -391,7 +391,7 @@
 <td class="colFirst"><a href="../../../org/bitcoinj/core/PeerAddress.html" title="class in org.bitcoinj.core">PeerAddress</a></td>
 <td class="colLast">
 <div class="block">A PeerAddress holds an IP address and port number representing the network location of
- a peer in the Bitcoin P2P network.</div>
+ a peer in the Sumcoin P2P network.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -540,7 +540,7 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../org/bitcoinj/core/Utils.html" title="class in org.bitcoinj.core">Utils</a></td>
 <td class="colLast">
-<div class="block">A collection of various utility methods that are helpful for working with the Bitcoin protocol.</div>
+<div class="block">A collection of various utility methods that are helpful for working with the Sumcoin protocol.</div>
 </td>
 </tr>
 <tr class="rowColor">

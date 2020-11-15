@@ -409,7 +409,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -469,7 +469,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - NetworkParameters object.</dd>
-<dd><code>payload</code> - Bitcoin protocol formatted byte array containing message content.</dd>
+<dd><code>payload</code> - Sumcoin protocol formatted byte array containing message content.</dd>
 <dd><code>offset</code> - The location of the first payload byte within the array.</dd>
 <dd><code>parseLazy</code> - Whether to perform a full parse immediately or delay until a read is requested.</dd>
 <dd><code>parseRetain</code> - Whether to retain the backing byte array for quick reserialization.  
@@ -583,7 +583,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in or
  the redeem script.</p>
 
  <p>P2SH is described by <a href="https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki">BIP 16</a> and
- <a href="https://bitcoin.org/en/developer-guide#p2sh-scripts">documented in the Bitcoin Developer Guide</a>.</p></div>
+ <a href="https://bitcoin.org/en/developer-guide#p2sh-scripts">documented in the Sumcoin Developer Guide</a>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>networkParameters</code> - needed to specify an address</dd>
@@ -676,7 +676,7 @@ public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in or
 <pre>public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;getMinNonDustValue(<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;feePerKbRequired)</pre>
 <div class="block"><p>Gets the minimum value for a txout of this size to be considered non-dust by a reference client
  (and thus relayed). See: CTxOut::IsDust() in the reference client. The assumption is that any output that would
- consume more than a third of its value in fees is not something the Bitcoin system wants to deal with right now,
+ consume more than a third of its value in fees is not something the Sumcoin system wants to deal with right now,
  so we call them "dust outputs" and they're made non standard. The choice of one third is somewhat arbitrary and
  may change in future.</p>
 

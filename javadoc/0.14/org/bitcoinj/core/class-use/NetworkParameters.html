@@ -113,21 +113,21 @@
 <tr class="altColor">
 <td class="colFirst"><a href="#org.bitcoinj.params">org.bitcoinj.params</a></td>
 <td class="colLast">
-<div class="block">Network parameters encapsulate some of the differences between different Bitcoin networks such as the main
+<div class="block">Network parameters encapsulate some of the differences between different Sumcoin networks such as the main
  network, the testnet, regtest mode, unit testing params and so on.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#org.bitcoinj.protocols.payments">org.bitcoinj.protocols.payments</a></td>
 <td class="colLast">
-<div class="block">The BIP70 payment protocol wraps Bitcoin transactions and adds various useful features like memos, refund addresses
+<div class="block">The BIP70 payment protocol wraps Sumcoin transactions and adds various useful features like memos, refund addresses
  and authentication.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#org.bitcoinj.script">org.bitcoinj.script</a></td>
 <td class="colLast">
-<div class="block">Classes for working with and executing Bitcoin script programs, as embedded in inputs and outputs.</div>
+<div class="block">Classes for working with and executing Sumcoin script programs, as embedded in inputs and outputs.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -145,7 +145,7 @@
 <tr class="rowColor">
 <td class="colFirst"><a href="#org.bitcoinj.utils">org.bitcoinj.utils</a></td>
 <td class="colLast">
-<div class="block">Formatting monetary amounts, representing exchange rates, a program for loading Bitcoin Core saved block files,
+<div class="block">Formatting monetary amounts, representing exchange rates, a program for loading Sumcoin Core saved block files,
  a class to control how bitcoinj uses threads and misc other utility classes that don't fit anywhere else.</div>
 </td>
 </tr>
@@ -218,7 +218,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#getParameters--">getParameters</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#getParameters--">getParameters</a></span>()</code>
 <div class="block">Get the network parameters for this serializer.</div>
 </td>
 </tr>
@@ -376,7 +376,7 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/DumpedPrivateKey.html" title="class in org.bitcoinj.core">DumpedPrivateKey</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ECKey.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/ECKey.html#getPrivateKeyEncoded-org.bitcoinj.core.NetworkParameters-">getPrivateKeyEncoded</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params)</code>
-<div class="block">Exports the private key in the form used by Bitcoin Core's "dumpprivkey" and "importprivkey" commands.</div>
+<div class="block">Exports the private key in the form used by Sumcoin Core's "dumpprivkey" and "importprivkey" commands.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -450,9 +450,9 @@
             byte[]&nbsp;payloadBytes)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#BitcoinSerializer-org.bitcoinj.core.NetworkParameters-boolean-">BitcoinSerializer</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#SumcoinSerializer-org.bitcoinj.core.NetworkParameters-boolean-">SumcoinSerializer</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
                  boolean&nbsp;parseRetain)</code>
-<div class="block">Constructs a BitcoinSerializer with the given behavior.</div>
+<div class="block">Constructs a SumcoinSerializer with the given behavior.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -470,7 +470,7 @@
      <a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;parent,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -479,7 +479,7 @@
      int&nbsp;offset,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -487,7 +487,7 @@
      byte[]&nbsp;payloadBytes,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1330,8 +1330,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/params/AbstractBitcoinNetParams.html" title="class in org.bitcoinj.params">AbstractBitcoinNetParams</a></span></code>
-<div class="block">Parameters for Bitcoin-like networks.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/params/AbstractSumcoinNetParams.html" title="class in org.bitcoinj.params">AbstractSumcoinNetParams</a></span></code>
+<div class="block">Parameters for Sumcoin-like networks.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1355,8 +1355,8 @@
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/params/TestNet3Params.html" title="class in org.bitcoinj.params">TestNet3Params</a></span></code>
-<div class="block">Parameters for the testnet, a separate public instance of Bitcoin that has relaxed rules suitable for development
- and testing of applications and new Bitcoin versions.</div>
+<div class="block">Parameters for the testnet, a separate public instance of Sumcoin that has relaxed rules suitable for development
+ and testing of applications and new Sumcoin versions.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1679,12 +1679,12 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinURI.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/uri/BitcoinURI.html#convertToBitcoinURI-org.bitcoinj.core.NetworkParameters-java.lang.String-org.bitcoinj.core.Coin-java.lang.String-java.lang.String-">convertToBitcoinURI</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colLast"><span class="typeNameLabel">SumcoinURI.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/uri/SumcoinURI.html#convertToSumcoinURI-org.bitcoinj.core.NetworkParameters-java.lang.String-org.bitcoinj.core.Coin-java.lang.String-java.lang.String-">convertToSumcoinURI</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;address,
                    <a href="../../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;amount,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">Simple Bitcoin URI builder using known good fields.</div>
+<div class="block">Simple Sumcoin URI builder using known good fields.</div>
 </td>
 </tr>
 </tbody>
@@ -1696,9 +1696,9 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/uri/BitcoinURI.html#BitcoinURI-org.bitcoinj.core.NetworkParameters-java.lang.String-">BitcoinURI</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/uri/SumcoinURI.html#SumcoinURI-org.bitcoinj.core.NetworkParameters-java.lang.String-">SumcoinURI</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
           <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;input)</code>
-<div class="block">Constructs a new object by trying to parse the input as a valid Bitcoin URI.</div>
+<div class="block">Constructs a new object by trying to parse the input as a valid Sumcoin URI.</div>
 </td>
 </tr>
 </tbody>

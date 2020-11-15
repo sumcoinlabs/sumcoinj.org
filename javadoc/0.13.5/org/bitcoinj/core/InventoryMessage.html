@@ -262,7 +262,7 @@ extends <a href="../../../org/bitcoinj/core/ListMessage.html" title="class in or
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#adjustLength-int-int-">adjustLength</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#ensureParsed--">ensureParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isParsed--">isParsed</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#maybeParse--">maybeParse</a>, <a href="../../../org/bitcoinj/core/Message.html#unCache--">unCache</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -338,7 +338,7 @@ extends <a href="../../../org/bitcoinj/core/ListMessage.html" title="class in or
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - NetworkParameters object.</dd>
-<dd><code>payload</code> - Bitcoin protocol formatted byte array containing message content.</dd>
+<dd><code>payload</code> - Sumcoin protocol formatted byte array containing message content.</dd>
 <dd><code>parseLazy</code> - Whether to perform a full parse immediately or delay until a read is requested.</dd>
 <dd><code>parseRetain</code> - Whether to retain the backing byte array for quick reserialization.  
  If true and the backing byte array is invalidated due to modification of a field then 

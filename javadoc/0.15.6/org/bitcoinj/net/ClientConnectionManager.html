@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/net/BlockingClientManager.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/net/FilterMerger.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/BlockingClientManager.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/FilterMerger.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/net/ClientConnectionManager.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/net/ClientConnectionManager.html" target="_top">Frames</a></li>
 <li><a href="ClientConnectionManager.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.net</div>
+<div class="subTitle">org.sumcoinj.net</div>
 <h2 title="Interface ClientConnectionManager" class="title">Interface ClientConnectionManager</h2>
 </div>
 <div class="contentContainer">
@@ -104,7 +104,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../org/bitcoinj/net/BlockingClientManager.html" title="class in org.bitcoinj.net">BlockingClientManager</a>, <a href="../../../org/bitcoinj/net/NioClientManager.html" title="class in org.bitcoinj.net">NioClientManager</a></dd>
+<dd><a href="../../../org/sumcoinj/net/BlockingClientManager.html" title="class in org.sumcoinj.net">BlockingClientManager</a>, <a href="../../../org/sumcoinj/net/NioClientManager.html" title="class in org.sumcoinj.net">NioClientManager</a></dd>
 </dl>
 <hr>
 <br>
@@ -150,20 +150,20 @@ extends com.google.common.util.concurrent.Service</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/ClientConnectionManager.html#closeConnections-int-">closeConnections</a></span>(int&nbsp;n)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/ClientConnectionManager.html#closeConnections-int-">closeConnections</a></span>(int&nbsp;n)</code>
 <div class="block">Closes n peer connections</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/ClientConnectionManager.html#getConnectedClientCount--">getConnectedClientCount</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/ClientConnectionManager.html#getConnectedClientCount--">getConnectedClientCount</a></span>()</code>
 <div class="block">Gets the number of connected peers</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>com.google.common.util.concurrent.ListenableFuture&lt;java.net.SocketAddress&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/ClientConnectionManager.html#openConnection-java.net.SocketAddress-org.bitcoinj.net.StreamConnection-">openConnection</a></span>(java.net.SocketAddress&nbsp;serverAddress,
-              <a href="../../../org/bitcoinj/net/StreamConnection.html" title="interface in org.bitcoinj.net">StreamConnection</a>&nbsp;connection)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/ClientConnectionManager.html#openConnection-java.net.SocketAddress-org.sumcoinj.net.StreamConnection-">openConnection</a></span>(java.net.SocketAddress&nbsp;serverAddress,
+              <a href="../../../org/sumcoinj/net/StreamConnection.html" title="interface in org.sumcoinj.net">StreamConnection</a>&nbsp;connection)</code>
 <div class="block">Creates a new connection to the given address, with the given connection used to handle incoming data.</div>
 </td>
 </tr>
@@ -189,14 +189,14 @@ extends com.google.common.util.concurrent.Service</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="openConnection-java.net.SocketAddress-org.bitcoinj.net.StreamConnection-">
+<a name="openConnection-java.net.SocketAddress-org.sumcoinj.net.StreamConnection-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>openConnection</h4>
 <pre>com.google.common.util.concurrent.ListenableFuture&lt;java.net.SocketAddress&gt;&nbsp;openConnection(java.net.SocketAddress&nbsp;serverAddress,
-                                                                                          <a href="../../../org/bitcoinj/net/StreamConnection.html" title="interface in org.bitcoinj.net">StreamConnection</a>&nbsp;connection)</pre>
+                                                                                          <a href="../../../org/sumcoinj/net/StreamConnection.html" title="interface in org.sumcoinj.net">StreamConnection</a>&nbsp;connection)</pre>
 <div class="block">Creates a new connection to the given address, with the given connection used to handle incoming data. Any errors
  that occur during connection will be returned in the given future, including errors that can occur immediately.</div>
 </li>
@@ -248,11 +248,11 @@ extends com.google.common.util.concurrent.Service</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/net/BlockingClientManager.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/net/FilterMerger.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/BlockingClientManager.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/FilterMerger.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/net/ClientConnectionManager.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/net/ClientConnectionManager.html" target="_top">Frames</a></li>
 <li><a href="ClientConnectionManager.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "How to access bitcoinj from other languages"
+title: "How to access sumcoinj from other languages"
 ---
 
 <div markdown="1" id="toc" class="toc"><div markdown="1">
@@ -12,13 +12,13 @@ title: "How to access bitcoinj from other languages"
 
 <div markdown="1" class="toccontent">
 
-# How to access bitcoinj from other languages
+# How to access sumcoinj from other languages
 
 ## Introduction
 
 Java is a fine choice for something that needs to be widely understood, secure against buffer overflows and usable from Android phones. But it's also old, verbose and just generally is not for everyone.
 
-This page details how you can go about using bitcoinj from other languages.
+This page details how you can go about using sumcoinj from other languages.
 
 ## Javascript
 
@@ -26,13 +26,13 @@ Javascript can interop with Java using the Nashorn engine shipped in Java 8. We 
 
 ## Kotlin/Scala
 
-These languages offer good Java interop and there are various people using them in combination with bitcoinj.
+These languages offer good Java interop and there are various people using them in combination with sumcoinj.
 
 ## Python
 
 Python has many fans and can be fun to prototype in. The original Python implementation cannot interop with Java code, but we can gain access via another way using [Jython](http://www.jython.org/index.html). Jython is an implementation of Python (2.x) that is compatible with the original language/class libraries and provides an interactive interpreter that works just like regular Python's for exploration and learning. As long as you don't rely on any custom CPython extensions, you can just run your regular Python application out of the box, including UNIX style executable scripts.
 
-Why would you do that? Primarily because you can import Java class libraries as you would Python class libraries (from org.bitcoinj.core import Wallet). You also get a better garbage collector and real multi-threading support.
+Why would you do that? Primarily because you can import Java class libraries as you would Python class libraries (from org.sumcoinj.core import Wallet). You also get a better garbage collector and real multi-threading support.
 
 ## Ruby
 
@@ -40,11 +40,11 @@ In a similar vein to Jython, there is also [JRuby](http://jruby.org/).  Like Jyt
 
 ## C# and .NET
 
-bitcoinj can be used via IKVM
+sumcoinj can be used via IKVM
 
 ## C++
 
-At the moment, the easiest way to use bitcoinj from C++ is to embed the JVM and use auto-generated JNI wrappers. Here's an example of what such a program looks like:
+At the moment, the easiest way to use sumcoinj from C++ is to embed the JVM and use auto-generated JNI wrappers. Here's an example of what such a program looks like:
 
 [https://github.com/mikehearn/cppjvm/blob/master/mytest/bcj-hello-world.cpp](https://github.com/mikehearn/cppjvm/blob/master/mytest/bcj-hello-world.cpp)
 
@@ -54,26 +54,26 @@ The tool generates all the classes needed based on a recursive exploration of so
 
 [https://github.com/mikehearn/cppjvm/blob/master/java/cppjvm/morkfile](https://github.com/mikehearn/cppjvm/blob/master/java/cppjvm/morkfile)
 
-Because `WalletAppKit` is there and you can reach most of the bitcoinj API via this class, most of the API has wrappers generated. If you're missing a piece, you can add the class you want to that list, delete the "gen" directory and rerun make.
+Because `WalletAppKit` is there and you can reach most of the sumcoinj API via this class, most of the API has wrappers generated. If you're missing a piece, you can add the class you want to that list, delete the "gen" directory and rerun make.
 
-Callback interfaces (`WalletListener`, `PeerEventListener` etc) have to be bound manually and that isn't complete. If you want to use bitcoinj from C++, you'll need to finish off the thunks. Fortunately it's easy and there aren't many of them:
+Callback interfaces (`WalletListener`, `PeerEventListener` etc) have to be bound manually and that isn't complete. If you want to use sumcoinj from C++, you'll need to finish off the thunks. Fortunately it's easy and there aren't many of them:
 
 [https://github.com/mikehearn/cppjvm/blob/master/mytest/native-listeners.h](https://github.com/mikehearn/cppjvm/blob/master/mytest/native-listeners.h)
 
 [https://github.com/mikehearn/cppjvm/blob/master/mytest/native-listeners.cpp](https://github.com/mikehearn/cppjvm/blob/master/mytest/native-listeners.cpp)
 
-We are also exploring complete automated conversion of the bitcoinj sources into C++, so it could be used without any JVM at all. However this work is at an earlier, less usable stage.
+We are also exploring complete automated conversion of the sumcoinj sources into C++, so it could be used without any JVM at all. However this work is at an earlier, less usable stage.
 
 ## Objective-C
 
-The Hive team maintain a library called [BitcoinKit](https://github.com/hivewallet/BitcoinKit), which is designed for building wallet apps on MacOS X. It does not expose the raw bitcoinj API, rather providing its own Objective-C API on top and using JNI under the covers.
+The Hive team maintain a library called [SumcoinKit](https://github.com/hivewallet/SumcoinKit), which is designed for building wallet apps on MacOS X. It does not expose the raw sumcoinj API, rather providing its own Objective-C API on top and using JNI under the covers.
 
-RoboVM can be used to compile Java down to ARM binary code that runs on iPhones, and it has bindings for all iOS frameworks. If you want to write an iPhone app with bitcoinj, this would be a good way to do it.
+RoboVM can be used to compile Java down to ARM binary code that runs on iPhones, and it has bindings for all iOS frameworks. If you want to write an iPhone app with sumcoinj, this would be a good way to do it.
 
-Alternatively, [BreadWallet]() is an iOS SPV wallet that isn't based on bitcoinj. The code is not written to be a library but you could potentially extract the core code and use it for other purposes.
+Alternatively, [BreadWallet]() is an iOS SPV wallet that isn't based on sumcoinj. The code is not written to be a library but you could potentially extract the core code and use it for other purposes.
 
 ## Lisp
 
-The block explorer at biteasy.com is written in Clojure, a dialect of Lisp that runs on the JVM. It uses bitcoinj directly.
+The block explorer at biteasy.com is written in Clojure, a dialect of Lisp that runs on the JVM. It uses sumcoinj directly.
 
 </div>

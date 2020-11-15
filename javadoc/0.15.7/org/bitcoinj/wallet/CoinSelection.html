@@ -42,11 +42,11 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/wallet/BasicKeyChain.State.html" title="enum in org.bitcoinj.wallet"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/wallet/CoinSelector.html" title="interface in org.bitcoinj.wallet"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/wallet/BasicKeyChain.State.html" title="enum in org.sumcoinj.wallet"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/wallet/CoinSelector.html" title="interface in org.sumcoinj.wallet"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/wallet/CoinSelection.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/wallet/CoinSelection.html" target="_top">Frames</a></li>
 <li><a href="CoinSelection.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -85,7 +85,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.wallet</div>
+<div class="subTitle">org.sumcoinj.wallet</div>
 <h2 title="Class CoinSelection" class="title">Class CoinSelection</h2>
 </div>
 <div class="contentContainer">
@@ -93,7 +93,7 @@
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.wallet.CoinSelection</li>
+<li>org.sumcoinj.wallet.CoinSelection</li>
 </ul>
 </li>
 </ul>
@@ -105,7 +105,7 @@
 <pre>public class <span class="typeNameLabel">CoinSelection</span>
 extends java.lang.Object</pre>
 <div class="block">Represents the results of a
- <a href="../../../org/bitcoinj/wallet/CoinSelector.html#select-org.bitcoinj.core.Coin-java.util.List-"><code>CoinSelector.select(Coin, List)</code></a> operation. A
+ <a href="../../../org/sumcoinj/wallet/CoinSelector.html#select-org.sumcoinj.core.Coin-java.util.List-"><code>CoinSelector.select(Coin, List)</code></a> operation. A
  coin selection represents a list of spendable transaction outputs that sum together to give valueGathered.
  Different coin selections could be produced by different coin selectors from the same input set, according
  to their varying policies.</div>
@@ -128,12 +128,12 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>java.util.Collection&lt;<a href="../../../org/bitcoinj/core/TransactionOutput.html" title="class in org.bitcoinj.core">TransactionOutput</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/wallet/CoinSelection.html#gathered">gathered</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>java.util.Collection&lt;<a href="../../../org/sumcoinj/core/TransactionOutput.html" title="class in org.sumcoinj.core">TransactionOutput</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/wallet/CoinSelection.html#gathered">gathered</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/wallet/CoinSelection.html#valueGathered">valueGathered</a></span></code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/wallet/CoinSelection.html#valueGathered">valueGathered</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -150,8 +150,8 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/wallet/CoinSelection.html#CoinSelection-org.bitcoinj.core.Coin-java.util.Collection-">CoinSelection</a></span>(<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;valueGathered,
-             java.util.Collection&lt;<a href="../../../org/bitcoinj/core/TransactionOutput.html" title="class in org.bitcoinj.core">TransactionOutput</a>&gt;&nbsp;gathered)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/wallet/CoinSelection.html#CoinSelection-org.sumcoinj.core.Coin-java.util.Collection-">CoinSelection</a></span>(<a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;valueGathered,
+             java.util.Collection&lt;<a href="../../../org/sumcoinj/core/TransactionOutput.html" title="class in org.sumcoinj.core">TransactionOutput</a>&gt;&nbsp;gathered)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -189,7 +189,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>valueGathered</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a> valueGathered</pre>
+<pre>public&nbsp;<a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a> valueGathered</pre>
 </li>
 </ul>
 <a name="gathered">
@@ -198,7 +198,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>gathered</h4>
-<pre>public&nbsp;java.util.Collection&lt;<a href="../../../org/bitcoinj/core/TransactionOutput.html" title="class in org.bitcoinj.core">TransactionOutput</a>&gt; gathered</pre>
+<pre>public&nbsp;java.util.Collection&lt;<a href="../../../org/sumcoinj/core/TransactionOutput.html" title="class in org.sumcoinj.core">TransactionOutput</a>&gt; gathered</pre>
 </li>
 </ul>
 </li>
@@ -209,14 +209,14 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="CoinSelection-org.bitcoinj.core.Coin-java.util.Collection-">
+<a name="CoinSelection-org.sumcoinj.core.Coin-java.util.Collection-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CoinSelection</h4>
-<pre>public&nbsp;CoinSelection(<a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;valueGathered,
-                     java.util.Collection&lt;<a href="../../../org/bitcoinj/core/TransactionOutput.html" title="class in org.bitcoinj.core">TransactionOutput</a>&gt;&nbsp;gathered)</pre>
+<pre>public&nbsp;CoinSelection(<a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;valueGathered,
+                     java.util.Collection&lt;<a href="../../../org/sumcoinj/core/TransactionOutput.html" title="class in org.sumcoinj.core">TransactionOutput</a>&gt;&nbsp;gathered)</pre>
 </li>
 </ul>
 </li>
@@ -246,11 +246,11 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/wallet/BasicKeyChain.State.html" title="enum in org.bitcoinj.wallet"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/wallet/CoinSelector.html" title="interface in org.bitcoinj.wallet"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/wallet/BasicKeyChain.State.html" title="enum in org.sumcoinj.wallet"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/wallet/CoinSelector.html" title="interface in org.sumcoinj.wallet"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/wallet/CoinSelection.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/wallet/CoinSelection.html" target="_top">Frames</a></li>
 <li><a href="CoinSelection.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

@@ -114,7 +114,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#deserialize-java.nio.ByteBuffer-">deserialize</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#deserialize-java.nio.ByteBuffer-">deserialize</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Reads a message from the given ByteBuffer and returns it.</div>
 </td>
 </tr>
@@ -126,29 +126,29 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>abstract <a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a></code></td>
+<td class="colFirst"><code>abstract <a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MessageSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/MessageSerializer.html#deserializeHeader-java.nio.ByteBuffer-">deserializeHeader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserializes only the header in case packet meta data is needed before decoding
  the payload.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#deserializeHeader-java.nio.ByteBuffer-">deserializeHeader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
+<td class="colFirst"><code><a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#deserializeHeader-java.nio.ByteBuffer-">deserializeHeader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserializes only the header in case packet meta data is needed before decoding
  the payload.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">MessageSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/MessageSerializer.html#deserializePayload-org.bitcoinj.core.BitcoinSerializer.BitcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<td class="colLast"><span class="typeNameLabel">MessageSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/MessageSerializer.html#deserializePayload-org.bitcoinj.core.SumcoinSerializer.SumcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                   <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserialize payload only.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#deserializePayload-org.bitcoinj.core.BitcoinSerializer.BitcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html" title="class in org.bitcoinj.core">BitcoinSerializer.BitcoinPacketHeader</a>&nbsp;header,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#deserializePayload-org.bitcoinj.core.SumcoinSerializer.SumcoinPacketHeader-java.nio.ByteBuffer-">deserializePayload</a></span>(<a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html" title="class in org.bitcoinj.core">SumcoinSerializer.SumcoinPacketHeader</a>&nbsp;header,
                   <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>
 <div class="block">Deserialize payload only.</div>
 </td>
@@ -162,7 +162,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/AddressMessage.html" title="class in org.bitcoinj.core">AddressMessage</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeAddressMessage-byte:A-int-">makeAddressMessage</a></span>(byte[]&nbsp;payloadBytes,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeAddressMessage-byte:A-int-">makeAddressMessage</a></span>(byte[]&nbsp;payloadBytes,
                   int&nbsp;length)</code>
 <div class="block">Make an address message from the payload.</div>
 </td>
@@ -175,7 +175,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeAlertMessage-byte:A-">makeAlertMessage</a></span>(byte[]&nbsp;payloadBytes)</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeAlertMessage-byte:A-">makeAlertMessage</a></span>(byte[]&nbsp;payloadBytes)</code>
 <div class="block">Make an alert message from the payload.</div>
 </td>
 </tr>
@@ -205,7 +205,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Block.html" title="class in org.bitcoinj.core">Block</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeBlock-byte:A-int-int-">makeBlock</a></span>(byte[]&nbsp;payloadBytes,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeBlock-byte:A-int-int-">makeBlock</a></span>(byte[]&nbsp;payloadBytes,
          int&nbsp;offset,
          int&nbsp;length)</code>
 <div class="block">Make a block from the payload.</div>
@@ -219,7 +219,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeBloomFilter-byte:A-">makeBloomFilter</a></span>(byte[]&nbsp;payloadBytes)</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeBloomFilter-byte:A-">makeBloomFilter</a></span>(byte[]&nbsp;payloadBytes)</code>
 <div class="block">Make an filter message from the payload.</div>
 </td>
 </tr>
@@ -231,7 +231,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/FilteredBlock.html" title="class in org.bitcoinj.core">FilteredBlock</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeFilteredBlock-byte:A-">makeFilteredBlock</a></span>(byte[]&nbsp;payloadBytes)</code>
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeFilteredBlock-byte:A-">makeFilteredBlock</a></span>(byte[]&nbsp;payloadBytes)</code>
 <div class="block">Make a filtered block from the payload.</div>
 </td>
 </tr>
@@ -244,7 +244,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/InventoryMessage.html" title="class in org.bitcoinj.core">InventoryMessage</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeInventoryMessage-byte:A-int-">makeInventoryMessage</a></span>(byte[]&nbsp;payloadBytes,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeInventoryMessage-byte:A-int-">makeInventoryMessage</a></span>(byte[]&nbsp;payloadBytes,
                     int&nbsp;length)</code>
 <div class="block">Make an inventory message from the payload.</div>
 </td>
@@ -273,7 +273,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BitcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.html#makeTransaction-byte:A-int-int-byte:A-">makeTransaction</a></span>(byte[]&nbsp;payloadBytes,
+<td class="colLast"><span class="typeNameLabel">SumcoinSerializer.</span><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.html#makeTransaction-byte:A-int-int-byte:A-">makeTransaction</a></span>(byte[]&nbsp;payloadBytes,
                int&nbsp;offset,
                int&nbsp;length,
                byte[]&nbsp;hash)</code>
@@ -441,7 +441,7 @@
             byte[]&nbsp;payloadBytes)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/BitcoinSerializer.BitcoinPacketHeader.html#BitcoinPacketHeader-java.nio.ByteBuffer-">BitcoinPacketHeader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/SumcoinSerializer.SumcoinPacketHeader.html#SumcoinPacketHeader-java.nio.ByteBuffer-">SumcoinPacketHeader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/core/Block.html#Block-org.bitcoinj.core.NetworkParameters-byte:A-">Block</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
@@ -458,7 +458,7 @@
      <a href="../../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a>&nbsp;parent,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -467,7 +467,7 @@
      int&nbsp;offset,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -475,7 +475,7 @@
      byte[]&nbsp;payloadBytes,
      <a href="../../../../org/bitcoinj/core/MessageSerializer.html" title="class in org.bitcoinj.core">MessageSerializer</a>&nbsp;serializer,
      int&nbsp;length)</code>
-<div class="block">Construct a block object from the Bitcoin wire format.</div>
+<div class="block">Construct a block object from the Sumcoin wire format.</div>
 </td>
 </tr>
 <tr class="altColor">

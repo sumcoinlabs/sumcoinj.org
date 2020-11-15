@@ -18,9 +18,9 @@ title: "Building a document timestamping contracts app in under 30 minutes"
 
 Document timestamping is the process of proving that a document existed at a certain time, usually, without revealing the contents of that document to the entity doing the timestamping. Examples include financial reports, predictions about the future, invoices and so on.
 
-By inserting a hash into the block chain using a special transaction output type, called an OP_RETURN output, we can build a timestamping app on top of Bitcoin. This video tutorial shows how.
+By inserting a hash into the block chain using a special transaction output type, called an OP_RETURN output, we can build a timestamping app on top of Sumcoin. This video tutorial shows how.
 
-The program saves proof files with a .timestamp extension: these proofs contain what's called a Merkle branch. You can learn more about Merkle trees and branches at the <a href="https://bitcoin.org/en/developer-guide#transaction-data">official Bitcoin block chain developer guide</a>.
+The program saves proof files with a .timestamp extension: these proofs contain what's called a Merkle branch. You can learn more about Merkle trees and branches at the <a href="https://bitcoin.org/en/developer-guide#transaction-data">official Sumcoin block chain developer guide</a>.
 
 ## Overview
 

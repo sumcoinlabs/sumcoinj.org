@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientChannelProperties.html" title="interface in org.bitcoinj.protocols.channels"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.Factory.html" title="interface in org.bitcoinj.protocols.channels"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientChannelProperties.html" title="interface in org.sumcoinj.protocols.channels"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.Factory.html" title="interface in org.sumcoinj.protocols.channels"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html" target="_top">Frames</a></li>
 <li><a href="IPaymentChannelClient.ClientConnection.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.protocols.channels</div>
+<div class="subTitle">org.sumcoinj.protocols.channels</div>
 <h2 title="Interface IPaymentChannelClient.ClientConnection" class="title">Interface IPaymentChannelClient.ClientConnection</h2>
 </div>
 <div class="contentContainer">
@@ -100,7 +100,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>Enclosing interface:</dt>
-<dd><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.html" title="interface in org.bitcoinj.protocols.channels">IPaymentChannelClient</a></dd>
+<dd><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.html" title="interface in org.sumcoinj.protocols.channels">IPaymentChannelClient</a></dd>
 </dl>
 <hr>
 <br>
@@ -128,27 +128,27 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#acceptExpireTime-long-">acceptExpireTime</a></span>(long&nbsp;expireTime)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#acceptExpireTime-long-">acceptExpireTime</a></span>(long&nbsp;expireTime)</code>
 <div class="block">Queries if the expire time proposed by server is acceptable.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#channelOpen-boolean-">channelOpen</a></span>(boolean&nbsp;wasInitiated)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#channelOpen-boolean-">channelOpen</a></span>(boolean&nbsp;wasInitiated)</code>
 <div class="block">Indicates the channel has been successfully opened and
- <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html#incrementPayment-org.bitcoinj.core.Coin-"><code>PaymentChannelClient.incrementPayment(Coin)</code></a>
+ <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html#incrementPayment-org.sumcoinj.core.Coin-"><code>PaymentChannelClient.incrementPayment(Coin)</code></a>
  may be called at will.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#destroyConnection-org.bitcoinj.protocols.channels.PaymentChannelCloseException.CloseReason-">destroyConnection</a></span>(<a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html" title="enum in org.bitcoinj.protocols.channels">PaymentChannelCloseException.CloseReason</a>&nbsp;reason)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#destroyConnection-org.sumcoinj.protocols.channels.PaymentChannelCloseException.CloseReason-">destroyConnection</a></span>(<a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html" title="enum in org.sumcoinj.protocols.channels">PaymentChannelCloseException.CloseReason</a>&nbsp;reason)</code>
 <div class="block">Requests that the connection to the server be closed.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#sendToServer-org.bitcoin.paymentchannel.Protos.TwoWayChannelMessage-">sendToServer</a></span>(<a href="../../../../org/bitcoin/paymentchannel/Protos.TwoWayChannelMessage.html" title="class in org.bitcoin.paymentchannel">Protos.TwoWayChannelMessage</a>&nbsp;msg)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html#sendToServer-org.bitcoin.paymentchannel.Protos.TwoWayChannelMessage-">sendToServer</a></span>(<a href="../../../../org/bitcoin/paymentchannel/Protos.TwoWayChannelMessage.html" title="class in org.bitcoin.paymentchannel">Protos.TwoWayChannelMessage</a>&nbsp;msg)</code>
 <div class="block">Requests that the given message be sent to the server.</div>
 </td>
 </tr>
@@ -178,31 +178,31 @@ var activeTableTab = "activeTableTab";
  however the order of messages must be preserved.</p>
 
  <p>If the send fails, no exception should be thrown, however
- <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html#connectionClosed--"><code>PaymentChannelClient.connectionClosed()</code></a> should be called immediately. In the case of messages which
+ <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html#connectionClosed--"><code>PaymentChannelClient.connectionClosed()</code></a> should be called immediately. In the case of messages which
  are a part of initialization, initialization will simply fail and the refund transaction will be broadcasted
  when it unlocks (if necessary).  In the case of a payment message, the payment will be lost however if the
  channel is resumed it will begin again from the channel value <i>after</i> the failed payment.</p>
 
- <p>Called while holding a lock on the <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.bitcoinj.protocols.channels"><code>PaymentChannelClient</code></a> object - be careful about reentrancy</p></div>
+ <p>Called while holding a lock on the <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.sumcoinj.protocols.channels"><code>PaymentChannelClient</code></a> object - be careful about reentrancy</p></div>
 </li>
 </ul>
-<a name="destroyConnection-org.bitcoinj.protocols.channels.PaymentChannelCloseException.CloseReason-">
+<a name="destroyConnection-org.sumcoinj.protocols.channels.PaymentChannelCloseException.CloseReason-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>destroyConnection</h4>
-<pre>void&nbsp;destroyConnection(<a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html" title="enum in org.bitcoinj.protocols.channels">PaymentChannelCloseException.CloseReason</a>&nbsp;reason)</pre>
+<pre>void&nbsp;destroyConnection(<a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html" title="enum in org.sumcoinj.protocols.channels">PaymentChannelCloseException.CloseReason</a>&nbsp;reason)</pre>
 <div class="block"><p>Requests that the connection to the server be closed. For stateless protocols, note that after this call,
  no more messages should be received from the server and this object is no longer usable. A
- <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html#connectionClosed--"><code>PaymentChannelClient.connectionClosed()</code></a> event should be generated immediately after this call.</p>
+ <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html#connectionClosed--"><code>PaymentChannelClient.connectionClosed()</code></a> event should be generated immediately after this call.</p>
 
- <p>Called while holding a lock on the <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.bitcoinj.protocols.channels"><code>PaymentChannelClient</code></a> object - be careful about reentrancy</p></div>
+ <p>Called while holding a lock on the <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.sumcoinj.protocols.channels"><code>PaymentChannelClient</code></a> object - be careful about reentrancy</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reason</code> - The reason for the closure, see the individual values for more details.
                It is usually safe to ignore this and treat any value below
-               <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html#CLIENT_REQUESTED_CLOSE"><code>PaymentChannelCloseException.CloseReason.CLIENT_REQUESTED_CLOSE</code></a> as "unrecoverable error" and all others as
+               <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html#CLIENT_REQUESTED_CLOSE"><code>PaymentChannelCloseException.CloseReason.CLIENT_REQUESTED_CLOSE</code></a> as "unrecoverable error" and all others as
                "try again once and see if it works then"</dd>
 </dl>
 </li>
@@ -215,7 +215,7 @@ var activeTableTab = "activeTableTab";
 <h4>acceptExpireTime</h4>
 <pre>boolean&nbsp;acceptExpireTime(long&nbsp;expireTime)</pre>
 <div class="block"><p>Queries if the expire time proposed by server is acceptable. If <code>false</code> is return the channel
- will be closed with a  <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html#TIME_WINDOW_UNACCEPTABLE"><code>PaymentChannelCloseException.CloseReason.TIME_WINDOW_UNACCEPTABLE</code></a>.</p></div>
+ will be closed with a  <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelCloseException.CloseReason.html#TIME_WINDOW_UNACCEPTABLE"><code>PaymentChannelCloseException.CloseReason.TIME_WINDOW_UNACCEPTABLE</code></a>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>expireTime</code> - The time, in seconds,  when this channel will be closed by the server. Note this is in absolute time, i.e. seconds since 1970-01-01T00:00:00.</dd>
@@ -232,10 +232,10 @@ var activeTableTab = "activeTableTab";
 <h4>channelOpen</h4>
 <pre>void&nbsp;channelOpen(boolean&nbsp;wasInitiated)</pre>
 <div class="block"><p>Indicates the channel has been successfully opened and
- <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html#incrementPayment-org.bitcoinj.core.Coin-"><code>PaymentChannelClient.incrementPayment(Coin)</code></a>
+ <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html#incrementPayment-org.sumcoinj.core.Coin-"><code>PaymentChannelClient.incrementPayment(Coin)</code></a>
  may be called at will.</p>
 
- <p>Called while holding a lock on the <a href="../../../../org/bitcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.bitcoinj.protocols.channels"><code>PaymentChannelClient</code></a>
+ <p>Called while holding a lock on the <a href="../../../../org/sumcoinj/protocols/channels/PaymentChannelClient.html" title="class in org.sumcoinj.protocols.channels"><code>PaymentChannelClient</code></a>
  object - be careful about reentrancy</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -270,11 +270,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientChannelProperties.html" title="interface in org.bitcoinj.protocols.channels"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/protocols/channels/IPaymentChannelClient.Factory.html" title="interface in org.bitcoinj.protocols.channels"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientChannelProperties.html" title="interface in org.sumcoinj.protocols.channels"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/protocols/channels/IPaymentChannelClient.Factory.html" title="interface in org.sumcoinj.protocols.channels"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/protocols/channels/IPaymentChannelClient.ClientConnection.html" target="_top">Frames</a></li>
 <li><a href="IPaymentChannelClient.ClientConnection.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

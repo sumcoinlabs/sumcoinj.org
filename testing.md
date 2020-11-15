@@ -14,11 +14,11 @@ title: "How to test applications"
 
 # How to test applications
 
-Testing is obviously an important step for any software that uses money. This article explains some common techniques used to test Bitcoin apps.
+Testing is obviously an important step for any software that uses money. This article explains some common techniques used to test Sumcoin apps.
 
 ## The testnet
 
-The Bitcoin community runs a separate, parallel instance of the Bitcoin network that features a slightly different and more relaxed ruleset, called the _testnet_. Most usefully, coins on the testnet have no value and can be obtained for free from testnet faucet sites like [https://testnet-faucet.mempool.co/](https://testnet-faucet.mempool.co/) or [http://tpfaucet.appspot.com/](http://tpfaucet.appspot.com/).
+The Sumcoin community runs a separate, parallel instance of the Sumcoin network that features a slightly different and more relaxed ruleset, called the _testnet_. Most usefully, coins on the testnet have no value and can be obtained for free from testnet faucet sites like [https://testnet-faucet.mempool.co/](https://testnet-faucet.mempool.co/) or [http://tpfaucet.appspot.com/](http://tpfaucet.appspot.com/).
 
 You can make your app use the testnet by instantiating your objects with `TestNetParams.get()` instead of `MainNetParams.get()`. The wallet-tool app accepts a flag `--net=TEST` as well.
 
@@ -28,7 +28,7 @@ It's worth noting that whilst the testnet can be convenient, sometimes people me
 
 The testnet is good as far as it goes, but it still has the issue that blocks are mined every ten minutes. Often you don't want to wait for a new block, and you don't want to have to use faucet sites to get test coins.
 
-To simplify things, starting from Bitcoin Core 0.9 there is a new mode called regtest mode. You can run a local bitcoind in regtest mode like this:
+To simplify things, starting from Sumcoin Core 0.9 there is a new mode called regtest mode. You can run a local bitcoind in regtest mode like this:
 
 ~~~
 ./bitcoind -regtest
@@ -37,26 +37,26 @@ To simplify things, starting from Bitcoin Core 0.9 there is a new mode called re
 and once that's running, in another window you can do something like
 
 ~~~
-./bitcoin-cli -regtest generate 101
+./sumcoin-cli -regtest generate 101
 ~~~
 
 ... to create a new block on demand. Regtest mode requires the usage of yet another set of network params, `RegTestParams.get()`, and is designed to run only locally. There is no public regtest network. You can use `PeerGroup.connectToLocalHost()` to make it talk to the local bitcoind.
 
-Note that newly mined coins have to mature (this is a general Bitcoin rule). This means they don't become spendable for 100 blocks. The number 101 in the command above selects how many blocks to mine. Thus this should give you spendable coins. Then you can send some test coins to your app like this:
+Note that newly mined coins have to mature (this is a general Sumcoin rule). This means they don't become spendable for 100 blocks. The number 101 in the command above selects how many blocks to mine. Thus this should give you spendable coins. Then you can send some test coins to your app like this:
 
 ~~~
-./bitcoin-cli -regtest sendtoaddress <address of your app goes here> 10.0
-./bitcoin-cli -regtest generate 1
+./sumcoin-cli -regtest sendtoaddress <address of your app goes here> 10.0
+./sumcoin-cli -regtest generate 1
 ~~~
 
-The block chain and so on is stored in ~/.bitcoin/regtest, so you can delete it to start over again, or use -datadir to make the files be saved in a different location.
+The block chain and so on is stored in ~/.sumcoin/regtest, so you can delete it to start over again, or use -datadir to make the files be saved in a different location.
 
 You can make wallet-tool use this mode using `--net=REGTEST --peers=localhost`.
 
-Currently bitcoinj doesn't have a class that wraps the Bitcoin Core RPC interface and drives regtest mode, but it'd be a nice feature to have in future.
+Currently sumcoinj doesn't have a class that wraps the Sumcoin Core RPC interface and drives regtest mode, but it'd be a nice feature to have in future.
 
 ## Unit tests
 
-Bitcoinj provides a `TestUtils` class that can do things like manufacture fake `Transaction` objects and so on. Take a look at the test suite for bitcoinj itself to see how to use the utilities. Unit tests are a great way to build robustness in your software, although due to the many subtle complexities of the Bitcoin protocol they're not always sufficient to ensure things work correctly.
+Sumcoinj provides a `TestUtils` class that can do things like manufacture fake `Transaction` objects and so on. Take a look at the test suite for sumcoinj itself to see how to use the utilities. Unit tests are a great way to build robustness in your software, although due to the many subtle complexities of the Sumcoin protocol they're not always sufficient to ensure things work correctly.
 
 </div>

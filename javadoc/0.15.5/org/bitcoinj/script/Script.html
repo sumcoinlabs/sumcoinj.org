@@ -49,10 +49,10 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/script/Script.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/script/Script.html" target="_top">Frames</a></li>
 <li><a href="Script.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.script</div>
+<div class="subTitle">org.sumcoinj.script</div>
 <h2 title="Class Script" class="title">Class Script</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.script.Script</li>
+<li>org.sumcoinj.script.Script</li>
 </ul>
 </li>
 </ul>
@@ -112,7 +112,7 @@ var activeTableTab = "activeTableTab";
 extends java.lang.Object</pre>
 <div class="block"><p>Programs embedded inside transactions that control redemption of payments.</p>
 
- <p>Bitcoin transactions don't specify what they do directly. Instead <a href="https://en.bitcoin.it/wiki/Script">a
+ <p>Sumcoin transactions don't specify what they do directly. Instead <a href="https://en.bitcoin.it/wiki/Script">a
  small binary stack language</a> is used to define programs that when evaluated return whether the transaction
  "accepts" or rejects the other transactions connected to it.</p>
 
@@ -139,14 +139,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script">Script.ScriptType</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script">Script.ScriptType</a></span></code>
 <div class="block">Enumeration to encapsulate the type of this script.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a></span></code>
-<div class="block">Flags to pass to <a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, long, Script, Set)</code></a>.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a></span></code>
+<div class="block">Flags to pass to <a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, long, Script, Set)</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -165,30 +165,30 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static java.util.EnumSet&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#ALL_VERIFY_FLAGS">ALL_VERIFY_FLAGS</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>static java.util.EnumSet&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#ALL_VERIFY_FLAGS">ALL_VERIFY_FLAGS</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected java.util.List&lt;<a href="../../../org/bitcoinj/script/ScriptChunk.html" title="class in org.bitcoinj.script">ScriptChunk</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#chunks">chunks</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>protected java.util.List&lt;<a href="../../../org/sumcoinj/script/ScriptChunk.html" title="class in org.sumcoinj.script">ScriptChunk</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#chunks">chunks</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#MAX_P2SH_SIGOPS">MAX_P2SH_SIGOPS</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#MAX_P2SH_SIGOPS">MAX_P2SH_SIGOPS</a></span></code>
 <div class="block">Max number of sigops allowed in a standard p2sh redeem script</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#MAX_SCRIPT_ELEMENT_SIZE">MAX_SCRIPT_ELEMENT_SIZE</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#MAX_SCRIPT_ELEMENT_SIZE">MAX_SCRIPT_ELEMENT_SIZE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#program">program</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#program">program</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#SIG_SIZE">SIG_SIZE</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#SIG_SIZE">SIG_SIZE</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -205,12 +205,12 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#Script-byte:A-">Script</a></span>(byte[]&nbsp;programBytes)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#Script-byte:A-">Script</a></span>(byte[]&nbsp;programBytes)</code>
 <div class="block">Construct a Script that copies and wraps the programBytes array.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#Script-byte:A-long-">Script</a></span>(byte[]&nbsp;programBytes,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#Script-byte:A-long-">Script</a></span>(byte[]&nbsp;programBytes,
       long&nbsp;creationTimeSeconds)</code>&nbsp;</td>
 </tr>
 </table>
@@ -230,22 +230,22 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-">correctlySpends</a></span>(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-">correctlySpends</a></span>(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                int&nbsp;scriptSigIndex,
-               <a href="../../../org/bitcoinj/core/TransactionWitness.html" title="class in org.bitcoinj.core">TransactionWitness</a>&nbsp;witness,
-               <a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;value,
-               <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey,
-               java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
+               <a href="../../../org/sumcoinj/core/TransactionWitness.html" title="class in org.sumcoinj.core">TransactionWitness</a>&nbsp;witness,
+               <a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;value,
+               <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey,
+               java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
 <div class="block">Verifies that this script (interpreted as a scriptSig) correctly spends the given scriptPubKey.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-">correctlySpends</a></span>(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-">correctlySpends</a></span>(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                long&nbsp;scriptSigIndex,
-               <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey)</code>
+               <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>
+<div class="block"><span class="deprecationComment">Use <a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>
  instead so that verification flags do not change as new verification options
  are added.</span></div>
 </div>
@@ -253,259 +253,259 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.Set-">correctlySpends</a></span>(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.Set-">correctlySpends</a></span>(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                long&nbsp;scriptSigIndex,
-               <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey,
-               java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
+               <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey,
+               java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
 <div class="block">Verifies that this script (interpreted as a scriptSig) correctly spends the given scriptPubKey.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#createEmptyInputScript-org.bitcoinj.core.ECKey-org.bitcoinj.script.Script-">createEmptyInputScript</a></span>(<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;key,
-                      <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;redeemScript)</code>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#createEmptyInputScript-org.sumcoinj.core.ECKey-org.sumcoinj.script.Script-">createEmptyInputScript</a></span>(<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;key,
+                      <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;redeemScript)</code>
 <div class="block">Creates an incomplete scriptSig that, once filled with signatures, can redeem output containing this scriptPubKey.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/core/TransactionWitness.html" title="class in org.bitcoinj.core">TransactionWitness</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#createEmptyWitness-org.bitcoinj.core.ECKey-">createEmptyWitness</a></span>(<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;key)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/core/TransactionWitness.html" title="class in org.sumcoinj.core">TransactionWitness</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#createEmptyWitness-org.sumcoinj.core.ECKey-">createEmptyWitness</a></span>(<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#createInputScript-byte:A-">createInputScript</a></span>(byte[]&nbsp;signature)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#createInputScript-byte:A-">createInputScript</a></span>(byte[]&nbsp;signature)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#createInputScript-byte:A-byte:A-">createInputScript</a></span>(byte[]&nbsp;signature,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#createInputScript-byte:A-byte:A-">createInputScript</a></span>(byte[]&nbsp;signature,
                  byte[]&nbsp;pubkey)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#createMultiSigOutputScript-int-java.util.List-">createMultiSigOutputScript</a></span>(int&nbsp;threshold,
-                          java.util.List&lt;<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&gt;&nbsp;pubkeys)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#createMultiSigOutputScript-int-java.util.List-">createMultiSigOutputScript</a></span>(int&nbsp;threshold,
+                          java.util.List&lt;<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&gt;&nbsp;pubkeys)</code>
 <div class="block">Creates a program that requires at least N of the given keys to sign, using OP_CHECKMULTISIG.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#decodeFromOpN-int-">decodeFromOpN</a></span>(int&nbsp;opcode)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#decodeFromOpN-int-">decodeFromOpN</a></span>(int&nbsp;opcode)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#encodeToOpN-int-">encodeToOpN</a></span>(int&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#encodeToOpN-int-">encodeToOpN</a></span>(int&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-boolean-">executeScript</a></span>(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-boolean-">executeScript</a></span>(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
              long&nbsp;index,
-             <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;script,
+             <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;script,
              java.util.LinkedList&lt;byte[]&gt;&nbsp;stack,
              boolean&nbsp;enforceNullDummy)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../org/bitcoinj/script/Script.html#executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-java.util.Set-"><code>executeScript(Transaction, long, Script, LinkedList, Set)</code></a>
+<div class="block"><span class="deprecationComment">Use <a href="../../../org/sumcoinj/script/Script.html#executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-java.util.Set-"><code>executeScript(Transaction, long, Script, LinkedList, Set)</code></a>
  instead.</span></div>
 </div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-java.util.Set-">executeScript</a></span>(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-java.util.Set-">executeScript</a></span>(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
              long&nbsp;index,
-             <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;script,
+             <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;script,
              java.util.LinkedList&lt;byte[]&gt;&nbsp;stack,
-             java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
+             java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)</code>
 <div class="block">Exposes the script interpreter.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../org/bitcoinj/script/ScriptChunk.html" title="class in org.bitcoinj.script">ScriptChunk</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getChunks--">getChunks</a></span>()</code>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../org/sumcoinj/script/ScriptChunk.html" title="class in org.sumcoinj.script">ScriptChunk</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getChunks--">getChunks</a></span>()</code>
 <div class="block">Returns an immutable list of the scripts parsed form.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>java.math.BigInteger</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getCLTVPaymentChannelExpiry--">getCLTVPaymentChannelExpiry</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getCLTVPaymentChannelExpiry--">getCLTVPaymentChannelExpiry</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getCLTVPaymentChannelRecipientPubKey--">getCLTVPaymentChannelRecipientPubKey</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getCLTVPaymentChannelRecipientPubKey--">getCLTVPaymentChannelRecipientPubKey</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getCLTVPaymentChannelSenderPubKey--">getCLTVPaymentChannelSenderPubKey</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getCLTVPaymentChannelSenderPubKey--">getCLTVPaymentChannelSenderPubKey</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getCreationTimeSeconds--">getCreationTimeSeconds</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getCreationTimeSeconds--">getCreationTimeSeconds</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getNumberOfBytesRequiredToSpend-org.bitcoinj.core.ECKey-org.bitcoinj.script.Script-">getNumberOfBytesRequiredToSpend</a></span>(<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;pubKey,
-                               <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;redeemScript)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getNumberOfBytesRequiredToSpend-org.sumcoinj.core.ECKey-org.sumcoinj.script.Script-">getNumberOfBytesRequiredToSpend</a></span>(<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;pubKey,
+                               <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;redeemScript)</code>
 <div class="block">Returns number of bytes required to spend this script.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getNumberOfSignaturesRequiredToSpend--">getNumberOfSignaturesRequiredToSpend</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getNumberOfSignaturesRequiredToSpend--">getNumberOfSignaturesRequiredToSpend</a></span>()</code>
 <div class="block">Returns number of signatures required to satisfy this script.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getP2SHSigOpCount-byte:A-">getP2SHSigOpCount</a></span>(byte[]&nbsp;scriptSig)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getP2SHSigOpCount-byte:A-">getP2SHSigOpCount</a></span>(byte[]&nbsp;scriptSig)</code>
 <div class="block">Gets the count of P2SH Sig Ops in the Script scriptSig</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getProgram--">getProgram</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getProgram--">getProgram</a></span>()</code>
 <div class="block">Returns the serialized program as a newly created byte array.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getPubKeyHash--">getPubKeyHash</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getPubKeyHash--">getPubKeyHash</a></span>()</code>
 <div class="block">If the program somehow pays to a hash, returns the hash.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getPubKeys--">getPubKeys</a></span>()</code>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getPubKeys--">getPubKeys</a></span>()</code>
 <div class="block">Returns a list of the keys required by this script, assuming a multi-sig script.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getScriptSigWithSignature-org.bitcoinj.script.Script-byte:A-int-">getScriptSigWithSignature</a></span>(<a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptSig,
+<td class="colFirst"><code><a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getScriptSigWithSignature-org.sumcoinj.script.Script-byte:A-int-">getScriptSigWithSignature</a></span>(<a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptSig,
                          byte[]&nbsp;sigBytes,
                          int&nbsp;index)</code>
 <div class="block">Returns a copy of the given scriptSig with the signature inserted in the given position.</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script">Script.ScriptType</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getScriptType--">getScriptType</a></span>()</code>
-<div class="block">Get the <a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script"><code>Script.ScriptType</code></a>.</div>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script">Script.ScriptType</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getScriptType--">getScriptType</a></span>()</code>
+<div class="block">Get the <a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script"><code>Script.ScriptType</code></a>.</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getSigInsertionIndex-org.bitcoinj.core.Sha256Hash-org.bitcoinj.core.ECKey-">getSigInsertionIndex</a></span>(<a href="../../../org/bitcoinj/core/Sha256Hash.html" title="class in org.bitcoinj.core">Sha256Hash</a>&nbsp;hash,
-                    <a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;signingKey)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getSigInsertionIndex-org.sumcoinj.core.Sha256Hash-org.sumcoinj.core.ECKey-">getSigInsertionIndex</a></span>(<a href="../../../org/sumcoinj/core/Sha256Hash.html" title="class in org.sumcoinj.core">Sha256Hash</a>&nbsp;hash,
+                    <a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;signingKey)</code>
 <div class="block">Returns the index where a signature by the key should be inserted.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getSigOpCount-byte:A-">getSigOpCount</a></span>(byte[]&nbsp;program)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getSigOpCount-byte:A-">getSigOpCount</a></span>(byte[]&nbsp;program)</code>
 <div class="block">Gets the count of regular SigOps in the script program (counting multisig ops as 20)</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getToAddress-org.bitcoinj.core.NetworkParameters-">getToAddress</a></span>(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params)</code>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getToAddress-org.sumcoinj.core.NetworkParameters-">getToAddress</a></span>(<a href="../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params)</code>
 <div class="block">Gets the destination address from this script, if it's in the required form.</div>
 </td>
 </tr>
 <tr id="i29" class="rowColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#getToAddress-org.bitcoinj.core.NetworkParameters-boolean-">getToAddress</a></span>(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colFirst"><code><a href="../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#getToAddress-org.sumcoinj.core.NetworkParameters-boolean-">getToAddress</a></span>(<a href="../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
             boolean&nbsp;forcePayToPubKey)</code>
 <div class="block">Gets the destination address from this script, if it's in the required form.</div>
 </td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isOpReturn--">isOpReturn</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isOpReturn--">isOpReturn</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isOpReturn-org.bitcoinj.script.Script-"><code>ScriptPattern.isOpReturn(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isOpReturn-org.sumcoinj.script.Script-"><code>ScriptPattern.isOpReturn(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isPayToScriptHash--">isPayToScriptHash</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isPayToScriptHash--">isPayToScriptHash</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2SH-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2SH(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2SH-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2SH(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isSentToAddress--">isSentToAddress</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isSentToAddress--">isSentToAddress</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2PKH-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2PKH(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2PKH-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2PKH(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isSentToCLTVPaymentChannel--">isSentToCLTVPaymentChannel</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isSentToCLTVPaymentChannel--">isSentToCLTVPaymentChannel</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isSentToCltvPaymentChannel-org.bitcoinj.script.Script-"><code>ScriptPattern.isSentToCltvPaymentChannel(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isSentToCltvPaymentChannel-org.sumcoinj.script.Script-"><code>ScriptPattern.isSentToCltvPaymentChannel(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isSentToMultiSig--">isSentToMultiSig</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isSentToMultiSig--">isSentToMultiSig</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isSentToMultisig-org.bitcoinj.script.Script-"><code>ScriptPattern.isSentToMultisig(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isSentToMultisig-org.sumcoinj.script.Script-"><code>ScriptPattern.isSentToMultisig(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#isSentToRawPubKey--">isSentToRawPubKey</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#isSentToRawPubKey--">isSentToRawPubKey</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2PK-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2PK(Script)</code></a></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2PK-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2PK(Script)</code></a></span></div>
 </div>
 </td>
 </tr>
 <tr id="i37" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#removeAllInstancesOf-byte:A-byte:A-">removeAllInstancesOf</a></span>(byte[]&nbsp;inputScript,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#removeAllInstancesOf-byte:A-byte:A-">removeAllInstancesOf</a></span>(byte[]&nbsp;inputScript,
                     byte[]&nbsp;chunkToRemove)</code>
 <div class="block">Returns the script bytes of inputScript with all instances of the specified script object removed</div>
 </td>
 </tr>
 <tr id="i38" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#removeAllInstancesOfOp-byte:A-int-">removeAllInstancesOfOp</a></span>(byte[]&nbsp;inputScript,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#removeAllInstancesOfOp-byte:A-int-">removeAllInstancesOfOp</a></span>(byte[]&nbsp;inputScript,
                       int&nbsp;opCode)</code>
 <div class="block">Returns the script bytes of inputScript with all instances of the given op code removed</div>
 </td>
 </tr>
 <tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#setCreationTimeSeconds-long-">setCreationTimeSeconds</a></span>(long&nbsp;creationTimeSeconds)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#setCreationTimeSeconds-long-">setCreationTimeSeconds</a></span>(long&nbsp;creationTimeSeconds)</code>&nbsp;</td>
 </tr>
 <tr id="i40" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#toString--">toString</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#toString--">toString</a></span>()</code>
 <div class="block">Returns the program opcodes as a string, for example "[1234] DUP HASH160", or "&lt;empty&gt;".</div>
 </td>
 </tr>
 <tr id="i41" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/script/Script.html#writeBytes-java.io.OutputStream-byte:A-">writeBytes</a></span>(java.io.OutputStream&nbsp;os,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/script/Script.html#writeBytes-java.io.OutputStream-byte:A-">writeBytes</a></span>(java.io.OutputStream&nbsp;os,
           byte[]&nbsp;buf)</code>
 <div class="block">Writes out the given byte buffer to the output stream with the correct opcode prefix
  To write an integer call writeBytes(out, Utils.reverseBytes(Utils.encodeMPI(val, false)));</div>
@@ -539,7 +539,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>ALL_VERIFY_FLAGS</h4>
-<pre>public static final&nbsp;java.util.EnumSet&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt; ALL_VERIFY_FLAGS</pre>
+<pre>public static final&nbsp;java.util.EnumSet&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt; ALL_VERIFY_FLAGS</pre>
 </li>
 </ul>
 <a name="MAX_SCRIPT_ELEMENT_SIZE">
@@ -551,7 +551,7 @@ extends java.lang.Object</pre>
 <pre>public static final&nbsp;long MAX_SCRIPT_ELEMENT_SIZE</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.bitcoinj.script.Script.MAX_SCRIPT_ELEMENT_SIZE">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.sumcoinj.script.Script.MAX_SCRIPT_ELEMENT_SIZE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -564,7 +564,7 @@ extends java.lang.Object</pre>
 <pre>public static final&nbsp;int SIG_SIZE</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.bitcoinj.script.Script.SIG_SIZE">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.sumcoinj.script.Script.SIG_SIZE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -578,7 +578,7 @@ extends java.lang.Object</pre>
 <div class="block">Max number of sigops allowed in a standard p2sh redeem script</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#org.bitcoinj.script.Script.MAX_P2SH_SIGOPS">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#org.sumcoinj.script.Script.MAX_P2SH_SIGOPS">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -588,7 +588,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>chunks</h4>
-<pre>protected&nbsp;java.util.List&lt;<a href="../../../org/bitcoinj/script/ScriptChunk.html" title="class in org.bitcoinj.script">ScriptChunk</a>&gt; chunks</pre>
+<pre>protected&nbsp;java.util.List&lt;<a href="../../../org/sumcoinj/script/ScriptChunk.html" title="class in org.sumcoinj.script">ScriptChunk</a>&gt; chunks</pre>
 </li>
 </ul>
 <a name="program">
@@ -615,14 +615,14 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>Script</h4>
 <pre>public&nbsp;Script(byte[]&nbsp;programBytes)
-       throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+       throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Construct a Script that copies and wraps the programBytes array. The array is parsed and checked for syntactic
  validity.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>programBytes</code> - Array of program bytes from a transaction.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -634,10 +634,10 @@ extends java.lang.Object</pre>
 <h4>Script</h4>
 <pre>public&nbsp;Script(byte[]&nbsp;programBytes,
               long&nbsp;creationTimeSeconds)
-       throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+       throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -697,7 +697,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getChunks</h4>
-<pre>public&nbsp;java.util.List&lt;<a href="../../../org/bitcoinj/script/ScriptChunk.html" title="class in org.bitcoinj.script">ScriptChunk</a>&gt;&nbsp;getChunks()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../org/sumcoinj/script/ScriptChunk.html" title="class in org.sumcoinj.script">ScriptChunk</a>&gt;&nbsp;getChunks()</pre>
 <div class="block">Returns an immutable list of the scripts parsed form. Each chunk is either an opcode or data element.</div>
 </li>
 </ul>
@@ -709,7 +709,7 @@ extends java.lang.Object</pre>
 <h4>isSentToRawPubKey</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isSentToRawPubKey()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2PK-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2PK(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2PK-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2PK(Script)</code></a></span></div>
 </li>
 </ul>
 <a name="isSentToAddress--">
@@ -720,7 +720,7 @@ public&nbsp;boolean&nbsp;isSentToRawPubKey()</pre>
 <h4>isSentToAddress</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isSentToAddress()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2PKH-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2PKH(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2PKH-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2PKH(Script)</code></a></span></div>
 </li>
 </ul>
 <a name="getPubKeyHash--">
@@ -730,13 +730,13 @@ public&nbsp;boolean&nbsp;isSentToAddress()</pre>
 <li class="blockList">
 <h4>getPubKeyHash</h4>
 <pre>public&nbsp;byte[]&nbsp;getPubKeyHash()
-                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block"><p>If the program somehow pays to a hash, returns the hash.</p>
  
  <p>Otherwise this method throws a ScriptException.</p></div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -748,11 +748,11 @@ public&nbsp;boolean&nbsp;isSentToAddress()</pre>
 <h4>getCLTVPaymentChannelSenderPubKey</h4>
 <pre>@Deprecated
 public&nbsp;byte[]&nbsp;getCLTVPaymentChannelSenderPubKey()
-                                                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                                                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -764,11 +764,11 @@ public&nbsp;byte[]&nbsp;getCLTVPaymentChannelSenderPubKey()
 <h4>getCLTVPaymentChannelRecipientPubKey</h4>
 <pre>@Deprecated
 public&nbsp;byte[]&nbsp;getCLTVPaymentChannelRecipientPubKey()
-                                                        throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                                                        throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -780,45 +780,45 @@ public&nbsp;byte[]&nbsp;getCLTVPaymentChannelRecipientPubKey()
 <h4>getCLTVPaymentChannelExpiry</h4>
 <pre>@Deprecated
 public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
-                                                             throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                                                             throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="getToAddress-org.bitcoinj.core.NetworkParameters-">
+<a name="getToAddress-org.sumcoinj.core.NetworkParameters-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getToAddress</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;getToAddress(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params)
-                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+<pre>public&nbsp;<a href="../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;getToAddress(<a href="../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params)
+                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Gets the destination address from this script, if it's in the required form.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="getToAddress-org.bitcoinj.core.NetworkParameters-boolean-">
+<a name="getToAddress-org.sumcoinj.core.NetworkParameters-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getToAddress</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/core/Address.html" title="class in org.bitcoinj.core">Address</a>&nbsp;getToAddress(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<pre>public&nbsp;<a href="../../../org/sumcoinj/core/Address.html" title="class in org.sumcoinj.core">Address</a>&nbsp;getToAddress(<a href="../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                             boolean&nbsp;forcePayToPubKey)
-                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Gets the destination address from this script, if it's in the required form.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>forcePayToPubKey</code> - If true, allow payToPubKey to be casted to the corresponding address. This is useful if you prefer
             showing addresses rather than pubkeys.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -846,7 +846,7 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <li class="blockList">
 <h4>createMultiSigOutputScript</h4>
 <pre>public static&nbsp;byte[]&nbsp;createMultiSigOutputScript(int&nbsp;threshold,
-                                                java.util.List&lt;<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&gt;&nbsp;pubkeys)</pre>
+                                                java.util.List&lt;<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&gt;&nbsp;pubkeys)</pre>
 <div class="block">Creates a program that requires at least N of the given keys to sign, using OP_CHECKMULTISIG.</div>
 </li>
 </ul>
@@ -869,51 +869,51 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <pre>public static&nbsp;byte[]&nbsp;createInputScript(byte[]&nbsp;signature)</pre>
 </li>
 </ul>
-<a name="createEmptyInputScript-org.bitcoinj.core.ECKey-org.bitcoinj.script.Script-">
+<a name="createEmptyInputScript-org.sumcoinj.core.ECKey-org.sumcoinj.script.Script-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createEmptyInputScript</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;createEmptyInputScript(@Nullable
-                                     <a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;key,
+<pre>public&nbsp;<a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;createEmptyInputScript(@Nullable
+                                     <a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;key,
                                      @Nullable
-                                     <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;redeemScript)</pre>
+                                     <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;redeemScript)</pre>
 <div class="block">Creates an incomplete scriptSig that, once filled with signatures, can redeem output containing this scriptPubKey.
  Instead of the signatures resulting script has OP_0.
  Having incomplete input script allows to pass around partially signed tx.
  It is expected that this program later on will be updated with proper signatures.</div>
 </li>
 </ul>
-<a name="createEmptyWitness-org.bitcoinj.core.ECKey-">
+<a name="createEmptyWitness-org.sumcoinj.core.ECKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createEmptyWitness</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/core/TransactionWitness.html" title="class in org.bitcoinj.core">TransactionWitness</a>&nbsp;createEmptyWitness(<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;key)</pre>
+<pre>public&nbsp;<a href="../../../org/sumcoinj/core/TransactionWitness.html" title="class in org.sumcoinj.core">TransactionWitness</a>&nbsp;createEmptyWitness(<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;key)</pre>
 </li>
 </ul>
-<a name="getScriptSigWithSignature-org.bitcoinj.script.Script-byte:A-int-">
+<a name="getScriptSigWithSignature-org.sumcoinj.script.Script-byte:A-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getScriptSigWithSignature</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;getScriptSigWithSignature(<a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptSig,
+<pre>public&nbsp;<a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;getScriptSigWithSignature(<a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptSig,
                                         byte[]&nbsp;sigBytes,
                                         int&nbsp;index)</pre>
 <div class="block">Returns a copy of the given scriptSig with the signature inserted in the given position.</div>
 </li>
 </ul>
-<a name="getSigInsertionIndex-org.bitcoinj.core.Sha256Hash-org.bitcoinj.core.ECKey-">
+<a name="getSigInsertionIndex-org.sumcoinj.core.Sha256Hash-org.sumcoinj.core.ECKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSigInsertionIndex</h4>
-<pre>public&nbsp;int&nbsp;getSigInsertionIndex(<a href="../../../org/bitcoinj/core/Sha256Hash.html" title="class in org.bitcoinj.core">Sha256Hash</a>&nbsp;hash,
-                                <a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;signingKey)</pre>
+<pre>public&nbsp;int&nbsp;getSigInsertionIndex(<a href="../../../org/sumcoinj/core/Sha256Hash.html" title="class in org.sumcoinj.core">Sha256Hash</a>&nbsp;hash,
+                                <a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;signingKey)</pre>
 <div class="block">Returns the index where a signature by the key should be inserted.  Only applicable to
  a P2SH scriptSig.</div>
 </li>
@@ -924,11 +924,11 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <ul class="blockList">
 <li class="blockList">
 <h4>getPubKeys</h4>
-<pre>public&nbsp;java.util.List&lt;<a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&gt;&nbsp;getPubKeys()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&gt;&nbsp;getPubKeys()</pre>
 <div class="block">Returns a list of the keys required by this script, assuming a multi-sig script.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code> - if the script type is not understood or is pay to address or is P2SH (run this method on the "Redeem script" instead).</dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code> - if the script type is not understood or is pay to address or is P2SH (run this method on the "Redeem script" instead).</dd>
 </dl>
 </li>
 </ul>
@@ -957,11 +957,11 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <li class="blockList">
 <h4>getSigOpCount</h4>
 <pre>public static&nbsp;int&nbsp;getSigOpCount(byte[]&nbsp;program)
-                         throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                         throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Gets the count of regular SigOps in the script program (counting multisig ops as 20)</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -972,11 +972,11 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <li class="blockList">
 <h4>getP2SHSigOpCount</h4>
 <pre>public static&nbsp;long&nbsp;getP2SHSigOpCount(byte[]&nbsp;scriptSig)
-                              throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                              throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Gets the count of P2SH Sig Ops in the Script scriptSig</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -990,16 +990,16 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <div class="block">Returns number of signatures required to satisfy this script.</div>
 </li>
 </ul>
-<a name="getNumberOfBytesRequiredToSpend-org.bitcoinj.core.ECKey-org.bitcoinj.script.Script-">
+<a name="getNumberOfBytesRequiredToSpend-org.sumcoinj.core.ECKey-org.sumcoinj.script.Script-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getNumberOfBytesRequiredToSpend</h4>
 <pre>public&nbsp;int&nbsp;getNumberOfBytesRequiredToSpend(@Nullable
-                                           <a href="../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;pubKey,
+                                           <a href="../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;pubKey,
                                            @Nullable
-                                           <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;redeemScript)</pre>
+                                           <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;redeemScript)</pre>
 <div class="block">Returns number of bytes required to spend this script. It accepts optional ECKey and redeemScript that may
  be required for certain types of script to estimate target size.</div>
 </li>
@@ -1012,7 +1012,7 @@ public&nbsp;java.math.BigInteger&nbsp;getCLTVPaymentChannelExpiry()
 <h4>isPayToScriptHash</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isPayToScriptHash()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isP2SH-org.bitcoinj.script.Script-"><code>ScriptPattern.isP2SH(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isP2SH-org.sumcoinj.script.Script-"><code>ScriptPattern.isP2SH(Script)</code></a></span></div>
 </li>
 </ul>
 <a name="isSentToMultiSig--">
@@ -1023,7 +1023,7 @@ public&nbsp;boolean&nbsp;isPayToScriptHash()</pre>
 <h4>isSentToMultiSig</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isSentToMultiSig()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isSentToMultisig-org.bitcoinj.script.Script-"><code>ScriptPattern.isSentToMultisig(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isSentToMultisig-org.sumcoinj.script.Script-"><code>ScriptPattern.isSentToMultisig(Script)</code></a></span></div>
 </li>
 </ul>
 <a name="isSentToCLTVPaymentChannel--">
@@ -1034,7 +1034,7 @@ public&nbsp;boolean&nbsp;isSentToMultiSig()</pre>
 <h4>isSentToCLTVPaymentChannel</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isSentToCLTVPaymentChannel()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isSentToCltvPaymentChannel-org.bitcoinj.script.Script-"><code>ScriptPattern.isSentToCltvPaymentChannel(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isSentToCltvPaymentChannel-org.sumcoinj.script.Script-"><code>ScriptPattern.isSentToCltvPaymentChannel(Script)</code></a></span></div>
 </li>
 </ul>
 <a name="removeAllInstancesOf-byte:A-byte:A-">
@@ -1067,10 +1067,10 @@ public&nbsp;boolean&nbsp;isSentToCLTVPaymentChannel()</pre>
 <h4>isOpReturn</h4>
 <pre>@Deprecated
 public&nbsp;boolean&nbsp;isOpReturn()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/bitcoinj/script/ScriptPattern.html#isOpReturn-org.bitcoinj.script.Script-"><code>ScriptPattern.isOpReturn(Script)</code></a></span></div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">use <a href="../../../org/sumcoinj/script/ScriptPattern.html#isOpReturn-org.sumcoinj.script.Script-"><code>ScriptPattern.isOpReturn(Script)</code></a></span></div>
 </li>
 </ul>
-<a name="executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-boolean-">
+<a name="executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -1078,61 +1078,61 @@ public&nbsp;boolean&nbsp;isOpReturn()</pre>
 <h4>executeScript</h4>
 <pre>@Deprecated
 public static&nbsp;void&nbsp;executeScript(@Nullable
-                                             <a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+                                             <a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                                              long&nbsp;index,
-                                             <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;script,
+                                             <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;script,
                                              java.util.LinkedList&lt;byte[]&gt;&nbsp;stack,
                                              boolean&nbsp;enforceNullDummy)
-                                      throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../org/bitcoinj/script/Script.html#executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-java.util.Set-"><code>executeScript(Transaction, long, Script, LinkedList, Set)</code></a>
+                                      throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../org/sumcoinj/script/Script.html#executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-java.util.Set-"><code>executeScript(Transaction, long, Script, LinkedList, Set)</code></a>
  instead.</span></div>
 <div class="block">Exposes the script interpreter. Normally you should not use this directly, instead use
- <a href="../../../org/bitcoinj/core/TransactionInput.html#verify-org.bitcoinj.core.TransactionOutput-"><code>TransactionInput.verify(TransactionOutput)</code></a> or
- <a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>. This method
+ <a href="../../../org/sumcoinj/core/TransactionInput.html#verify-org.sumcoinj.core.TransactionOutput-"><code>TransactionInput.verify(TransactionOutput)</code></a> or
+ <a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>. This method
  is useful if you need more precise control or access to the final state of the stack. This interface is very
  likely to change in future.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="executeScript-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.LinkedList-java.util.Set-">
+<a name="executeScript-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.LinkedList-java.util.Set-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>executeScript</h4>
 <pre>public static&nbsp;void&nbsp;executeScript(@Nullable
-                                 <a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+                                 <a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                                  long&nbsp;index,
-                                 <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;script,
+                                 <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;script,
                                  java.util.LinkedList&lt;byte[]&gt;&nbsp;stack,
-                                 java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
-                          throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                                 java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
+                          throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Exposes the script interpreter. Normally you should not use this directly, instead use
- <a href="../../../org/bitcoinj/core/TransactionInput.html#verify-org.bitcoinj.core.TransactionOutput-"><code>TransactionInput.verify(TransactionOutput)</code></a> or
- <a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>. This method
+ <a href="../../../org/sumcoinj/core/TransactionInput.html#verify-org.sumcoinj.core.TransactionOutput-"><code>TransactionInput.verify(TransactionOutput)</code></a> or
+ <a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>. This method
  is useful if you need more precise control or access to the final state of the stack. This interface is very
  likely to change in future.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="correctlySpends-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-">
+<a name="correctlySpends-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>correctlySpends</h4>
 <pre>@Deprecated
-public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                                         long&nbsp;scriptSigIndex,
-                                        <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey)
-                                 throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../org/bitcoinj/script/Script.html#correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>
+                                        <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey)
+                                 throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../org/sumcoinj/script/Script.html#correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-"><code>correctlySpends(Transaction, int, TransactionWitness, Coin, Script, Set)</code></a>
  instead so that verification flags do not change as new verification options
  are added.</span></div>
 <div class="block">Verifies that this script (interpreted as a scriptSig) correctly spends the given scriptPubKey, enabling all
@@ -1144,25 +1144,25 @@ public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transa
 <dd><code>scriptSigIndex</code> - The index in txContainingThis of the scriptSig (note: NOT the index of the scriptPubKey).</dd>
 <dd><code>scriptPubKey</code> - The connected scriptPubKey containing the conditions needed to claim the value.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="correctlySpends-org.bitcoinj.core.Transaction-int-org.bitcoinj.core.TransactionWitness-org.bitcoinj.core.Coin-org.bitcoinj.script.Script-java.util.Set-">
+<a name="correctlySpends-org.sumcoinj.core.Transaction-int-org.sumcoinj.core.TransactionWitness-org.sumcoinj.core.Coin-org.sumcoinj.script.Script-java.util.Set-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>correctlySpends</h4>
-<pre>public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<pre>public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                             int&nbsp;scriptSigIndex,
                             @Nullable
-                            <a href="../../../org/bitcoinj/core/TransactionWitness.html" title="class in org.bitcoinj.core">TransactionWitness</a>&nbsp;witness,
+                            <a href="../../../org/sumcoinj/core/TransactionWitness.html" title="class in org.sumcoinj.core">TransactionWitness</a>&nbsp;witness,
                             @Nullable
-                            <a href="../../../org/bitcoinj/core/Coin.html" title="class in org.bitcoinj.core">Coin</a>&nbsp;value,
-                            <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey,
-                            java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
-                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                            <a href="../../../org/sumcoinj/core/Coin.html" title="class in org.sumcoinj.core">Coin</a>&nbsp;value,
+                            <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey,
+                            java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
+                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Verifies that this script (interpreted as a scriptSig) correctly spends the given scriptPubKey.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1174,21 +1174,21 @@ public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transa
 <dd><code>value</code> - Value of the output. Needed for SegWit scripts.</dd>
 <dd><code>verifyFlags</code> - Each flag enables one validation rule.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="correctlySpends-org.bitcoinj.core.Transaction-long-org.bitcoinj.script.Script-java.util.Set-">
+<a name="correctlySpends-org.sumcoinj.core.Transaction-long-org.sumcoinj.script.Script-java.util.Set-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>correctlySpends</h4>
-<pre>public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transaction.html" title="class in org.bitcoinj.core">Transaction</a>&nbsp;txContainingThis,
+<pre>public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/sumcoinj/core/Transaction.html" title="class in org.sumcoinj.core">Transaction</a>&nbsp;txContainingThis,
                             long&nbsp;scriptSigIndex,
-                            <a href="../../../org/bitcoinj/script/Script.html" title="class in org.bitcoinj.script">Script</a>&nbsp;scriptPubKey,
-                            java.util.Set&lt;<a href="../../../org/bitcoinj/script/Script.VerifyFlag.html" title="enum in org.bitcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
-                     throws <a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></pre>
+                            <a href="../../../org/sumcoinj/script/Script.html" title="class in org.sumcoinj.script">Script</a>&nbsp;scriptPubKey,
+                            java.util.Set&lt;<a href="../../../org/sumcoinj/script/Script.VerifyFlag.html" title="enum in org.sumcoinj.script">Script.VerifyFlag</a>&gt;&nbsp;verifyFlags)
+                     throws <a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></pre>
 <div class="block">Verifies that this script (interpreted as a scriptSig) correctly spends the given scriptPubKey.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1198,7 +1198,7 @@ public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transa
 <dd><code>scriptPubKey</code> - The connected scriptPubKey containing the conditions needed to claim the value.</dd>
 <dd><code>verifyFlags</code> - Each flag enables one validation rule.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../org/bitcoinj/script/ScriptException.html" title="class in org.bitcoinj.script">ScriptException</a></code></dd>
+<dd><code><a href="../../../org/sumcoinj/script/ScriptException.html" title="class in org.sumcoinj.script">ScriptException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1209,8 +1209,8 @@ public&nbsp;void&nbsp;correctlySpends(<a href="../../../org/bitcoinj/core/Transa
 <li class="blockList">
 <h4>getScriptType</h4>
 <pre>@Nullable
-public&nbsp;<a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script">Script.ScriptType</a>&nbsp;getScriptType()</pre>
-<div class="block">Get the <a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script"><code>Script.ScriptType</code></a>.</div>
+public&nbsp;<a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script">Script.ScriptType</a>&nbsp;getScriptType()</pre>
+<div class="block">Get the <a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script"><code>Script.ScriptType</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The script type, or null if the script is of unknown type</dd>
@@ -1271,10 +1271,10 @@ public&nbsp;<a href="../../../org/bitcoinj/script/Script.ScriptType.html" title=
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../org/bitcoinj/script/Script.ScriptType.html" title="enum in org.bitcoinj.script"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/script/Script.ScriptType.html" title="enum in org.sumcoinj.script"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/script/Script.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/script/Script.html" target="_top">Frames</a></li>
 <li><a href="Script.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

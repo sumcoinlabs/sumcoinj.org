@@ -18,7 +18,7 @@ _Learn how to use the wallet class and craft custom transactions with it._
 
 ## Introduction
 
-The Wallet class is one of the most important classes in bitcoinj. It stores keys and the transactions that assign value to/from those keys. It lets you create new transactions which spend the previously stored transactions outputs, and it notifies you when the contents of the wallet have changed.
+The Wallet class is one of the most important classes in sumcoinj. It stores keys and the transactions that assign value to/from those keys. It lets you create new transactions which spend the previously stored transactions outputs, and it notifies you when the contents of the wallet have changed.
 
 You'll need to learn how to use the Wallet to build many kinds of apps.
 
@@ -60,7 +60,7 @@ The keys and addresses returned by these methods are derived deterministically f
 1. A new Wallet object selects 128 bits of random entropy using `SecureRandom`.
 2. This randomness is transformed into a "mnemonic code"; a set of 12 words using a dictionary pre-defined by the BIP 39 standard.
 3. The string form of the 12 words is used as input to a key derivation algorithm (PBKDF2) and iterated numerous times to obtain the "seed". Note that the seed is *not* simply the original random entropy represented using words as you might expect, rather, the seed is a derivative of the UTF-8 byte sequence of the words themselves.
-4. The newly calculated seed is then split into a master private key and a "chain code". Together, these allow for iteration of a key tree using the algorithms specified in BIP 32. This algorithm exploits properties of elliptic curve mathematics to allow the public keys in a sequence to be iterated without having access to the equivalent private keys, which is very useful for vending addresses without needing the wallet to be decrypted if a password has been supplied. bitcoinj uses the default recommended tree structure from BIP 32.
+4. The newly calculated seed is then split into a master private key and a "chain code". Together, these allow for iteration of a key tree using the algorithms specified in BIP 32. This algorithm exploits properties of elliptic curve mathematics to allow the public keys in a sequence to be iterated without having access to the equivalent private keys, which is very useful for vending addresses without needing the wallet to be decrypted if a password has been supplied. sumcoinj uses the default recommended tree structure from BIP 32.
 5. The wallet pre-calculates a set of *lookahead keys*. These are keys that were not issued by the Wallet yet via the current/freshReceiveKey APIs, but will be in future. Precalculation achieves several goals. One, it makes these APIs fast, which is useful for GUI apps that don't want to wait for potentially slow EC math to be done. Two, it allows the wallet to notice transactions being made to/from keys that were not issued yet - this can happen if the wallet seed has been cloned to multiple devices, and if the block chain is being replayed.
 
 The seed and keys that were (pre) calculated are saved to disk in order to avoid slow rederivation loops when the wallet is loaded.
@@ -109,7 +109,7 @@ For convenience there are helper methods that do these steps for you. In the sim
 {% highlight java %}
 // Get the address 1RbxbA1yP2Lebauuef3cBiBho853f7jxs in object form.
 Address targetAddress = new Address(params, "1RbxbA1yP2Lebauuef3cBiBho853f7jxs");
-// Do the send of 1 BTC in the background. This could throw InsufficientMoneyException.
+// Do the send of 1 SUM in the background. This could throw InsufficientMoneyException.
 Wallet.SendResult result = wallet.sendCoins(peerGroup, targetAddress, Coin.COIN);
 // Save the wallet to disk, optional if using auto saving (see below).
 wallet.saveToFile(....);
@@ -141,7 +141,7 @@ future.get();
 
 To create a transaction we first build a `SendRequest` object using one of the static helper methods. A `SendRequest` consists of a partially complete (invalid) `Transaction` object. It has other fields let you customize things that aren't done yet like the fee, change address and maybe in future privacy features like how coins are selected. You can modify the partial transaction if you like, or simply construct your own from scratch. The static helper methods on `SendRequest` are simply different ways to construct the partial transaction.
 
-Then we complete the request - that means the transaction in the send request has inputs/outputs added and signed to make the transaction valid. It's now acceptable to the Bitcoin network.
+Then we complete the request - that means the transaction in the send request has inputs/outputs added and signed to make the transaction valid. It's now acceptable to the Sumcoin network.
 
 Note that between `completeTx` and `commitTx` no lock is being held. So it's possible for this code to race and fail if the wallet changes out from underneath you - for example, if the keys in the wallet have been exported and used elsewhere, and a transaction that spends the selected outputs comes in between the two calls. When you use the simpler construction the wallet is locked whilst both operations are run, ensuring that you don't end up trying to commit a double spend.
 
@@ -157,16 +157,16 @@ You can also just not call `wallet.commitTx` and use `peerGroup.broadcastTransac
 
 The `Wallet.getBalance()` call has by default behaviour that may surprise you. If you broadcast a transaction that sends money and then immediately afterwards check the balance, it may be lower than what you expect (or even be zero).
 
-The reason is that bitcoinj has a somewhat complex notion of _balance_. You need to understand this in order to write robust applications. The `getBalance()` method has two alternative forms. In one, you pass in a `Wallet.BalanceType` enum. It has four possible values, `AVAILABLE`, `ESTIMATED`, `AVAILABLE_SPENDABLE` and `ESTIMATED_SPENDABLE`. Often these will be the same, but sometimes they will vary. The other overload of `getBalance()` takes a `CoinSelector` object.
+The reason is that sumcoinj has a somewhat complex notion of _balance_. You need to understand this in order to write robust applications. The `getBalance()` method has two alternative forms. In one, you pass in a `Wallet.BalanceType` enum. It has four possible values, `AVAILABLE`, `ESTIMATED`, `AVAILABLE_SPENDABLE` and `ESTIMATED_SPENDABLE`. Often these will be the same, but sometimes they will vary. The other overload of `getBalance()` takes a `CoinSelector` object.
 
-The `ESTIMATED` balance is perhaps what you may imagine as a "balance" - it's simply all outputs in the wallet which are not yet spent. However, that doesn't mean it's really safe to spend them. Because Bitcoin is a global consensus system, deciding when you can really trust you received money and the transaction won't be rolled back can be a subtle art. 
+The `ESTIMATED` balance is perhaps what you may imagine as a "balance" - it's simply all outputs in the wallet which are not yet spent. However, that doesn't mean it's really safe to spend them. Because Sumcoin is a global consensus system, deciding when you can really trust you received money and the transaction won't be rolled back can be a subtle art. 
 
 This concept of safety is therefore exposed via the `AVAILABLE` balance type, and the `CoinSelector` abstraction. A coin selector is just an object that implements the `CoinSelector` interface. That interface has a single method, which given a list of all unspent outputs and a target value, returns a smaller list of outputs that adds up to at least the target (and possibly more). Coin selection can be a complex process that trades off safety, privacy, fee-efficiency and other factors, which is why it's pluggable.
 
-The default coin selector bitcoinj provides (`DefaultCoinSelector`) implements a relatively safe policy: it requires at least one confirmation for any transaction to be considered for selection, except for transactions created by the wallet itself which are considered spendable as long as it was seen propagating across the network. This is the balance you get back when you use `getBalance(BalanceType.AVAILABLE)` or the simplest form, `getBalance()` - it's the amount of money that the spend creation methods will consider for usage. The reason for this policy is as follows:
+The default coin selector sumcoinj provides (`DefaultCoinSelector`) implements a relatively safe policy: it requires at least one confirmation for any transaction to be considered for selection, except for transactions created by the wallet itself which are considered spendable as long as it was seen propagating across the network. This is the balance you get back when you use `getBalance(BalanceType.AVAILABLE)` or the simplest form, `getBalance()` - it's the amount of money that the spend creation methods will consider for usage. The reason for this policy is as follows:
 
 1. You trust your own transactions implicitly, as you "know" you are trustworthy. However, it's still possible for bugs and other things to cause you to create unconfirmable transactions - for instance if you don't include sufficient fees. Therefore we don't want to spend change outputs unless we saw that network nodes relayed the transaction, giving a high degree of confidence that it will be mined upon.
-2. For other transactions, we wait until we saw at least one block because in SPV mode, you cannot check for yourself that a transaction is valid. If your internet connection was hacked, you might be talking to a fake Bitcoin network that feeds you a nonsense transaction which spends non-existent Bitcoins. Please read the [SecurityModel](/security-model) article to learn more about this. Waiting for the transaction to appear in a block gives you confidence the transaction is real. The original Bitcoin client waits for 6 confirmations, but this value was picked at a time when mining hash rate was much lower and it was thus much easier to forge a small fake chain. We've not yet heard reports of merchants being defrauded using invalid blocks, so waiting for one block is sufficient.
+2. For other transactions, we wait until we saw at least one block because in SPV mode, you cannot check for yourself that a transaction is valid. If your internet connection was hacked, you might be talking to a fake Sumcoin network that feeds you a nonsense transaction which spends non-existent Sumcoins. Please read the [SecurityModel](/security-model) article to learn more about this. Waiting for the transaction to appear in a block gives you confidence the transaction is real. The original Sumcoin client waits for 6 confirmations, but this value was picked at a time when mining hash rate was much lower and it was thus much easier to forge a small fake chain. We've not yet heard reports of merchants being defrauded using invalid blocks, so waiting for one block is sufficient.
 
 The default coin selector also takes into account the age of the outputs, in order to maximise the probability of your transaction getting confirmed in the next block. 
 
@@ -184,7 +184,7 @@ Transactions can have fees attached to them when they are completed by the walle
 
 There are also some fee rules in place intended to avoid cheap flooding attacks. Most notably, any transaction that has an output of value less than 0.01 coins ($1) requires the min fee which is currently set to be 10,000 satoshis (0.0001 coins or at June 2013 exchange rates about $0.01). By default nodes will refuse to relay transactions that don't meet that rule, although mining them is of course allowed. You can disable it and thus create transactions that may be un-relayable by changing `SendRequest.ensureMinRequiredFee` to false.
 
-bitcoinj will by default ensure you always attach a small fee per kilobyte to each transaction regardless of whether one is technically necessary or not. The amount of fee used depends on the size of the transaction. You can find out what fee was attached by reading the fee field of `SendRequest` after completion. There are several reasons for why bitcoinj always sets a fee by default:
+sumcoinj will by default ensure you always attach a small fee per kilobyte to each transaction regardless of whether one is technically necessary or not. The amount of fee used depends on the size of the transaction. You can find out what fee was attached by reading the fee field of `SendRequest` after completion. There are several reasons for why sumcoinj always sets a fee by default:
 
 * Most apps were already setting a fixed fee anyway.
 * There is only 27kb in each block for free "high priority" transactions. This is a quite small amount of space which will often be used up already.
@@ -263,13 +263,13 @@ wallet.sendCoins(req);
 
 The wallet can be decrypted by using the `wallet.decrypt` method which takes either a textual password or a `KeyParameter`.
 
-Note that because bitcoinj saves wallets by creating temp files and then renaming them, private key material may still exist on disk even after encryption. Especially with modern SSD based systems deleting data on disk is rarely completely possible. Encryption should be seen as a reasonable way to raise the bar against adversaries that are not extremely sophisticated. But if someone has already gained access to their wallet file, they could theoretically also just wait for the user to type in their password and obtain the private keys this way. Encryption is useful but should not be regarded as a silver bullet.
+Note that because sumcoinj saves wallets by creating temp files and then renaming them, private key material may still exist on disk even after encryption. Especially with modern SSD based systems deleting data on disk is rarely completely possible. Encryption should be seen as a reasonable way to raise the bar against adversaries that are not extremely sophisticated. But if someone has already gained access to their wallet file, they could theoretically also just wait for the user to type in their password and obtain the private keys this way. Encryption is useful but should not be regarded as a silver bullet.
 
 ## Watching wallets
 
 A wallet can cloned such that the clone is able to follow transactions from the P2P network but doesn't have the private keys needed for spending. This arrangement is very useful and makes a lot of sense for things like online web shops. The web server can observe all payments into the shops wallet, so knows when customers have paid, but cannot authorise withdrawals from that wallet itself thus significantly reducing the risk of hacking.
 
-To create a watching wallet from another HD BIP32/bitcoinj wallet:
+To create a watching wallet from another HD BIP32/sumcoinj wallet:
 
 {% highlight java %}
 Wallet toWatch = ....;
@@ -301,7 +301,7 @@ Obviously in this case you don't get auto synchronisation of new keys/addresses/
 
 ## Married/multi-signature wallets and pluggable signers
 
-Starting from bitcoinj 0.12 there is some support for wallets which require multiple signers to cooperate to sign transactions. This allows the usage of a remote "risk analysis service" which may only countersign transactions if some additional authorisation has been obtained or if the transaction seems to be low risk. A wallet that requires the cooperation of a third party in this way is called a *married wallet*, because it needs the permission of its spouse to spend money :-)
+Starting from sumcoinj 0.12 there is some support for wallets which require multiple signers to cooperate to sign transactions. This allows the usage of a remote "risk analysis service" which may only countersign transactions if some additional authorisation has been obtained or if the transaction seems to be low risk. A wallet that requires the cooperation of a third party in this way is called a *married wallet*, because it needs the permission of its spouse to spend money :-)
 
 To marry a wallet to another one, the spouse must also be an HD wallet using the default BIP 32 tree. You must obtain the watching key of that other wallet via some external protocol (it can be retrieved as outlined above) and then do:
 
@@ -340,7 +340,7 @@ public interface UTXOProvider {
 
 Note that this API will probably change in future to take a list of scripts instead of/as well as a list of addresses, as not every output type can be expressed with an address.
 
-Conveniently the database backed `FullPrunedBlockStore` implementations that bitcoinj ships with (Postgres, MySQL, H2) implement this interface, so if you use them you can connect the wallet to the databases directly.
+Conveniently the database backed `FullPrunedBlockStore` implementations that sumcoinj ships with (Postgres, MySQL, H2) implement this interface, so if you use them you can connect the wallet to the databases directly.
 
 Once you have a provider, just use `Wallet.setUTXOProvider` to plug it in. The provider will then be queried for spendable outputs whenever the balance is calculated or a spend is completed.
 

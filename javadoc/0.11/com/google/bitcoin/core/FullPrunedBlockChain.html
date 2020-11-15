@@ -105,7 +105,7 @@
 <pre>public class <span class="strong">FullPrunedBlockChain</span>
 extends <a href="../../../../com/google/bitcoin/core/AbstractBlockChain.html" title="class in com.google.bitcoin.core">AbstractBlockChain</a></pre>
 <div class="block"><p>A FullPrunedBlockChain works in conjunction with a <a href="../../../../com/google/bitcoin/store/FullPrunedBlockStore.html" title="interface in com.google.bitcoin.store"><code>FullPrunedBlockStore</code></a> to verify all the rules of the
- Bitcoin system, with the downside being a larg cost in system resources. Fully verifying means all unspent transaction
+ Sumcoin system, with the downside being a larg cost in system resources. Fully verifying means all unspent transaction
  outputs are stored. Once a transaction output is spent and that spend is buried deep enough, the data related to it
  is deleted to ensure disk space usage doesn't grow forever. For this reason a pruning node cannot serve the full
  block chain to other clients, but it nevertheless provides the same security guarantees as a regular Satoshi

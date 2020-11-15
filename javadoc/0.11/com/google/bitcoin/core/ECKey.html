@@ -109,7 +109,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
  when you already have the public or private parts. If you create a key with only the public part, you can check
  signatures but not create them.</p>
 
- <p>ECKey also provides access to Bitcoin-Qt compatible text message signing, as accessible via the UI or JSON-RPC.
+ <p>ECKey also provides access to Sumcoin-Qt compatible text message signing, as accessible via the UI or JSON-RPC.
  This is slightly different to signing raw bytes - if you want to sign your own data and it won't be exposed as
  text to people, you don't want to use this. If in doubt, ask on the mailing list.</p>
 
@@ -139,7 +139,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/ECKey.ECDSASignature.html" title="class in com.google.bitcoin.core">ECKey.ECDSASignature</a></strong></code>
 <div class="block">Groups the two components that make up a signature, and provides a way to encode to DER form, which is
- how ECDSA signatures are represented when embedded in other data structures in the Bitcoin protocol.</div>
+ how ECDSA signatures are represented when embedded in other data structures in the Sumcoin protocol.</div>
 </td>
 </tr>
 </table>
@@ -160,7 +160,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <tr class="altColor">
 <td class="colFirst"><code>static org.spongycastle.crypto.params.ECDomainParameters</code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/ECKey.html#CURVE">CURVE</a></strong></code>
-<div class="block">The parameters of the secp256k1 curve that Bitcoin uses.</div>
+<div class="block">The parameters of the secp256k1 curve that Sumcoin uses.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -394,14 +394,14 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <td class="colFirst"><code>static <a href="../../../../com/google/bitcoin/core/ECKey.html" title="class in com.google.bitcoin.core">ECKey</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/ECKey.html#signedMessageToKey(java.lang.String, java.lang.String)">signedMessageToKey</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
                   <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signatureBase64)</code>
-<div class="block">Given an arbitrary piece of text and a Bitcoin-format message signature encoded in base64, returns an ECKey
+<div class="block">Given an arbitrary piece of text and a Sumcoin-format message signature encoded in base64, returns an ECKey
  containing the public key that was used to sign it.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/ECKey.html#signMessage(java.lang.String)">signMessage</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">Signs a text message using the standard Bitcoin messaging signing format and returns the signature as a base64
+<div class="block">Signs a text message using the standard Sumcoin messaging signing format and returns the signature as a base64
  encoded string.</div>
 </td>
 </tr>
@@ -409,7 +409,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../com/google/bitcoin/core/ECKey.html#signMessage(java.lang.String, org.spongycastle.crypto.params.KeyParameter)">signMessage</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
            org.spongycastle.crypto.params.KeyParameter&nbsp;aesKey)</code>
-<div class="block">Signs a text message using the standard Bitcoin messaging signing format and returns the signature as a base64
+<div class="block">Signs a text message using the standard Sumcoin messaging signing format and returns the signature as a base64
  encoded string.</div>
 </td>
 </tr>
@@ -502,7 +502,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>CURVE</h4>
 <pre>public static final&nbsp;org.spongycastle.crypto.params.ECDomainParameters CURVE</pre>
-<div class="block">The parameters of the secp256k1 curve that Bitcoin uses.</div>
+<div class="block">The parameters of the secp256k1 curve that Sumcoin uses.</div>
 </li>
 </ul>
 <a name="HALF_CURVE_ORDER">
@@ -631,7 +631,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>fromASN1</h4>
 <pre>public static&nbsp;<a href="../../../../com/google/bitcoin/core/ECKey.html" title="class in com.google.bitcoin.core">ECKey</a>&nbsp;fromASN1(byte[]&nbsp;asn1privkey)</pre>
-<div class="block">Construct an ECKey from an ASN.1 encoded private key. These are produced by OpenSSL and stored by the Bitcoin
+<div class="block">Construct an ECKey from an ASN.1 encoded private key. These are produced by OpenSSL and stored by the Sumcoin
  reference implementation in its wallet. Note that this is slow because it requires an EC point multiply.</div>
 </li>
 </ul>
@@ -762,7 +762,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <h4>sign</h4>
 <pre>public&nbsp;<a href="../../../../com/google/bitcoin/core/ECKey.ECDSASignature.html" title="class in com.google.bitcoin.core">ECKey.ECDSASignature</a>&nbsp;sign(<a href="../../../../com/google/bitcoin/core/Sha256Hash.html" title="class in com.google.bitcoin.core">Sha256Hash</a>&nbsp;input)
                           throws <a href="../../../../com/google/bitcoin/crypto/KeyCrypterException.html" title="class in com.google.bitcoin.crypto">KeyCrypterException</a></pre>
-<div class="block">Signs the given hash and returns the R and S components as BigIntegers. In the Bitcoin protocol, they are
+<div class="block">Signs the given hash and returns the R and S components as BigIntegers. In the Sumcoin protocol, they are
  usually encoded using DER format, so you want <a href="../../../../com/google/bitcoin/core/ECKey.html#toASN1()"><code>toASN1()</code></a>
  instead. However sometimes the independent components can be useful, for instance, if you're doing to do
  further EC maths on them.</div>
@@ -780,7 +780,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
                         <a href="http://docs.oracle.com/javase/6/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                         org.spongycastle.crypto.params.KeyParameter&nbsp;aesKey)
                           throws <a href="../../../../com/google/bitcoin/crypto/KeyCrypterException.html" title="class in com.google.bitcoin.crypto">KeyCrypterException</a></pre>
-<div class="block">Signs the given hash and returns the R and S components as BigIntegers. In the Bitcoin protocol, they are
+<div class="block">Signs the given hash and returns the R and S components as BigIntegers. In the Sumcoin protocol, they are
  usually encoded using DER format, so you want <a href="../../../../com/google/bitcoin/core/ECKey.ECDSASignature.html#encodeToDER()"><code>ECKey.ECDSASignature.encodeToDER()</code></a>
  instead. However sometimes the independent components can be useful, for instance, if you're doing to do further
  EC maths on them.</div>
@@ -869,7 +869,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <h4>signMessage</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signMessage(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)
                    throws <a href="../../../../com/google/bitcoin/crypto/KeyCrypterException.html" title="class in com.google.bitcoin.crypto">KeyCrypterException</a></pre>
-<div class="block">Signs a text message using the standard Bitcoin messaging signing format and returns the signature as a base64
+<div class="block">Signs a text message using the standard Sumcoin messaging signing format and returns the signature as a base64
  encoded string.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if this ECKey does not have the private part.</dd>
@@ -886,7 +886,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
                  <a href="http://docs.oracle.com/javase/6/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                  org.spongycastle.crypto.params.KeyParameter&nbsp;aesKey)
                    throws <a href="../../../../com/google/bitcoin/crypto/KeyCrypterException.html" title="class in com.google.bitcoin.crypto">KeyCrypterException</a></pre>
-<div class="block">Signs a text message using the standard Bitcoin messaging signing format and returns the signature as a base64
+<div class="block">Signs a text message using the standard Sumcoin messaging signing format and returns the signature as a base64
  encoded string.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if this ECKey does not have the private part.</dd>
@@ -902,12 +902,12 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <pre>public static&nbsp;<a href="../../../../com/google/bitcoin/core/ECKey.html" title="class in com.google.bitcoin.core">ECKey</a>&nbsp;signedMessageToKey(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
                        <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;signatureBase64)
                                 throws <a href="http://docs.oracle.com/javase/6/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</a></pre>
-<div class="block">Given an arbitrary piece of text and a Bitcoin-format message signature encoded in base64, returns an ECKey
+<div class="block">Given an arbitrary piece of text and a Sumcoin-format message signature encoded in base64, returns an ECKey
  containing the public key that was used to sign it. This can then be compared to the expected public key to
- determine if the signature was correct. These sorts of signatures are compatible with the Bitcoin-Qt/bitcoind
+ determine if the signature was correct. These sorts of signatures are compatible with the Sumcoin-Qt/bitcoind
  format generated by signmessage/verifymessage RPCs and GUI menu options. They are intended for humans to verify
  their communications with each other, hence the base64 format and the fact that the input is text.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - Some piece of human readable text.</dd><dd><code>signatureBase64</code> - The Bitcoin-format message signature in base64</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>message</code> - Some piece of human readable text.</dd><dd><code>signatureBase64</code> - The Sumcoin-format message signature in base64</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/security/SignatureException.html?is-external=true" title="class or interface in java.security">SignatureException</a></code> - If the public key could not be recovered or if there was a signature format error.</dd></dl>
 </li>

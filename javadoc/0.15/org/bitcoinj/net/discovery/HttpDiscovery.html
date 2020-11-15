@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/net/discovery/DnsDiscovery.DnsSeedDiscovery.html" title="class in org.bitcoinj.net.discovery"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/net/discovery/DnsDiscovery.DnsSeedDiscovery.html" title="class in org.sumcoinj.net.discovery"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/net/discovery/HttpDiscovery.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/net/discovery/HttpDiscovery.html" target="_top">Frames</a></li>
 <li><a href="HttpDiscovery.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.net.discovery</div>
+<div class="subTitle">org.sumcoinj.net.discovery</div>
 <h2 title="Class HttpDiscovery" class="title">Class HttpDiscovery</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.net.discovery.HttpDiscovery</li>
+<li>org.sumcoinj.net.discovery.HttpDiscovery</li>
 </ul>
 </li>
 </ul>
@@ -108,16 +108,16 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" title="interface in org.bitcoinj.net.discovery">PeerDiscovery</a></dd>
+<dd><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html" title="interface in org.sumcoinj.net.discovery">PeerDiscovery</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">HttpDiscovery</span>
 extends java.lang.Object
-implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" title="interface in org.bitcoinj.net.discovery">PeerDiscovery</a></pre>
+implements <a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html" title="interface in org.sumcoinj.net.discovery">PeerDiscovery</a></pre>
 <div class="block">A class that knows how to read signed sets of seeds over HTTP, using a simple protobuf based protocol. See the
  peerseeds.proto file for the definition, with a gzipped delimited SignedPeerSeeds being the root of the data.
- This is not currently in use by the Bitcoin community, but rather, is here for experimentation.</div>
+ This is not currently in use by the Sumcoin community, but rather, is here for experimentation.</div>
 </li>
 </ul>
 </div>
@@ -138,7 +138,7 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery">HttpDiscovery.Details</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery">HttpDiscovery.Details</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -155,21 +155,21 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.bitcoinj.core.NetworkParameters-org.bitcoinj.net.discovery.HttpDiscovery.Details-">HttpDiscovery</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
-             <a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.sumcoinj.core.NetworkParameters-org.sumcoinj.net.discovery.HttpDiscovery.Details-">HttpDiscovery</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
+             <a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details)</code>
 <div class="block">Constructs a discovery object that will read data from the given HTTP[S] URI and, if a public key is provided,
  will check the signature using that key.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.bitcoinj.core.NetworkParameters-org.bitcoinj.net.discovery.HttpDiscovery.Details-okhttp3.OkHttpClient-">HttpDiscovery</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
-             <a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.sumcoinj.core.NetworkParameters-org.sumcoinj.net.discovery.HttpDiscovery.Details-okhttp3.OkHttpClient-">HttpDiscovery</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
+             <a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details,
              okhttp3.OkHttpClient&nbsp;client)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.bitcoinj.core.NetworkParameters-java.net.URI-org.bitcoinj.core.ECKey-">HttpDiscovery</a></span>(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#HttpDiscovery-org.sumcoinj.core.NetworkParameters-java.net.URI-org.sumcoinj.core.ECKey-">HttpDiscovery</a></span>(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
              java.net.URI&nbsp;uri,
-             <a href="../../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;pubkey)</code>
+             <a href="../../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;pubkey)</code>
 <div class="block">Constructs a discovery object that will read data from the given HTTP[S] URI and, if a public key is provided,
  will check the signature using that key.</div>
 </td>
@@ -191,7 +191,7 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>java.net.InetSocketAddress[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">getPeers</a></span>(long&nbsp;services,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">getPeers</a></span>(long&nbsp;services,
         long&nbsp;timeoutValue,
         java.util.concurrent.TimeUnit&nbsp;timeoutUnit)</code>
 <div class="block">Returns an array of addresses.</div>
@@ -199,11 +199,11 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.net.InetSocketAddress[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#protoToAddrs-org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds-">protoToAddrs</a></span>(<a href="../../../../org/bitcoin/crawler/PeerSeedProtos.SignedPeerSeeds.html" title="class in org.bitcoin.crawler">PeerSeedProtos.SignedPeerSeeds</a>&nbsp;proto)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#protoToAddrs-org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds-">protoToAddrs</a></span>(<a href="../../../../org/bitcoin/crawler/PeerSeedProtos.SignedPeerSeeds.html" title="class in org.bitcoin.crawler">PeerSeedProtos.SignedPeerSeeds</a>&nbsp;proto)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.html#shutdown--">shutdown</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.html#shutdown--">shutdown</a></span>()</code>
 <div class="block">Stops any discovery in progress when we want to shut down quickly.</div>
 </td>
 </tr>
@@ -229,40 +229,40 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="HttpDiscovery-org.bitcoinj.core.NetworkParameters-java.net.URI-org.bitcoinj.core.ECKey-">
+<a name="HttpDiscovery-org.sumcoinj.core.NetworkParameters-java.net.URI-org.sumcoinj.core.ECKey-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>HttpDiscovery</h4>
-<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
+<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
                      java.net.URI&nbsp;uri,
                      @Nullable
-                     <a href="../../../../org/bitcoinj/core/ECKey.html" title="class in org.bitcoinj.core">ECKey</a>&nbsp;pubkey)</pre>
+                     <a href="../../../../org/sumcoinj/core/ECKey.html" title="class in org.sumcoinj.core">ECKey</a>&nbsp;pubkey)</pre>
 <div class="block">Constructs a discovery object that will read data from the given HTTP[S] URI and, if a public key is provided,
  will check the signature using that key.</div>
 </li>
 </ul>
-<a name="HttpDiscovery-org.bitcoinj.core.NetworkParameters-org.bitcoinj.net.discovery.HttpDiscovery.Details-">
+<a name="HttpDiscovery-org.sumcoinj.core.NetworkParameters-org.sumcoinj.net.discovery.HttpDiscovery.Details-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>HttpDiscovery</h4>
-<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
-                     <a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details)</pre>
+<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
+                     <a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details)</pre>
 <div class="block">Constructs a discovery object that will read data from the given HTTP[S] URI and, if a public key is provided,
  will check the signature using that key.</div>
 </li>
 </ul>
-<a name="HttpDiscovery-org.bitcoinj.core.NetworkParameters-org.bitcoinj.net.discovery.HttpDiscovery.Details-okhttp3.OkHttpClient-">
+<a name="HttpDiscovery-org.sumcoinj.core.NetworkParameters-org.sumcoinj.net.discovery.HttpDiscovery.Details-okhttp3.OkHttpClient-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>HttpDiscovery</h4>
-<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
-                     <a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details,
+<pre>public&nbsp;HttpDiscovery(<a href="../../../../org/sumcoinj/core/NetworkParameters.html" title="class in org.sumcoinj.core">NetworkParameters</a>&nbsp;params,
+                     <a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery">HttpDiscovery.Details</a>&nbsp;details,
                      okhttp3.OkHttpClient&nbsp;client)</pre>
 </li>
 </ul>
@@ -283,16 +283,16 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 <pre>public&nbsp;java.net.InetSocketAddress[]&nbsp;getPeers(long&nbsp;services,
                                              long&nbsp;timeoutValue,
                                              java.util.concurrent.TimeUnit&nbsp;timeoutUnit)
-                                      throws <a href="../../../../org/bitcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.bitcoinj.net.discovery">PeerDiscoveryException</a></pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">PeerDiscovery</a></code></span></div>
+                                      throws <a href="../../../../org/sumcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.sumcoinj.net.discovery">PeerDiscoveryException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">PeerDiscovery</a></code></span></div>
 <div class="block">Returns an array of addresses. This method may block.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">getPeers</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" title="interface in org.bitcoinj.net.discovery">PeerDiscovery</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html#getPeers-long-long-java.util.concurrent.TimeUnit-">getPeers</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html" title="interface in org.sumcoinj.net.discovery">PeerDiscovery</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>services</code> - Required services as a bitmask, e.g. <a href="../../../../org/bitcoinj/core/VersionMessage.html#NODE_NETWORK"><code>VersionMessage.NODE_NETWORK</code></a>.</dd>
+<dd><code>services</code> - Required services as a bitmask, e.g. <a href="../../../../org/sumcoinj/core/VersionMessage.html#NODE_NETWORK"><code>VersionMessage.NODE_NETWORK</code></a>.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.bitcoinj.net.discovery">PeerDiscoveryException</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.sumcoinj.net.discovery">PeerDiscoveryException</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -303,15 +303,15 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 <li class="blockList">
 <h4>protoToAddrs</h4>
 <pre>public&nbsp;java.net.InetSocketAddress[]&nbsp;protoToAddrs(<a href="../../../../org/bitcoin/crawler/PeerSeedProtos.SignedPeerSeeds.html" title="class in org.bitcoin.crawler">PeerSeedProtos.SignedPeerSeeds</a>&nbsp;proto)
-                                          throws <a href="../../../../org/bitcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.bitcoinj.net.discovery">PeerDiscoveryException</a>,
+                                          throws <a href="../../../../org/sumcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.sumcoinj.net.discovery">PeerDiscoveryException</a>,
                                                  com.google.protobuf.InvalidProtocolBufferException,
-                                                 <a href="../../../../org/bitcoinj/core/SignatureDecodeException.html" title="class in org.bitcoinj.core">SignatureDecodeException</a>,
+                                                 <a href="../../../../org/sumcoinj/core/SignatureDecodeException.html" title="class in org.sumcoinj.core">SignatureDecodeException</a>,
                                                  java.security.SignatureException</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.bitcoinj.net.discovery">PeerDiscoveryException</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscoveryException.html" title="class in org.sumcoinj.net.discovery">PeerDiscoveryException</a></code></dd>
 <dd><code>com.google.protobuf.InvalidProtocolBufferException</code></dd>
-<dd><code><a href="../../../../org/bitcoinj/core/SignatureDecodeException.html" title="class in org.bitcoinj.core">SignatureDecodeException</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/core/SignatureDecodeException.html" title="class in org.sumcoinj.core">SignatureDecodeException</a></code></dd>
 <dd><code>java.security.SignatureException</code></dd>
 </dl>
 </li>
@@ -323,11 +323,11 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 <li class="blockList">
 <h4>shutdown</h4>
 <pre>public&nbsp;void&nbsp;shutdown()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html#shutdown--">PeerDiscovery</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html#shutdown--">PeerDiscovery</a></code></span></div>
 <div class="block">Stops any discovery in progress when we want to shut down quickly.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html#shutdown--">shutdown</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" title="interface in org.bitcoinj.net.discovery">PeerDiscovery</a></code></dd>
+<dd><code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html#shutdown--">shutdown</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../org/sumcoinj/net/discovery/PeerDiscovery.html" title="interface in org.sumcoinj.net.discovery">PeerDiscovery</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -358,11 +358,11 @@ implements <a href="../../../../org/bitcoinj/net/discovery/PeerDiscovery.html" t
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../org/bitcoinj/net/discovery/DnsDiscovery.DnsSeedDiscovery.html" title="class in org.bitcoinj.net.discovery"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../org/bitcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.bitcoinj.net.discovery"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/net/discovery/DnsDiscovery.DnsSeedDiscovery.html" title="class in org.sumcoinj.net.discovery"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../org/sumcoinj/net/discovery/HttpDiscovery.Details.html" title="class in org.sumcoinj.net.discovery"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../../index.html?org/bitcoinj/net/discovery/HttpDiscovery.html" target="_top">Frames</a></li>
+<li><a href="../../../../index.html?org/sumcoinj/net/discovery/HttpDiscovery.html" target="_top">Frames</a></li>
 <li><a href="HttpDiscovery.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

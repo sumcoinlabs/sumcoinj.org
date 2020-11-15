@@ -48,11 +48,11 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/net/ClientConnectionManager.html" title="interface in org.bitcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/net/FilterMerger.Result.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/ClientConnectionManager.html" title="interface in org.sumcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/FilterMerger.Result.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/net/FilterMerger.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/net/FilterMerger.html" target="_top">Frames</a></li>
 <li><a href="FilterMerger.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">org.bitcoinj.net</div>
+<div class="subTitle">org.sumcoinj.net</div>
 <h2 title="Class FilterMerger" class="title">Class FilterMerger</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>org.bitcoinj.net.FilterMerger</li>
+<li>org.sumcoinj.net.FilterMerger</li>
 </ul>
 </li>
 </ul>
@@ -110,9 +110,9 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">FilterMerger</span>
 extends java.lang.Object</pre>
-<div class="block"><p>A reusable object that will calculate, given a list of <a href="../../../org/bitcoinj/core/PeerFilterProvider.html" title="interface in org.bitcoinj.core"><code>PeerFilterProvider</code></a>s, a merged
- <a href="../../../org/bitcoinj/core/BloomFilter.html" title="class in org.bitcoinj.core"><code>BloomFilter</code></a> and earliest key time for all of them.
- Used by the <a href="../../../org/bitcoinj/core/PeerGroup.html" title="class in org.bitcoinj.core"><code>PeerGroup</code></a> class internally.</p>
+<div class="block"><p>A reusable object that will calculate, given a list of <a href="../../../org/sumcoinj/core/PeerFilterProvider.html" title="interface in org.sumcoinj.core"><code>PeerFilterProvider</code></a>s, a merged
+ <a href="../../../org/sumcoinj/core/BloomFilter.html" title="class in org.sumcoinj.core"><code>BloomFilter</code></a> and earliest key time for all of them.
+ Used by the <a href="../../../org/sumcoinj/core/PeerGroup.html" title="class in org.sumcoinj.core"><code>PeerGroup</code></a> class internally.</p>
 
  <p>Thread safety: threading here can be complicated. Each filter provider is given a begin event, which may acquire
  a lock (and is guaranteed to receive an end event). This class is mostly thread unsafe and is meant to be used from a
@@ -140,7 +140,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.Result.html" title="class in org.bitcoinj.net">FilterMerger.Result</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.Result.html" title="class in org.sumcoinj.net">FilterMerger.Result</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -157,7 +157,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.html#FilterMerger-double-">FilterMerger</a></span>(double&nbsp;bloomFilterFPRate)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.html#FilterMerger-double-">FilterMerger</a></span>(double&nbsp;bloomFilterFPRate)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -175,20 +175,20 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/net/FilterMerger.Result.html" title="class in org.bitcoinj.net">FilterMerger.Result</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.html#calculate-com.google.common.collect.ImmutableList-">calculate</a></span>(com.google.common.collect.ImmutableList&lt;<a href="../../../org/bitcoinj/core/PeerFilterProvider.html" title="interface in org.bitcoinj.core">PeerFilterProvider</a>&gt;&nbsp;providers)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/net/FilterMerger.Result.html" title="class in org.sumcoinj.net">FilterMerger.Result</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.html#calculate-com.google.common.collect.ImmutableList-">calculate</a></span>(com.google.common.collect.ImmutableList&lt;<a href="../../../org/sumcoinj/core/PeerFilterProvider.html" title="interface in org.sumcoinj.core">PeerFilterProvider</a>&gt;&nbsp;providers)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.html#getBloomFilterFPRate--">getBloomFilterFPRate</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.html#getBloomFilterFPRate--">getBloomFilterFPRate</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../org/bitcoinj/core/BloomFilter.html" title="class in org.bitcoinj.core">BloomFilter</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.html#getLastFilter--">getLastFilter</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../org/sumcoinj/core/BloomFilter.html" title="class in org.sumcoinj.core">BloomFilter</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.html#getLastFilter--">getLastFilter</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/bitcoinj/net/FilterMerger.html#setBloomFilterFPRate-double-">setBloomFilterFPRate</a></span>(double&nbsp;bloomFilterFPRate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/sumcoinj/net/FilterMerger.html#setBloomFilterFPRate-double-">setBloomFilterFPRate</a></span>(double&nbsp;bloomFilterFPRate)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -235,7 +235,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>calculate</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/net/FilterMerger.Result.html" title="class in org.bitcoinj.net">FilterMerger.Result</a>&nbsp;calculate(com.google.common.collect.ImmutableList&lt;<a href="../../../org/bitcoinj/core/PeerFilterProvider.html" title="interface in org.bitcoinj.core">PeerFilterProvider</a>&gt;&nbsp;providers)</pre>
+<pre>public&nbsp;<a href="../../../org/sumcoinj/net/FilterMerger.Result.html" title="class in org.sumcoinj.net">FilterMerger.Result</a>&nbsp;calculate(com.google.common.collect.ImmutableList&lt;<a href="../../../org/sumcoinj/core/PeerFilterProvider.html" title="interface in org.sumcoinj.core">PeerFilterProvider</a>&gt;&nbsp;providers)</pre>
 </li>
 </ul>
 <a name="setBloomFilterFPRate-double-">
@@ -262,7 +262,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getLastFilter</h4>
-<pre>public&nbsp;<a href="../../../org/bitcoinj/core/BloomFilter.html" title="class in org.bitcoinj.core">BloomFilter</a>&nbsp;getLastFilter()</pre>
+<pre>public&nbsp;<a href="../../../org/sumcoinj/core/BloomFilter.html" title="class in org.sumcoinj.core">BloomFilter</a>&nbsp;getLastFilter()</pre>
 </li>
 </ul>
 </li>
@@ -292,11 +292,11 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../org/bitcoinj/net/ClientConnectionManager.html" title="interface in org.bitcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../org/bitcoinj/net/FilterMerger.Result.html" title="class in org.bitcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/ClientConnectionManager.html" title="interface in org.sumcoinj.net"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../org/sumcoinj/net/FilterMerger.Result.html" title="class in org.sumcoinj.net"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../../index.html?org/bitcoinj/net/FilterMerger.html" target="_top">Frames</a></li>
+<li><a href="../../../index.html?org/sumcoinj/net/FilterMerger.html" target="_top">Frames</a></li>
 <li><a href="FilterMerger.html" target="_top">No&nbsp;Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">

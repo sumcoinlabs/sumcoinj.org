@@ -122,7 +122,7 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">PeerAddress</span>
 extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in org.bitcoinj.core">ChildMessage</a></pre>
 <div class="block"><p>A PeerAddress holds an IP address and port number representing the network location of
- a peer in the Bitcoin P2P network. It exists primarily for serialization purposes.</p>
+ a peer in the Sumcoin P2P network. It exists primarily for serialization purposes.</p>
  
  <p>Instances of this class are not safe for use by multiple threads.</p></div>
 </li>
@@ -335,7 +335,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.bitcoinj.core.<a href="../../../org/bitcoinj/core/Message.html" title="class in org.bitcoinj.core">Message</a></h3>
-<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeBitcoinSerialize--">unsafeBitcoinSerialize</a></code></li>
+<code><a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize--">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#bitcoinSerialize-java.io.OutputStream-">bitcoinSerialize</a>, <a href="../../../org/bitcoinj/core/Message.html#getHash--">getHash</a>, <a href="../../../org/bitcoinj/core/Message.html#getMessageSize--">getMessageSize</a>, <a href="../../../org/bitcoinj/core/Message.html#getParams--">getParams</a>, <a href="../../../org/bitcoinj/core/Message.html#hasMoreBytes--">hasMoreBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#isCached--">isCached</a>, <a href="../../../org/bitcoinj/core/Message.html#isRecached--">isRecached</a>, <a href="../../../org/bitcoinj/core/Message.html#readByteArray--">readByteArray</a>, <a href="../../../org/bitcoinj/core/Message.html#readBytes-int-">readBytes</a>, <a href="../../../org/bitcoinj/core/Message.html#readHash--">readHash</a>, <a href="../../../org/bitcoinj/core/Message.html#readInt64--">readInt64</a>, <a href="../../../org/bitcoinj/core/Message.html#readStr--">readStr</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint32--">readUint32</a>, <a href="../../../org/bitcoinj/core/Message.html#readUint64--">readUint64</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt--">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#readVarInt-int-">readVarInt</a>, <a href="../../../org/bitcoinj/core/Message.html#unsafeSumcoinSerialize--">unsafeSumcoinSerialize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -393,9 +393,9 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>params</code> - NetworkParameters object.</dd>
-<dd><code>payload</code> - Bitcoin protocol formatted byte array containing message content.</dd>
+<dd><code>payload</code> - Sumcoin protocol formatted byte array containing message content.</dd>
 <dd><code>offset</code> - The location of the first payload byte within the array.</dd>
-<dd><code>protocolVersion</code> - Bitcoin protocol version.</dd>
+<dd><code>protocolVersion</code> - Sumcoin protocol version.</dd>
 <dd><code>serializer</code> - the serializer to use for this message.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/bitcoinj/core/ProtocolException.html" title="class in org.bitcoinj.core">ProtocolException</a></code></dd>
@@ -423,7 +423,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <pre>public&nbsp;PeerAddress(<a href="http://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;addr,
                    int&nbsp;port)</pre>
 <div class="block">Constructs a peer address from the given IP address and port. Protocol version is the default
- for Bitcoin.</div>
+ for Sumcoin.</div>
 </li>
 </ul>
 <a name="PeerAddress-org.bitcoinj.core.NetworkParameters-java.net.InetAddress-int-">
@@ -446,7 +446,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <h4>PeerAddress</h4>
 <pre>public&nbsp;PeerAddress(<a href="http://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;addr)</pre>
 <div class="block">Constructs a peer address from the given IP address. Port and version number
- are default for Bitcoin mainnet.</div>
+ are default for Sumcoin mainnet.</div>
 </li>
 </ul>
 <a name="PeerAddress-org.bitcoinj.core.NetworkParameters-java.net.InetAddress-">
@@ -458,7 +458,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <pre>public&nbsp;PeerAddress(<a href="../../../org/bitcoinj/core/NetworkParameters.html" title="class in org.bitcoinj.core">NetworkParameters</a>&nbsp;params,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;addr)</pre>
 <div class="block">Constructs a peer address from the given IP address. Port is default for
- Bitcoin mainnet, version number is default for the given parameters.</div>
+ Sumcoin mainnet, version number is default for the given parameters.</div>
 </li>
 </ul>
 <a name="PeerAddress-java.net.InetSocketAddress-">
@@ -471,7 +471,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <div class="block">Constructs a peer address from an <a href="http://docs.oracle.com/javase/6/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net"><code>InetSocketAddress</code></a>. An InetSocketAddress can take in as parameters an
  InetAddress or a String hostname. If you want to connect to a .onion, set the hostname to the .onion address.
  Protocol version is the default.  Protocol version is the default
- for Bitcoin.</div>
+ for Sumcoin.</div>
 </li>
 </ul>
 <a name="PeerAddress-org.bitcoinj.core.NetworkParameters-java.net.InetSocketAddress-">
@@ -495,7 +495,7 @@ extends <a href="../../../org/bitcoinj/core/ChildMessage.html" title="class in o
 <pre>public&nbsp;PeerAddress(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;hostname,
                    int&nbsp;port)</pre>
 <div class="block">Constructs a peer address from a stringified hostname+port. Use this if you want to connect to a Tor .onion address.
- Protocol version is the default for Bitcoin.</div>
+ Protocol version is the default for Sumcoin.</div>
 </li>
 </ul>
 <a name="PeerAddress-org.bitcoinj.core.NetworkParameters-java.lang.String-int-">
